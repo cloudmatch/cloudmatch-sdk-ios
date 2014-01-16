@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "SMSwipeMatchClient.h"
 
 @interface SwipeMatchSDK : NSObject
 
