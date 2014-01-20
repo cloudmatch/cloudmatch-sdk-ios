@@ -9,8 +9,8 @@
 #import "SMSwipeMatchClient.h"
 
 //API URL
-//NSString* const kScreensAPIBaseURL = @"ws://api.swipemat.ch/open";
-NSString* const kScreensAPIBaseURL = @"ws://192.168.1.14:9000/open";
+NSString* const kScreensAPIBaseURL = @"ws://swipematch.herokuapp.com:80/open";
+//NSString* const kScreensAPIBaseURL = @"ws://192.168.1.14:9000/open";
 
 //CHUNK SIZE
 NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
