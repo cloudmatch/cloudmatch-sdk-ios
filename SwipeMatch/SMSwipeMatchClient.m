@@ -199,7 +199,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 {
     //TODO: check for location services enabled
     
-    SMMatchInput *matchInput = [[SMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude apiKey:apiKey appId:appId deviceId:deviceId equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
+    SMMatchInput *matchInput = [[SMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
     
     @try {
         SBJson4Writer *writer = [[SBJson4Writer alloc] init];

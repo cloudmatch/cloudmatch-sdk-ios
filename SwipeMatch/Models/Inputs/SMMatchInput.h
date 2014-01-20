@@ -17,14 +17,11 @@
 @property (nonatomic, strong) NSString* mCriteria;
 @property (nonatomic, assign) double mLatitude;
 @property (nonatomic, assign) double mLongitude;
-@property (nonatomic, strong) NSString* mApiKey;
-@property (nonatomic, strong) NSString *mAppId;
-@property (nonatomic, strong) NSString *mDeviceId;
 @property (nonatomic, strong) NSString *mEqualityParam;
 @property (nonatomic, strong) NSString* mAreaStart;
 @property (nonatomic, strong) NSString* mAreaEnd;
 
-- (id)initWithCriteria:(NSString*)criteria latitude:(double)latitude longitude:(double)longitude apiKey:(NSString*)apiKey appId:(NSString*)appId deviceId:(NSString*)appId equalityParam:(NSString*)equalityParam areaStart:(NSString*)areaStart areaEnd:(NSString*)areaEnd;
+- (id)initWithCriteria:(NSString*)criteria latitude:(double)latitude longitude:(double)longitude equalityParam:(NSString*)equalityParam areaStart:(NSString*)areaStart areaEnd:(NSString*)areaEnd;
 + (instancetype)modelObjectWithDictionary:(NSDictionary*)dict;
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
 - (NSDictionary*)dictionaryRepresentation;
