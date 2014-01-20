@@ -11,8 +11,6 @@
 		AC8E765918881122001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765718881122001B7893 /* InfoPlist.strings */; };
 		AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E765C18881122001B7893 /* SwipeMatchSDK.m */; };
 		AC8E766518881123001B7893 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766418881123001B7893 /* XCTest.framework */; };
-		AC8E766718881123001B7893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766618881123001B7893 /* Foundation.framework */; };
-		AC8E766918881123001B7893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766818881123001B7893 /* UIKit.framework */; };
 		AC8E766C18881123001B7893 /* SwipeMatchSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765218881122001B7893 /* SwipeMatchSDK.framework */; };
 		AC8E767218881123001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E767018881123001B7893 /* InfoPlist.strings */; };
 		AC8E767418881123001B7893 /* SwipeMatchSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E767318881123001B7893 /* SwipeMatchSDKTests.m */; };
@@ -133,8 +131,6 @@
 		AC8E765C18881122001B7893 /* SwipeMatchSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeMatchSDK.m; sourceTree = "<group>"; };
 		AC8E766218881123001B7893 /* SwipeMatchSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeMatchSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8E766418881123001B7893 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AC8E766618881123001B7893 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AC8E766818881123001B7893 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		AC8E766F18881123001B7893 /* SwipeMatchSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeMatchSDKTests-Info.plist"; sourceTree = "<group>"; };
 		AC8E767118881123001B7893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC8E767318881123001B7893 /* SwipeMatchSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeMatchSDKTests.m; sourceTree = "<group>"; };
@@ -215,7 +211,6 @@
 		ACB9816A18883DB6005C0C9F /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriterState.m; sourceTree = "<group>"; };
 		ACB9816B18883DB6005C0C9F /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
 		ACB9816C18883DB6005C0C9F /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
-		D66DAD9F8A234621AEBEDD96 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,8 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8E766518881123001B7893 /* XCTest.framework in Frameworks */,
-				AC8E766918881123001B7893 /* UIKit.framework in Frameworks */,
-				AC8E766718881123001B7893 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,9 +282,6 @@
 				AC8E76FA188812A6001B7893 /* libAWDProtobufLocation.dylib */,
 				AC8E76F8188812A1001B7893 /* UIKit.framework */,
 				AC8E766418881123001B7893 /* XCTest.framework */,
-				AC8E766618881123001B7893 /* Foundation.framework */,
-				AC8E766818881123001B7893 /* UIKit.framework */,
-				D66DAD9F8A234621AEBEDD96 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
