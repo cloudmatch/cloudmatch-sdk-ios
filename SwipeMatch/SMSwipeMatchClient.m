@@ -159,7 +159,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     
     NSString *deviceID = [SMUtilities getDeviceIdForAppId:_appID];
 
-    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@?%@=%@?%@=%@?%@=%@", kSMApiEndpoint, kSMApiParamApiKey, self.apiKey, kSMApiParamAppId, self.appID, kSMApiParamOS, @"ios", kSMApiParamDeviceId, deviceID];
+    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kSMApiEndpoint, kSMApiParamApiKey, self.apiKey, kSMApiParamAppId, self.appID, kSMApiParamOS, @"ios", kSMApiParamDeviceId, deviceID];
     
     NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:apiUrl]];
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
