@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC02259A188D553B00BF6AD2 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC8E765918881122001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765718881122001B7893 /* InfoPlist.strings */; };
 		AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E765C18881122001B7893 /* SwipeMatchSDK.m */; };
 		AC8E766518881123001B7893 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766418881123001B7893 /* XCTest.framework */; };
@@ -123,6 +124,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC8E765218881122001B7893 /* SwipeMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8E765618881122001B7893 /* SwipeMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeMatchSDK-Info.plist"; sourceTree = "<group>"; };
 		AC8E765818881122001B7893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				AC8E76AC188811C1001B7893 /* SMOnMatchEventInitiated.h */,
 				AC8E76AD188811C1001B7893 /* SMOnServerEventDelegate.h */,
 				AC8E76AE188811C1001B7893 /* SMOnServerMessageDelegate.h */,
+				AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */,
 				AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */,
 				AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */,
 				AC8E76B1188811C1001B7893 /* SMUtilities.h */,
@@ -500,6 +503,7 @@
 				ACB9818018884129005C0C9F /* SMInnerOuterChecker.h in Headers */,
 				ACB9818118884129005C0C9F /* SMLocation.h in Headers */,
 				ACB9818218884129005C0C9F /* SMOnMatchEventInitiated.h in Headers */,
+				AC02259A188D553B00BF6AD2 /* SMOnMovementDelegate.h in Headers */,
 				ACB9818318884129005C0C9F /* SMOnServerEventDelegate.h in Headers */,
 				ACB9818418884129005C0C9F /* SMOnServerMessageDelegate.h in Headers */,
 				ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */,

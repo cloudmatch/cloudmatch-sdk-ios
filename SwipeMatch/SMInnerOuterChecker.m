@@ -17,19 +17,8 @@
 
 @implementation SMInnerOuterChecker
 
-//@synthesize drawingFrame;
-
 //The border around the screen (in points) to detect when the user tapped on a border
 NSInteger const kInterval = 20;
-
-//-(id)initWithFrame:(CGRect)frame
-//{
-//    self = [super init];
-//    if (self) {
-//        self.drawingFrame = frame;
-//    }
-//    return self;
-//}
 
 #pragma mark - Touches delegate
 
@@ -97,7 +86,6 @@ NSInteger const kInterval = 20;
     //Upon receiving this message, the gesture recognizer for a continuous gesture should set its state to UIGestureRecognizerStateCancelled; a gesture recognizer for a discrete gesture should set its state to UIGestureRecognizerStateFailed.
     self.state = UIGestureRecognizerStateCancelled;
 }
-
 
 # pragma mark - touch interface
 

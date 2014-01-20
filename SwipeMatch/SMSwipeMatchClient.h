@@ -40,48 +40,27 @@
 #import "SMOnMatchEventInitiated.h"
 #import "SMOnServerEventDelegate.h"
 #import "SMOnServerMessageDelegate.h"
+#import "SMOnMovementDelegate.h"
 
-extern NSString* const kSMNotificationMovement;
 extern NSString* const kScreensAPIBaseURL;
 extern NSInteger const kSMMaxDeliveryChunkSize;
-
-
-@protocol SMOnMovementDelegate <NSObject>
-- (BOOL)clientShouldSend;
-- (NSData*)getDataToSendForMovement:(NSInteger)movement;
-- (void)detectedMovement:(NSString*)movement swipe:(NSInteger)swipe;
-- (void)detectedMovementFromAreaStart:(NSString*)areaStart toAreaEnd:(NSString*)areaEnd;
-@end
-
 
 @interface SMSwipeMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate, SMInnerOuterCheckerDelegate>
 
 //Some properties for the client
 @property (nonatomic, assign) BOOL SMClientShouldStopUpdatingLocationOnDealloc;
-@property (nonatomic, strong) NSString* apiKey;
-@property (nonatomic, strong) NSString* appID;
-
 
 +(SMSwipeMatchClient*)sharedInstance;
 
 //SDK view methods
-- (void)attachToView:(UIView*)view withDelegate:(id<SMOnMovementDelegate>)delegate;
+- (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria;
 - (void)detachFromView:(UIView*)view;
-- (void)setServerEventDelegate:(id<SMOnServerEventDelegate>)serverEventDelegate;
+- (void)setServerEventDelegate:(id<SMOnServerEventDelegate>)serverEventDelegate apiKey:(NSString*)apiKey appId:(NSString*)appId;
 
 //SDK Methods
 - (void)connect;
 - (void)closeConnection;
 - (void)matchUsingCriteria:(NSString*)criteria equalityParam:(NSString*)equalityParam areaStart:(NSString*)areaStart areaEnd:(NSString*)areaEnd;
 - (void)deliverPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
-- (void)deliverChunkedPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
-
-//SwipeMatch Transfer methods
-//- (void)leaveGroup;
-//- (void)sendMessage:(NSDictionary*)message;
-//- (void)sendMatch:(NSDictionary*)message;
-//- (void)sendPayloadDataToPeer:(NSData*)data;
-//- (void)sendPayloadDataToBroadcast:(NSData*)data;
-
 
 @end

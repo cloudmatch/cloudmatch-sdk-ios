@@ -46,18 +46,14 @@ typedef NS_ENUM(NSInteger, SwipeType) {
     ViewArea finalAreaTouched;
 }
 
-//@property (nonatomic) CGRect drawingFrame;
 
-//necessary for subclassing UIGestureRecognizer
+//the state property is necessary for subclassing UIGestureRecognizer
 @property(nonatomic,readwrite) UIGestureRecognizerState state;
 
 @property(nonatomic, weak) id<SMInnerOuterCheckerDelegate> movementDelegate;
 
 
 // "public" stuff
-//- (id)initWithFrame:(CGRect)frame;
-//- (ViewArea)touchStarted:(CGPoint)initialPoint;
-//- (NSString*)touchEnded:(CGPoint)finalPoint;
 - (BOOL)touchStartedInOuterArea:(CGPoint)initialPoint forView:(UIView*)view;
 + (BOOL)isAnOuterArea:(ViewArea)area;
 + (Movement)decodeMovement:(NSString*)movement;
