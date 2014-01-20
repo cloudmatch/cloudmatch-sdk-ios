@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F0C7C188D730300F9C014 /* SMApiConstants.h */; };
+		3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F0C7D188D730300F9C014 /* SMApiConstants.m */; };
 		AC02259A188D553B00BF6AD2 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC8E765918881122001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765718881122001B7893 /* InfoPlist.strings */; };
 		AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E765C18881122001B7893 /* SwipeMatchSDK.m */; };
@@ -122,6 +124,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E2F0C7C188D730300F9C014 /* SMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMApiConstants.h; sourceTree = "<group>"; };
+		3E2F0C7D188D730300F9C014 /* SMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMApiConstants.m; sourceTree = "<group>"; };
 		AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC8E765218881122001B7893 /* SwipeMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8E765618881122001B7893 /* SwipeMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeMatchSDK-Info.plist"; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 				AC8E7684188811C1001B7893 /* SMJsonInputLabels.m */,
 				AC8E7685188811C1001B7893 /* SMResponsesConstants.h */,
 				AC8E7686188811C1001B7893 /* SMResponsesConstants.m */,
+				3E2F0C7C188D730300F9C014 /* SMApiConstants.h */,
+				3E2F0C7D188D730300F9C014 /* SMApiConstants.m */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 			files = (
 				AC8E77001888137D001B7893 /* SwipeMatchSDK.h in Headers */,
 				ACB981871888414A005C0C9F /* SMJsonConstants.h in Headers */,
+				3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */,
 				ACB981881888414A005C0C9F /* SMJsonGeneralLabels.h in Headers */,
 				ACB981891888414A005C0C9F /* SMJsonInputLabels.h in Headers */,
 				ACB9818A1888414A005C0C9F /* SMResponsesConstants.h in Headers */,
@@ -642,6 +649,7 @@
 				ACB9815618883D4B005C0C9F /* base64.c in Sources */,
 				ACB9817918883DB6005C0C9F /* SBJson4StreamWriterState.m in Sources */,
 				AC8E76D2188811C1001B7893 /* SMMatcheeDeliveryMessage.m in Sources */,
+				3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */,
 				ACB9817B18883DB6005C0C9F /* SBJson4Writer.m in Sources */,
 				AC8E76B4188811C1001B7893 /* SMJsonConstants.m in Sources */,
 				AC8E76E1188811C1001B7893 /* SMMatchResponse.m in Sources */,

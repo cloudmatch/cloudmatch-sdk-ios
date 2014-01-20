@@ -7,10 +7,7 @@
 //
 
 #import "SMSwipeMatchClient.h"
-
-//API URL
-NSString* const kScreensAPIBaseURL = @"ws://swipematch.herokuapp.com:80/open";
-//NSString* const kScreensAPIBaseURL = @"ws://192.168.1.14:9000/open";
+#import "SMApiConstants.h"
 
 //CHUNK SIZE
 NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
@@ -160,7 +157,11 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:kScreensAPIBaseURL]];
+    NSString *deviceID = [SMUtilities getDeviceIdForAppId:_appID];
+
+    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@?%@=%@?%@=%@?%@=%@", kSMApiEndpoint, kSMApiParamApiKey, self.apiKey, kSMApiParamAppId, self.appID, kSMApiParamOS, @"ios", kSMApiParamDeviceId, deviceID];
+    
+    NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:apiUrl]];
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
     _webSocket.delegate = self;
     

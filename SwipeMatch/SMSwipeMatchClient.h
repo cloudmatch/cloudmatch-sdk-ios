@@ -42,7 +42,6 @@
 #import "SMOnServerMessageDelegate.h"
 #import "SMOnMovementDelegate.h"
 
-extern NSString* const kScreensAPIBaseURL;
 extern NSInteger const kSMMaxDeliveryChunkSize;
 
 @interface SMSwipeMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate, SMInnerOuterCheckerDelegate>
