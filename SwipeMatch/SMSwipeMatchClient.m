@@ -120,6 +120,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     [_sendQueue enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSData *data = [_sendQueue objectAtIndex:idx];
         [_webSocket send:data];
+        [_sendQueue removeObjectAtIndex:idx];
     }];
 }
 
@@ -188,11 +189,6 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     [self matchUsingCriteria:criteria latitude:latitude longitude:longitude apiKey:_apiKey appId:_appID deviceId:deviceID equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
 }
 
-- (void)deliverPayload:(NSString *)payload ToRecipients:(NSArray *)recipients inGroup:(NSString *)groupId
-{
-    [self deliverChunkedPayload:payload ToRecipients:recipients inGroup:groupId];
-}
-
 #pragma mark - SwipeMatchConnection private methods
 
 - (void)matchUsingCriteria:(NSString *)criteria latitude:(double)latitude longitude:(double)longitude apiKey:(NSString *)apiKey appId:(NSString *)appId deviceId:(NSString *)deviceId equalityParam:(NSString *)equalityParam areaStart:(NSString *)areaStart areaEnd:(NSString *)areaEnd
@@ -237,7 +233,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     return [array copy];
 }
 
-- (void)deliverChunkedPayload:(NSString *)payload ToRecipients:(NSArray *)recipients inGroup:(NSString *)groupId
+- (void)deliverPayload:(NSString *)payload ToRecipients:(NSArray *)recipients inGroup:(NSString *)groupId
 {
     //Prepare the array of chunks
     NSArray *chunks = [self splitEqually:payload chunkSize:kSMMaxDeliveryChunkSize];
@@ -247,7 +243,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     [chunks enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         SMDeliveryInput *deliveryInput = [[SMDeliveryInput alloc] initWithRecipients:recipients deliveryId:deliveryId payload:[chunks objectAtIndex:idx] groupId:groupId totalChunks:[chunks count] chunkNr:idx];
-        //Check:
+
         @try {
             SBJson4Writer *writer = [[SBJson4Writer alloc] init];
             NSString *dataToSend = [writer stringWithObject:[deliveryInput dictionaryRepresentation]];
