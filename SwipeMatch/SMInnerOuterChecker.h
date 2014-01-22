@@ -12,6 +12,7 @@
 #import "SMJsonConstants.h"
 #import "SMOnMovementDelegate.h"
 #import "SMSwipeTranslationHelper.h"
+#import "SMMatchInput.h"
 
 @interface SMInnerOuterChecker : UIPanGestureRecognizer {
     ViewArea initialAreaTouched;

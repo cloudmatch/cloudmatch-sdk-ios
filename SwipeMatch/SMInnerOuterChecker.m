@@ -68,13 +68,14 @@ NSInteger const kInterval = 20;
             
             [self.movementDelegate onMovementDetection:move swipeType:swipeType];
             
-            // TODO: prepare match request input and send it
             NSString *eqParam = [self.movementDelegate getEqualityParam];
             NSString *start = [SMSwipeTranslationHelper convertViewAreaToString:first];
             NSString *end = [SMSwipeTranslationHelper convertViewAreaToString:second];
             
+            // send match request
+            [[[SMSwipeMatchClient sharedInstance] getMatcher] matchUsingCriteria:kSMCriteriaPresence equalityParam:eqParam areaStart:start areaEnd:end];
         }
-        // [self.movementDelegate onMovementFromAreaStart:start toAreaEnd:end movement:[SMInnerOuterChecker decodeMovement:movement] swipe:[SMInnerOuterChecker decodeSwipe:movement]];
+        
     }
     // Check if valid touch END
     

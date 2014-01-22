@@ -18,6 +18,7 @@ extern NSString* const kSMAreaBottom;
 extern NSString* const kSMCriteriaUndefined;
 extern NSString* const kSMCriteriaPosition;
 extern NSString* const kSMCriteriaPresence;
+extern NSString* const kSMCriteriaPinch;
 
 extern NSString* const kSMKindResponse;
 extern NSString* const kSMKindMessage;

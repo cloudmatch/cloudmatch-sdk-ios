@@ -14,6 +14,8 @@
 		3E9AF7B7189009BC00FB719D /* SMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */; };
 		3E9AF7BB18900BE000FB719D /* SMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B918900BE000FB719D /* SMUtilities.h */; };
 		3E9AF7BC18900BE000FB719D /* SMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BA18900BE000FB719D /* SMUtilities.m */; };
+		3E9AF7BF18901AB300FB719D /* SMMatchHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7BD18901AB300FB719D /* SMMatchHelper.h */; };
+		3E9AF7C018901AB300FB719D /* SMMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BE18901AB300FB719D /* SMMatchHelper.m */; };
 		AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */; };
 		AC7D28E6188FD12D009CC433 /* SMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */; };
 		AC7D28E7188FD12D009CC433 /* SMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */; };
@@ -132,6 +134,8 @@
 		3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeConstants.h; sourceTree = "<group>"; };
 		3E9AF7B918900BE000FB719D /* SMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtilities.h; sourceTree = "<group>"; };
 		3E9AF7BA18900BE000FB719D /* SMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUtilities.m; sourceTree = "<group>"; };
+		3E9AF7BD18901AB300FB719D /* SMMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMatchHelper.h; sourceTree = "<group>"; };
+		3E9AF7BE18901AB300FB719D /* SMMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMatchHelper.m; sourceTree = "<group>"; };
 		AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerEventDelegate.h; sourceTree = "<group>"; };
 		AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerMessageDelegate.h; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				3E9AF7BA18900BE000FB719D /* SMUtilities.m */,
 				3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */,
 				3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */,
+				3E9AF7BD18901AB300FB719D /* SMMatchHelper.h */,
+				3E9AF7BE18901AB300FB719D /* SMMatchHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */,
 				ACB981A1188842FE005C0C9F /* SBJson4StreamParserState.h in Headers */,
 				ACB981A2188842FE005C0C9F /* SBJson4StreamTokeniser.h in Headers */,
+				3E9AF7BF18901AB300FB719D /* SMMatchHelper.h in Headers */,
 				ACB981A3188842FE005C0C9F /* SBJson4StreamWriter.h in Headers */,
 				ACB981A4188842FE005C0C9F /* SBJson4StreamWriterState.h in Headers */,
 				ACB981A5188842FE005C0C9F /* SBJson4Writer.h in Headers */,
@@ -672,6 +679,7 @@
 				AC8E76C9188811C1001B7893 /* SMLeaveGroupInput.m in Sources */,
 				AC8E76E4188811C1001B7893 /* SMMatchee.m in Sources */,
 				AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */,
+				3E9AF7C018901AB300FB719D /* SMMatchHelper.m in Sources */,
 				ACB9815618883D4B005C0C9F /* base64.c in Sources */,
 				3E9AF7B4189008F700FB719D /* SMSwipeTranslationHelper.m in Sources */,
 				ACB9817918883DB6005C0C9F /* SBJson4StreamWriterState.m in Sources */,

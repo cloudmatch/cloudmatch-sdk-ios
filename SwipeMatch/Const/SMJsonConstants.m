@@ -18,6 +18,7 @@ NSString* const kSMAreaBottom = @"bottom";
 NSString* const kSMCriteriaUndefined = @"undefined";
 NSString* const kSMCriteriaPosition = @"position";
 NSString* const kSMCriteriaPresence = @"presence";
+NSString* const kSMCriteriaPinch = @"pinch";
 
 NSString* const kSMKindResponse = @"response";
 NSString* const kSMKindMessage = @"message";

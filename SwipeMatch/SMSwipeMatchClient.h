@@ -38,6 +38,9 @@
 
 //Protocols
 #import "SMOnServerEventDelegate.h"
+
+#import "SMMatchHelper.h"
+
 #import "SMOnServerMessageDelegate.h"
 
 extern NSInteger const kSMMaxDeliveryChunkSize;
@@ -54,10 +57,13 @@ extern NSInteger const kSMMaxDeliveryChunkSize;
 - (void)detachFromView:(UIView*)view;
 - (void)setServerEventDelegate:(id<SMOnServerEventDelegate>)serverEventDelegate apiKey:(NSString*)apiKey appId:(NSString*)appId;
 
+// SDK private methods
+- (SMMatchHelper*)getMatcher;
+- (SRWebSocket*)getWebSocket;
+
 //SDK Methods
 - (void)connect;
 - (void)closeConnection;
-- (void)matchUsingCriteria:(NSString*)criteria equalityParam:(NSString*)equalityParam areaStart:(NSString*)areaStart areaEnd:(NSString*)areaEnd;
 - (void)deliverPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
 
 @end

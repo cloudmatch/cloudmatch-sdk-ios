@@ -14,8 +14,9 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 @interface SMSwipeMatchClient ()
 
+// api key & app id
 @property (nonatomic, strong) NSString* apiKey;
-@property (nonatomic, strong) NSString* appID;
+@property (nonatomic, strong) NSString* appId;
 
 //WebSocket connection
 @property (nonatomic, strong) SRWebSocket *webSocket;
@@ -31,6 +32,9 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 //Transfer
 @property (nonatomic, strong) NSMutableArray *sendQueue;
 @property (nonatomic, strong) SMServerMessagesHandler *serverMessagesHandler;
+
+// Matcher
+@property (nonatomic, strong) SMMatchHelper *matchHelper;
 
 @end
 
@@ -68,8 +72,22 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 {
     _serverMessagesHandler = [[SMServerMessagesHandler alloc] initWithServerEventDelegate:serverEventDelegate];
     self.onServerMessageDelegate = _serverMessagesHandler;
-    self.appID = appId;
-    self.apiKey = apiKey;
+    
+    _appId = appId;
+    _apiKey = apiKey;
+    
+    _matchHelper = [[SMMatchHelper alloc] init];
+}
+
+-(SMMatchHelper*)getMatcher
+{
+    return _matchHelper;
+}
+
+-(SRWebSocket*)getWebSocket
+{
+    // TODO: if not connected ...
+    return _webSocket;
 }
 
 #pragma mark - SDK View methods
@@ -151,9 +169,9 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSString *deviceID = [SMUtilities getDeviceIdForAppId:_appID];
+    NSString *deviceID = [SMUtilities getDeviceIdForAppId:_appId];
 
-    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kSMApiEndpoint, kSMApiParamApiKey, self.apiKey, kSMApiParamAppId, self.appID, kSMApiParamOS, @"ios", kSMApiParamDeviceId, deviceID];
+    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kSMApiEndpoint, kSMApiParamApiKey, self.apiKey, kSMApiParamAppId, self.appId, kSMApiParamOS, @"ios", kSMApiParamDeviceId, deviceID];
     
     NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:apiUrl]];
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
@@ -168,48 +186,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     [_webSocket close];
 }
 
-- (void)matchUsingCriteria:(NSString*)criteria equalityParam:(NSString*)equalityParam areaStart:(NSString *)areaStart areaEnd:(NSString *)areaEnd
-{
-    if (_appID == nil) {
-        @throw [NSException exceptionWithName:@"No app id set in client" reason:nil userInfo:nil];
-    }
-    if (_apiKey == nil) {
-        @throw [NSException exceptionWithName:@"No app id set in client" reason:nil userInfo:nil];
-    }
-    NSString *deviceID = [SMUtilities getDeviceIdForAppId:_appID];
-    double latitude = [SMLocation sharedInstance].currentLocation.coordinate.latitude;
-    double longitude = [SMLocation sharedInstance].currentLocation.coordinate.longitude;
-    [self matchUsingCriteria:criteria latitude:latitude longitude:longitude apiKey:_apiKey appId:_appID deviceId:deviceID equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
-}
-
 #pragma mark - SwipeMatchConnection private methods
-
-- (void)matchUsingCriteria:(NSString *)criteria latitude:(double)latitude longitude:(double)longitude apiKey:(NSString *)apiKey appId:(NSString *)appId deviceId:(NSString *)deviceId equalityParam:(NSString *)equalityParam areaStart:(NSString *)areaStart areaEnd:(NSString *)areaEnd
-{
-    //TODO: check for location services enabled
-    
-    SMMatchInput *matchInput = [[SMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
-    
-    @try {
-        SBJson4Writer *writer = [[SBJson4Writer alloc] init];
-        NSString *dataToSend = [writer stringWithObject:[matchInput dictionaryRepresentation]];
-        if (writer.error != nil) {
-            @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:writer.error userInfo:nil];
-        }
-        NSLog(@"%@ Ready to send: %@", [[self class] description], dataToSend);
-        if (_webSocket.readyState != SR_OPEN) {
-            [_sendQueue addObject:dataToSend];
-            [self connect];
-        }
-        else{
-            [_webSocket send:dataToSend];
-        }
-    }
-    @catch (NSException *exception) {
-        NSLog(@"[%@] Exception in matchUsingCriteria: %@", [[self class] description], [exception description]);
-    }
-    
-}
 
 - (NSArray*)splitEqually:(NSString*)payload chunkSize:(NSInteger)chunkSize
 {
@@ -242,7 +219,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
             NSString *dataToSend = [writer stringWithObject:[deliveryInput dictionaryRepresentation]];
 
             if (writer.error != nil) {
-                @throw [NSException exceptionWithName:@"Error parsing deliverChunkedPayload" reason:writer.error userInfo:nil];
+                @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:writer.error userInfo:nil];
             }
             if (_webSocket.readyState != SR_OPEN) {
                 [_sendQueue addObject:dataToSend];
