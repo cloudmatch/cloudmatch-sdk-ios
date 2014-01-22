@@ -94,8 +94,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria
 {
-    //TODO: based on criteria, use a different GestureRecognizer
-    _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:self action:@selector(move:)];
+    _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:self action:@selector(move:) criteria:criteria];
     _innerOuterChecker.delegate = self;
     _innerOuterChecker.movementDelegate = delegate;
     [view addGestureRecognizer:_innerOuterChecker];

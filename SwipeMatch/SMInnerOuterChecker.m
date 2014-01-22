@@ -10,7 +10,9 @@
 
 @interface SMInnerOuterChecker ()
 
-// "private" stuff
+@property (nonatomic, strong) NSString* mCriteria;
+
+//Checks if the coordinate is within the swipe detection area
 -(BOOL)xIsInInnerSection:(NSInteger)x forView:(UIView*)view;
 
 @end
@@ -18,7 +20,32 @@
 @implementation SMInnerOuterChecker
 
 //The border around the screen (in points) to detect when the user tapped on a border
-NSInteger const kInterval = 20;
+NSInteger const kSIDE_AREA_WIDTH = 20;
+
+#pragma mark - Init Methods
+
+- (id)init
+{
+    [self doesNotRecognizeSelector:_cmd];
+    //Init method should not be called
+    return self;
+}
+
+- (id)initWithTarget:(id)target action:(SEL)action
+{
+    [self doesNotRecognizeSelector:_cmd];
+    //initWithTarget should not be called without specifying a criteria
+    return self;
+}
+
+- (id)initWithTarget:(id)target action:(SEL)action criteria:(NSString*)criteria
+{
+    self = [super initWithTarget:target action:action];
+    if (self) {
+        self.mCriteria = criteria;
+    }
+    return self;
+}
 
 #pragma mark - Touches delegate
 
@@ -58,11 +85,11 @@ NSInteger const kInterval = 20;
         NSLog(@"[IOC]bad, at least one invalid area detected");
     }
     else {
-        // if the swipe is valid
+        // if the swipe is valid (after request to the delegate, implemented by SDK client)
         BOOL swipeValid = [self.movementDelegate isSwipeValid];
         
         if (swipeValid) {
-            // notify client of movement
+            // notify SDK client of movement
             Movement move = [SMSwipeTranslationHelper decodeMovement:movementStr];
             SwipeType swipeType = [SMSwipeTranslationHelper decodeSwipe:move];
             
@@ -73,7 +100,7 @@ NSInteger const kInterval = 20;
             NSString *end = [SMSwipeTranslationHelper convertViewAreaToString:second];
             
             // send match request
-            [[[SMSwipeMatchClient sharedInstance] getMatcher] matchUsingCriteria:kSMCriteriaPresence equalityParam:eqParam areaStart:start areaEnd:end];
+            [[[SMSwipeMatchClient sharedInstance] getMatcher] matchUsingCriteria:_mCriteria equalityParam:eqParam areaStart:start areaEnd:end];
         }
         
     }
@@ -128,12 +155,12 @@ NSInteger const kInterval = 20;
     
     // this method assumes that origin of the view is always (0, 0)
     ViewArea result = kViewAreaInvalid;
-    if (y < kInterval) {
+    if (y < kSIDE_AREA_WIDTH) {
         if ([self xIsInInnerSection:x forView:view]) {
             // top area
             result = kViewAreaTop;
         }
-    } else if (y > (view.frame.size.height - kInterval)) {
+    } else if (y > (view.frame.size.height - kSIDE_AREA_WIDTH)) {
         if ([self xIsInInnerSection:x forView:view]) {
             // top area
             result = kViewAreaBottom;
@@ -143,7 +170,7 @@ NSInteger const kInterval = 20;
             // inner area
             result = kViewAreaInner;
         } else {
-            if (x < kInterval) {
+            if (x < kSIDE_AREA_WIDTH) {
                 // left area
                 result = kViewAreaLeft;
             } else {
@@ -163,8 +190,8 @@ NSInteger const kInterval = 20;
 
 -(BOOL)xIsInInnerSection:(NSInteger)x forView:(UIView*)view
 {
-    return x > kInterval &&
-    x < (view.frame.size.width - kInterval);
+    return x > kSIDE_AREA_WIDTH &&
+    x < (view.frame.size.width - kSIDE_AREA_WIDTH);
 }
 
 - (BOOL)touchStartedInOuterArea:(CGPoint)initialPoint forView:(UIView*)view
