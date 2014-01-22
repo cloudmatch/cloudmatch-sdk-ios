@@ -11,12 +11,12 @@
 #import <UIKit/UIGestureRecognizerSubclass.h>
 #import "SMJsonConstants.h"
 #import "SMOnMovementDelegate.h"
+#import "SMSwipeTranslationHelper.h"
 
 @interface SMInnerOuterChecker : UIPanGestureRecognizer {
     ViewArea initialAreaTouched;
     ViewArea finalAreaTouched;
 }
-
 
 //the state property is necessary for subclassing UIGestureRecognizer
 @property(nonatomic,readwrite) UIGestureRecognizerState state;
@@ -28,9 +28,5 @@
 // "public" stuff
 - (BOOL)touchStartedInOuterArea:(CGPoint)initialPoint forView:(UIView*)view;
 + (BOOL)isAnOuterArea:(ViewArea)area;
-+ (Movement)decodeMovement:(NSString*)movement;
-+ (SwipeType)decodeSwipe:(NSString*)movement;
-+ (NSString*)convertViewAreaToString:(NSInteger)viewArea;
-
 
 @end

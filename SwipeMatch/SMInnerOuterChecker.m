@@ -42,12 +42,12 @@ NSInteger const kInterval = 20;
     CGPoint np = [mytouch locationInView:mytouch.view];
     NSLog(@"[IOC] touches ended at point: %@", NSStringFromCGPoint(np));
     
-    NSString *movement = [self touchEnded:np inView:self.view];
+    NSString *movementStr = [self touchEnded:np inView:self.view];
     
-    NSLog(@"[IOC]Movement: %@", movement);
+    NSLog(@"[IOC]Movement: %@", movementStr);
     //Check if valid touch START
-    int first = [[movement substringToIndex:1] intValue];
-    int second = [[movement substringFromIndex:1] intValue];
+    int first = [[movementStr substringToIndex:1] intValue];
+    int second = [[movementStr substringFromIndex:1] intValue];
     
     if (first == second) {
         NSLog(@"[IOC]bad, same two areas");
@@ -58,13 +58,27 @@ NSInteger const kInterval = 20;
         NSLog(@"[IOC]bad, at least one invalid area detected");
     }
     else {
-        NSString *start = [SMInnerOuterChecker convertViewAreaToString:first];
-        NSString *end = [SMInnerOuterChecker convertViewAreaToString:second];
-        [self.movementDelegate onMovementFromAreaStart:start toAreaEnd:end movement:[SMInnerOuterChecker decodeMovement:movement] swipe:[SMInnerOuterChecker decodeSwipe:movement]];
+        // if the swipe is valid
+        BOOL swipeValid = [self.movementDelegate isSwipeValid];
+        
+        if (swipeValid) {
+            // notify client of movement
+            Movement move = [SMSwipeTranslationHelper decodeMovement:movementStr];
+            SwipeType swipeType = [SMSwipeTranslationHelper decodeSwipe:move];
+            
+            [self.movementDelegate onMovementDetection:move swipeType:swipeType];
+            
+            // TODO: prepare match request input and send it
+            NSString *eqParam = [self.movementDelegate getEqualityParam];
+            NSString *start = [SMSwipeTranslationHelper convertViewAreaToString:first];
+            NSString *end = [SMSwipeTranslationHelper convertViewAreaToString:second];
+            
+        }
+        // [self.movementDelegate onMovementFromAreaStart:start toAreaEnd:end movement:[SMInnerOuterChecker decodeMovement:movement] swipe:[SMInnerOuterChecker decodeSwipe:movement]];
     }
-    //Check if valid touch END
+    // Check if valid touch END
     
-    //If the gesture recognizer is interpreting a continuous gesture, it should set its state to UIGestureRecognizerStateEnded upon receiving this message. If it is interpreting a discrete gesture, it should set its state to UIGestureRecognizerStateRecognized. If at any point in its handling of the touch objects the gesture recognizer determines that the multi-touch event sequence is not its gesture, it should set it state to UIGestureRecognizerStateCancelled.
+    // If the gesture recognizer is interpreting a continuous gesture, it should set its state to UIGestureRecognizerStateEnded upon receiving this message. If it is interpreting a discrete gesture, it should set its state to UIGestureRecognizerStateRecognized. If at any point in its handling of the touch objects the gesture recognizer determines that the multi-touch event sequence is not its gesture, it should set it state to UIGestureRecognizerStateCancelled.
     
     self.state = UIGestureRecognizerStateEnded;
     
@@ -72,8 +86,8 @@ NSInteger const kInterval = 20;
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    NSLog(@"[IOC] touches moved");
-
+    //    NSLog(@"[IOC] touches moved");
+    
     //If the gesture recognizer is interpreting a continuous gesture, it should set its state to UIGestureRecognizerStateChanged upon receiving this message. If at any point in its handling of the touch objects the gesture recognizer determines that the multi-touch event sequence is not its gesture, it should set it state to UIGestureRecognizerStateCancelled .
     
     self.state = UIGestureRecognizerStateChanged;
@@ -82,7 +96,7 @@ NSInteger const kInterval = 20;
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"[IOC] touches canceled");
-
+    
     //Upon receiving this message, the gesture recognizer for a continuous gesture should set its state to UIGestureRecognizerStateCancelled; a gesture recognizer for a discrete gesture should set its state to UIGestureRecognizerStateFailed.
     self.state = UIGestureRecognizerStateCancelled;
 }
@@ -140,109 +154,22 @@ NSInteger const kInterval = 20;
     return result;
 }
 
--(BOOL)xIsInInnerSection:(NSInteger)x forView:(UIView*)view
-{
-    return x > kInterval &&
-        x < (view.frame.size.width - kInterval);
-}
-
 + (BOOL)isAnOuterArea:(ViewArea)area
 {
     return area == kViewAreaLeft || area == kViewAreaRight ||
-        area == kViewAreaBottom || area == kViewAreaTop;
+    area == kViewAreaBottom || area == kViewAreaTop;
+}
+
+-(BOOL)xIsInInnerSection:(NSInteger)x forView:(UIView*)view
+{
+    return x > kInterval &&
+    x < (view.frame.size.width - kInterval);
 }
 
 - (BOOL)touchStartedInOuterArea:(CGPoint)initialPoint forView:(UIView*)view
 {
     ViewArea pointArea = [self getBelongingArea:initialPoint forView:view];
     return [SMInnerOuterChecker isAnOuterArea:pointArea];
-}
-
-+ (Movement)decodeMovement:(NSString*)movement
-{
-    
-    if ([movement length] < 2) {
-        return kMovementNonInitialized;
-    }
-    
-    ViewArea firstArea = (ViewArea)[[movement substringToIndex:1] integerValue];
-    ViewArea secondArea = (ViewArea)[[movement substringFromIndex:1] integerValue];
-    
-    if ([self isAnOuterArea:firstArea] && [self isAnOuterArea:secondArea]) {
-        return kMovementOuterToOuter;
-    }
-    else if([self isAnOuterArea:firstArea] && ![self isAnOuterArea:secondArea])
-    {
-        return kMovementOuterToInner;
-    }
-    else if(![self isAnOuterArea:firstArea] && [self isAnOuterArea:secondArea])
-    {
-        return kMovementInnerToOuter;
-    }
-    else if(firstArea == secondArea)
-    {
-        return kMovementInvalidSameArea;
-    }
-    else if( (firstArea == kViewAreaInvalid) || (secondArea == kViewAreaInvalid))
-    {
-        return kMovementInvalidAreaTouched;
-    }
-    else return kMovementNonInitialized;
-    
-}
-
-+ (SwipeType)decodeSwipe:(NSString*)movement
-{
-    if ([movement length] < 2) {
-        return kSwipeNotSupported;
-    }
-    
-    Movement mov = [SMInnerOuterChecker decodeMovement:movement];
-    
-    switch (mov) {
-        case kMovementInnerToOuter:
-            return kSwipeBegin;
-            break;
-        case kMovementOuterToInner:
-            return kSwipeEnd;
-            break;
-        case kMovementOuterToOuter:
-            return kSwipeIntermediate;
-            break;
-        default:
-            return  kSwipeNotSupported;
-            break;
-    }
-}
-
-+ (NSString*)convertViewAreaToString:(NSInteger)viewArea
-{
-    NSString *area = @"";
-    switch (viewArea) {
-        case kViewAreaTop:
-            area = kSMAreaTop;
-            break;
-        case kViewAreaRight:
-            area = kSMAreaRight;
-            break;
-        case kViewAreaBottom:
-            area = kSMAreaBottom;
-            break;
-        case kViewAreaLeft:
-            area = kSMAreaLeft;
-            break;
-        case kViewAreaInner:
-            area = kSMAreaInner;
-            break;
-        case kViewAreaInvalid:
-            area = kSMAreaInvalid;
-            break;
-            
-        default:
-            break;
-    }
-    
-    return area;
 }
 
 @end

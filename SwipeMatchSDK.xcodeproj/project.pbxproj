@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F0C7C188D730300F9C014 /* SMApiConstants.h */; };
 		3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F0C7D188D730300F9C014 /* SMApiConstants.m */; };
+		3E9AF7B3189008F700FB719D /* SMSwipeTranslationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */; };
+		3E9AF7B4189008F700FB719D /* SMSwipeTranslationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */; };
+		3E9AF7B7189009BC00FB719D /* SMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */; };
+		3E9AF7B8189009BC00FB719D /* SMSwipeConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */; };
+		3E9AF7BB18900BE000FB719D /* SMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B918900BE000FB719D /* SMUtilities.h */; };
+		3E9AF7BC18900BE000FB719D /* SMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BA18900BE000FB719D /* SMUtilities.m */; };
 		AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */; };
 		AC7D28E6188FD12D009CC433 /* SMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */; };
 		AC7D28E7188FD12D009CC433 /* SMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */; };
@@ -60,8 +66,6 @@
 		AC8E76EE188811C1001B7893 /* SMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76AB188811C1001B7893 /* SMLocation.m */; };
 		AC8E76F3188811C1001B7893 /* SMSwipeMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */; };
 		AC8E76F4188811C1001B7893 /* SMSwipeMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */; };
-		AC8E76F6188811C1001B7893 /* SMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B2188811C1001B7893 /* SMUtilities.m */; };
-		AC8E76F7188811C1001B7893 /* SMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B2188811C1001B7893 /* SMUtilities.m */; };
 		AC8E77001888137D001B7893 /* SwipeMatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E765B18881122001B7893 /* SwipeMatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9814C18883CF5005C0C9F /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9814818883CF5005C0C9F /* SSKeychain.m */; };
 		ACB9814E18883CF5005C0C9F /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9814A18883CF5005C0C9F /* SSKeychainQuery.m */; };
@@ -79,7 +83,6 @@
 		ACB9818018884129005C0C9F /* SMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A8188811C1001B7893 /* SMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818118884129005C0C9F /* SMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AA188811C1001B7893 /* SMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB9818618884129005C0C9F /* SMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76B1188811C1001B7893 /* SMUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981871888414A005C0C9F /* SMJsonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E767F188811C1001B7893 /* SMJsonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981881888414A005C0C9F /* SMJsonGeneralLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7681188811C1001B7893 /* SMJsonGeneralLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981891888414A005C0C9F /* SMJsonInputLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7683188811C1001B7893 /* SMJsonInputLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -125,6 +128,12 @@
 /* Begin PBXFileReference section */
 		3E2F0C7C188D730300F9C014 /* SMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMApiConstants.h; sourceTree = "<group>"; };
 		3E2F0C7D188D730300F9C014 /* SMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMApiConstants.m; sourceTree = "<group>"; };
+		3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeTranslationHelper.h; sourceTree = "<group>"; };
+		3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeTranslationHelper.m; sourceTree = "<group>"; };
+		3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeConstants.h; sourceTree = "<group>"; };
+		3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeConstants.m; sourceTree = "<group>"; };
+		3E9AF7B918900BE000FB719D /* SMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtilities.h; sourceTree = "<group>"; };
+		3E9AF7BA18900BE000FB719D /* SMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUtilities.m; sourceTree = "<group>"; };
 		AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerEventDelegate.h; sourceTree = "<group>"; };
 		AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerMessageDelegate.h; sourceTree = "<group>"; };
@@ -181,8 +190,6 @@
 		AC8E76AB188811C1001B7893 /* SMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLocation.m; sourceTree = "<group>"; };
 		AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeMatchClient.h; sourceTree = "<group>"; };
 		AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeMatchClient.m; sourceTree = "<group>"; };
-		AC8E76B1188811C1001B7893 /* SMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtilities.h; sourceTree = "<group>"; };
-		AC8E76B2188811C1001B7893 /* SMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUtilities.m; sourceTree = "<group>"; };
 		AC8E76F8188812A1001B7893 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC8E76FA188812A6001B7893 /* libAWDProtobufLocation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufLocation.dylib; path = usr/lib/libAWDProtobufLocation.dylib; sourceTree = SDKROOT; };
 		AC8E76FC188812AD001B7893 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -236,6 +243,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E9AF7B0189008A000FB719D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3E9AF7B918900BE000FB719D /* SMUtilities.h */,
+				3E9AF7BA18900BE000FB719D /* SMUtilities.m */,
+				3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */,
+				3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AC7D28DF188FD12D009CC433 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +341,7 @@
 		AC8E767D188811C1001B7893 /* SwipeMatch */ = {
 			isa = PBXGroup;
 			children = (
+				3E9AF7B0189008A000FB719D /* Helpers */,
 				AC7D28DF188FD12D009CC433 /* Protocols */,
 				AC8E767E188811C1001B7893 /* Const */,
 				AC8E7687188811C1001B7893 /* Handlers */,
@@ -335,8 +354,6 @@
 				AC8E76AB188811C1001B7893 /* SMLocation.m */,
 				AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */,
 				AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */,
-				AC8E76B1188811C1001B7893 /* SMUtilities.h */,
-				AC8E76B2188811C1001B7893 /* SMUtilities.m */,
 			);
 			path = SwipeMatch;
 			sourceTree = "<group>";
@@ -354,6 +371,8 @@
 				AC8E7686188811C1001B7893 /* SMResponsesConstants.m */,
 				3E2F0C7C188D730300F9C014 /* SMApiConstants.h */,
 				3E2F0C7D188D730300F9C014 /* SMApiConstants.m */,
+				3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */,
+				3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -493,7 +512,9 @@
 				ACB981881888414A005C0C9F /* SMJsonGeneralLabels.h in Headers */,
 				ACB981891888414A005C0C9F /* SMJsonInputLabels.h in Headers */,
 				ACB9818A1888414A005C0C9F /* SMResponsesConstants.h in Headers */,
+				3E9AF7BB18900BE000FB719D /* SMUtilities.h in Headers */,
 				ACB9818B1888414A005C0C9F /* SMServerMessagesHandler.h in Headers */,
+				3E9AF7B3189008F700FB719D /* SMSwipeTranslationHelper.h in Headers */,
 				ACB9818C1888414A005C0C9F /* SMDeliveryInput.h in Headers */,
 				ACB9818D1888414A005C0C9F /* SMDisconnectInput.h in Headers */,
 				ACB9818E1888414A005C0C9F /* SMLeaveGroupInput.h in Headers */,
@@ -511,7 +532,7 @@
 				ACB9818118884129005C0C9F /* SMLocation.h in Headers */,
 				AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */,
 				ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */,
-				ACB9818618884129005C0C9F /* SMUtilities.h in Headers */,
+				3E9AF7B7189009BC00FB719D /* SMSwipeConstants.h in Headers */,
 				ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */,
 				ACB9819F188842FE005C0C9F /* SBJson4Parser.h in Headers */,
 				ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */,
@@ -645,16 +666,18 @@
 			files = (
 				AC8E76E7188811C1001B7893 /* NSData+Base64.m in Sources */,
 				AC8E76C6188811C1001B7893 /* SMDisconnectInput.m in Sources */,
-				AC8E76F6188811C1001B7893 /* SMUtilities.m in Sources */,
+				3E9AF7B8189009BC00FB719D /* SMSwipeConstants.m in Sources */,
 				AC8E76CF188811C1001B7893 /* SMMatcheeDelivery.m in Sources */,
 				ACB9815B18883D4B005C0C9F /* SRWebSocket.m in Sources */,
 				AC8E76F3188811C1001B7893 /* SMSwipeMatchClient.m in Sources */,
 				AC8E76D8188811C1001B7893 /* SMDeliveryResponse.m in Sources */,
 				AC8E76B7188811C1001B7893 /* SMJsonGeneralLabels.m in Sources */,
+				3E9AF7BC18900BE000FB719D /* SMUtilities.m in Sources */,
 				AC8E76C9188811C1001B7893 /* SMLeaveGroupInput.m in Sources */,
 				AC8E76E4188811C1001B7893 /* SMMatchee.m in Sources */,
 				AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */,
 				ACB9815618883D4B005C0C9F /* base64.c in Sources */,
+				3E9AF7B4189008F700FB719D /* SMSwipeTranslationHelper.m in Sources */,
 				ACB9817918883DB6005C0C9F /* SBJson4StreamWriterState.m in Sources */,
 				AC8E76D2188811C1001B7893 /* SMMatcheeDeliveryMessage.m in Sources */,
 				3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */,
@@ -688,7 +711,6 @@
 			files = (
 				AC8E76E8188811C1001B7893 /* NSData+Base64.m in Sources */,
 				AC8E76C7188811C1001B7893 /* SMDisconnectInput.m in Sources */,
-				AC8E76F7188811C1001B7893 /* SMUtilities.m in Sources */,
 				AC8E76D0188811C1001B7893 /* SMMatcheeDelivery.m in Sources */,
 				AC8E76F4188811C1001B7893 /* SMSwipeMatchClient.m in Sources */,
 				AC8E76D9188811C1001B7893 /* SMDeliveryResponse.m in Sources */,
