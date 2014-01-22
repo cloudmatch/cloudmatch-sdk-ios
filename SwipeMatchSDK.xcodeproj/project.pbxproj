@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F0C7C188D730300F9C014 /* SMApiConstants.h */; };
 		3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F0C7D188D730300F9C014 /* SMApiConstants.m */; };
-		AC02259A188D553B00BF6AD2 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC7D28E4188FD12D009CC433 /* SMOnMatchEventInitiated.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */; };
+		AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */; };
+		AC7D28E6188FD12D009CC433 /* SMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */; };
+		AC7D28E7188FD12D009CC433 /* SMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */; };
 		AC8E765918881122001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765718881122001B7893 /* InfoPlist.strings */; };
 		AC8E765D18881122001B7893 /* SwipeMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E765C18881122001B7893 /* SwipeMatchSDK.m */; };
 		AC8E766518881123001B7893 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766418881123001B7893 /* XCTest.framework */; };
@@ -76,9 +79,6 @@
 		ACB9817F18884129005C0C9F /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A6188811C1001B7893 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818018884129005C0C9F /* SMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A8188811C1001B7893 /* SMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818118884129005C0C9F /* SMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AA188811C1001B7893 /* SMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB9818218884129005C0C9F /* SMOnMatchEventInitiated.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AC188811C1001B7893 /* SMOnMatchEventInitiated.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB9818318884129005C0C9F /* SMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AD188811C1001B7893 /* SMOnServerEventDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB9818418884129005C0C9F /* SMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AE188811C1001B7893 /* SMOnServerMessageDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9818618884129005C0C9F /* SMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76B1188811C1001B7893 /* SMUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981871888414A005C0C9F /* SMJsonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E767F188811C1001B7893 /* SMJsonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,7 +130,10 @@
 /* Begin PBXFileReference section */
 		3E2F0C7C188D730300F9C014 /* SMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMApiConstants.h; sourceTree = "<group>"; };
 		3E2F0C7D188D730300F9C014 /* SMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMApiConstants.m; sourceTree = "<group>"; };
-		AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
+		AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMatchEventInitiated.h; sourceTree = "<group>"; };
+		AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
+		AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerEventDelegate.h; sourceTree = "<group>"; };
+		AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerMessageDelegate.h; sourceTree = "<group>"; };
 		AC8E765218881122001B7893 /* SwipeMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8E765618881122001B7893 /* SwipeMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeMatchSDK-Info.plist"; sourceTree = "<group>"; };
 		AC8E765818881122001B7893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -182,9 +185,6 @@
 		AC8E76A9188811C1001B7893 /* SMInnerOuterChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMInnerOuterChecker.m; sourceTree = "<group>"; };
 		AC8E76AA188811C1001B7893 /* SMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLocation.h; sourceTree = "<group>"; };
 		AC8E76AB188811C1001B7893 /* SMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLocation.m; sourceTree = "<group>"; };
-		AC8E76AC188811C1001B7893 /* SMOnMatchEventInitiated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMatchEventInitiated.h; sourceTree = "<group>"; };
-		AC8E76AD188811C1001B7893 /* SMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerEventDelegate.h; sourceTree = "<group>"; };
-		AC8E76AE188811C1001B7893 /* SMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerMessageDelegate.h; sourceTree = "<group>"; };
 		AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeMatchClient.h; sourceTree = "<group>"; };
 		AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeMatchClient.m; sourceTree = "<group>"; };
 		AC8E76B1188811C1001B7893 /* SMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtilities.h; sourceTree = "<group>"; };
@@ -246,6 +246,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC7D28DF188FD12D009CC433 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */,
+				AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */,
+				AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */,
+				AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		AC8E764718881122001B7893 = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +334,7 @@
 		AC8E767D188811C1001B7893 /* SwipeMatch */ = {
 			isa = PBXGroup;
 			children = (
+				AC7D28DF188FD12D009CC433 /* Protocols */,
 				AC8E767E188811C1001B7893 /* Const */,
 				AC8E7687188811C1001B7893 /* Handlers */,
 				AC8E768A188811C1001B7893 /* Models */,
@@ -332,10 +344,6 @@
 				AC8E76A9188811C1001B7893 /* SMInnerOuterChecker.m */,
 				AC8E76AA188811C1001B7893 /* SMLocation.h */,
 				AC8E76AB188811C1001B7893 /* SMLocation.m */,
-				AC8E76AC188811C1001B7893 /* SMOnMatchEventInitiated.h */,
-				AC8E76AD188811C1001B7893 /* SMOnServerEventDelegate.h */,
-				AC8E76AE188811C1001B7893 /* SMOnServerMessageDelegate.h */,
-				AC022599188D553B00BF6AD2 /* SMOnMovementDelegate.h */,
 				AC8E76AF188811C1001B7893 /* SMSwipeMatchClient.h */,
 				AC8E76B0188811C1001B7893 /* SMSwipeMatchClient.m */,
 				AC8E76B1188811C1001B7893 /* SMUtilities.h */,
@@ -489,6 +497,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7D28E7188FD12D009CC433 /* SMOnServerMessageDelegate.h in Headers */,
 				AC8E77001888137D001B7893 /* SwipeMatchSDK.h in Headers */,
 				ACB981871888414A005C0C9F /* SMJsonConstants.h in Headers */,
 				3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */,
@@ -511,10 +520,8 @@
 				ACB9817F18884129005C0C9F /* NSData+Base64.h in Headers */,
 				ACB9818018884129005C0C9F /* SMInnerOuterChecker.h in Headers */,
 				ACB9818118884129005C0C9F /* SMLocation.h in Headers */,
-				ACB9818218884129005C0C9F /* SMOnMatchEventInitiated.h in Headers */,
-				AC02259A188D553B00BF6AD2 /* SMOnMovementDelegate.h in Headers */,
-				ACB9818318884129005C0C9F /* SMOnServerEventDelegate.h in Headers */,
-				ACB9818418884129005C0C9F /* SMOnServerMessageDelegate.h in Headers */,
+				AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */,
+				AC7D28E4188FD12D009CC433 /* SMOnMatchEventInitiated.h in Headers */,
 				ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */,
 				ACB9818618884129005C0C9F /* SMUtilities.h in Headers */,
 				ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */,
@@ -527,6 +534,7 @@
 				ACB981A5188842FE005C0C9F /* SBJson4Writer.h in Headers */,
 				ACB981A6188842FE005C0C9F /* base64.h in Headers */,
 				ACB981A7188842FE005C0C9F /* NSData+SRB64Additions.h in Headers */,
+				AC7D28E6188FD12D009CC433 /* SMOnServerEventDelegate.h in Headers */,
 				ACB981A8188842FE005C0C9F /* SRWebSocket.h in Headers */,
 				ACB981A9188842FE005C0C9F /* SSKeychain.h in Headers */,
 				ACB981AA188842FE005C0C9F /* SSKeychainQuery.h in Headers */,
