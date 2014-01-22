@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E2F0C7E188D730300F9C014 /* SMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F0C7C188D730300F9C014 /* SMApiConstants.h */; };
 		3E2F0C7F188D730300F9C014 /* SMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F0C7D188D730300F9C014 /* SMApiConstants.m */; };
-		AC7D28E4188FD12D009CC433 /* SMOnMatchEventInitiated.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */; };
 		AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */; };
 		AC7D28E6188FD12D009CC433 /* SMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */; };
 		AC7D28E7188FD12D009CC433 /* SMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */; };
@@ -126,7 +125,6 @@
 /* Begin PBXFileReference section */
 		3E2F0C7C188D730300F9C014 /* SMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMApiConstants.h; sourceTree = "<group>"; };
 		3E2F0C7D188D730300F9C014 /* SMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMApiConstants.m; sourceTree = "<group>"; };
-		AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMatchEventInitiated.h; sourceTree = "<group>"; };
 		AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerEventDelegate.h; sourceTree = "<group>"; };
 		AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnServerMessageDelegate.h; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		AC7D28DF188FD12D009CC433 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AC7D28E0188FD12D009CC433 /* SMOnMatchEventInitiated.h */,
 				AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */,
 				AC7D28E2188FD12D009CC433 /* SMOnServerEventDelegate.h */,
 				AC7D28E3188FD12D009CC433 /* SMOnServerMessageDelegate.h */,
@@ -513,7 +510,6 @@
 				ACB9818018884129005C0C9F /* SMInnerOuterChecker.h in Headers */,
 				ACB9818118884129005C0C9F /* SMLocation.h in Headers */,
 				AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */,
-				AC7D28E4188FD12D009CC433 /* SMOnMatchEventInitiated.h in Headers */,
 				ACB9818518884129005C0C9F /* SMSwipeMatchClient.h in Headers */,
 				ACB9818618884129005C0C9F /* SMUtilities.h in Headers */,
 				ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */,

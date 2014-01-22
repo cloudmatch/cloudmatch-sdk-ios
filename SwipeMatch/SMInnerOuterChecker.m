@@ -60,7 +60,7 @@ NSInteger const kInterval = 20;
     else {
         NSString *start = [SMInnerOuterChecker convertViewAreaToString:first];
         NSString *end = [SMInnerOuterChecker convertViewAreaToString:second];
-        [self.movementDelegate onMovementFromAreaStart:start toAreaEnd:end movement:movement swipe:[SMInnerOuterChecker decodeSwipe:movement]];
+        [self.movementDelegate onMovementFromAreaStart:start toAreaEnd:end movement:[SMInnerOuterChecker decodeMovement:movement] swipe:[SMInnerOuterChecker decodeSwipe:movement]];
     }
     //Check if valid touch END
     

@@ -23,7 +23,6 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 //Delegates
 @property (weak) id<SMOnServerMessageDelegate> onServerMessageDelegate;
 @property (weak) id<SMOnServerEventDelegate> onServerEventDelegate;
-@property (weak) id<SMOnMovementDelegate> onMovementDelegate;
 
 //Gesture recognizer
 @property (nonatomic, strong) SMInnerOuterChecker *innerOuterChecker;
@@ -80,12 +79,12 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     //TODO: based on criteria, use a different GestureRecognizer
     _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:self action:@selector(move:)];
     _innerOuterChecker.delegate = self;
-    _innerOuterChecker.movementDelegate = self;
+    _innerOuterChecker.movementDelegate = delegate;
     [view addGestureRecognizer:_innerOuterChecker];
     NSLog(@"%@ %@ panrecognizer view: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _innerOuterChecker.view);
     _attachedView = view;
     
-    self.onMovementDelegate = delegate;
+//    self.onMovementDelegate = delegate;
 }
 
 - (void)detachFromView:(UIView*)view
@@ -101,12 +100,6 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 {
     //Please keep this method for the time being, although movement detection is performed by InnerOuterChecker
 //    CGPoint locationInWindow = [_attachedView convertPoint:[_panRecognizer locationInView:_attachedView] toView:[[[UIApplication sharedApplication] delegate] window]];
-}
-
-- (void)onMovementFromAreaStart:(NSString *)areaStart toAreaEnd:(NSString *)areaEnd movement:(NSString*)movement swipe:(NSInteger)swipe
-{
-    NSLog(@"%@ %@ got movement from area start %@ to end %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), areaStart, areaEnd);
-    [self.onMovementDelegate detectedMovementFromAreaStart:areaStart toAreaEnd:areaEnd];
 }
 
 #pragma mark - SRWebSocketDelegate
@@ -275,8 +268,5 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
     //maybe use this to disable when client is transmitting?
     return YES;
 }
-
-
-
 
 @end

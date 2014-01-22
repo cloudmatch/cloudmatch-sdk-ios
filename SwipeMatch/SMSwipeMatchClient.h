@@ -36,15 +36,13 @@
 //Handler
 #import "SMServerMessagesHandler.h"
 
-//Delegates Protocols
-#import "SMOnMatchEventInitiated.h"
+//Protocols
 #import "SMOnServerEventDelegate.h"
 #import "SMOnServerMessageDelegate.h"
-#import "SMOnMovementDelegate.h"
 
 extern NSInteger const kSMMaxDeliveryChunkSize;
 
-@interface SMSwipeMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate, SMInnerOuterCheckerDelegate>
+@interface SMSwipeMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate>
 
 //Some properties for the client
 @property (nonatomic, assign) BOOL SMClientShouldStopUpdatingLocationOnDealloc;
