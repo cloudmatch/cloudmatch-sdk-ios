@@ -111,10 +111,6 @@
 		ACB981A8188842FE005C0C9F /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815418883D4B005C0C9F /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981A9188842FE005C0C9F /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9814718883CF5005C0C9F /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981AA188842FE005C0C9F /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9814918883CF5005C0C9F /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC09055188D7C6F0059A6E6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC09054188D7C6F0059A6E6 /* libicucore.dylib */; };
-		ACC09057188D7C750059A6E6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC09056188D7C750059A6E6 /* CFNetwork.framework */; };
-		ACC09058188D7C7B0059A6E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E77381888189C001B7893 /* Security.framework */; };
-		ACC09059188D7C7F0059A6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E76FE188812D1001B7893 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,10 +224,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC09059188D7C7F0059A6E6 /* Foundation.framework in Frameworks */,
-				ACC09058188D7C7B0059A6E6 /* Security.framework in Frameworks */,
-				ACC09057188D7C750059A6E6 /* CFNetwork.framework in Frameworks */,
-				ACC09055188D7C6F0059A6E6 /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +831,7 @@
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
@@ -862,7 +854,7 @@
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
