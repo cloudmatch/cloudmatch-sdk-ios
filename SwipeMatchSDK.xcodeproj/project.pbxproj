@@ -12,7 +12,6 @@
 		3E9AF7B3189008F700FB719D /* SMSwipeTranslationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */; };
 		3E9AF7B4189008F700FB719D /* SMSwipeTranslationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */; };
 		3E9AF7B7189009BC00FB719D /* SMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */; };
-		3E9AF7B8189009BC00FB719D /* SMSwipeConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */; };
 		3E9AF7BB18900BE000FB719D /* SMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B918900BE000FB719D /* SMUtilities.h */; };
 		3E9AF7BC18900BE000FB719D /* SMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BA18900BE000FB719D /* SMUtilities.m */; };
 		AC7D28E5188FD12D009CC433 /* SMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */; };
@@ -131,7 +130,6 @@
 		3E9AF7B1189008F700FB719D /* SMSwipeTranslationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeTranslationHelper.h; sourceTree = "<group>"; };
 		3E9AF7B2189008F700FB719D /* SMSwipeTranslationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeTranslationHelper.m; sourceTree = "<group>"; };
 		3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSwipeConstants.h; sourceTree = "<group>"; };
-		3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSwipeConstants.m; sourceTree = "<group>"; };
 		3E9AF7B918900BE000FB719D /* SMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMUtilities.h; sourceTree = "<group>"; };
 		3E9AF7BA18900BE000FB719D /* SMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMUtilities.m; sourceTree = "<group>"; };
 		AC7D28E1188FD12D009CC433 /* SMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOnMovementDelegate.h; sourceTree = "<group>"; };
@@ -372,7 +370,6 @@
 				3E2F0C7C188D730300F9C014 /* SMApiConstants.h */,
 				3E2F0C7D188D730300F9C014 /* SMApiConstants.m */,
 				3E9AF7B5189009BC00FB719D /* SMSwipeConstants.h */,
-				3E9AF7B6189009BC00FB719D /* SMSwipeConstants.m */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -666,7 +663,6 @@
 			files = (
 				AC8E76E7188811C1001B7893 /* NSData+Base64.m in Sources */,
 				AC8E76C6188811C1001B7893 /* SMDisconnectInput.m in Sources */,
-				3E9AF7B8189009BC00FB719D /* SMSwipeConstants.m in Sources */,
 				AC8E76CF188811C1001B7893 /* SMMatcheeDelivery.m in Sources */,
 				ACB9815B18883D4B005C0C9F /* SRWebSocket.m in Sources */,
 				AC8E76F3188811C1001B7893 /* SMSwipeMatchClient.m in Sources */,
