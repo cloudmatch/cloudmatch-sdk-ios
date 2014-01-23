@@ -52,10 +52,11 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    
     CGPoint touchPoint = [touch locationInView:self.view];
     
+#if DEBUG
     NSLog(@"[IOC] touches began at point: %@", NSStringFromCGPoint(touchPoint));
+#endif
     
     [self touchStarted:touchPoint inView:self.view];
     
@@ -66,24 +67,29 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *mytouch=[touches anyObject];
-    CGPoint np = [mytouch locationInView:self.view
-                  ];
-    NSLog(@"[IOC] touches ended at point: %@", NSStringFromCGPoint(np));
-    
+    CGPoint np = [mytouch locationInView:self.view];
     NSString *movementStr = [self touchEnded:np inView:self.view];
     
+#if DEBUG
+    NSLog(@"[IOC] touches ended at point: %@", NSStringFromCGPoint(np));
     NSLog(@"[IOC]Movement: %@", movementStr);
+#endif
+
     //Check if valid touch START
     int first = [[movementStr substringToIndex:1] intValue];
     int second = [[movementStr substringFromIndex:1] intValue];
     
     if (first == second) {
+#if DEBUG
         NSLog(@"[IOC]bad, same two areas");
+#endif
     }
     
     else if (first == kViewAreaInvalid ||
              second == kViewAreaInvalid) {
+#if DEBUG
         NSLog(@"[IOC]bad, at least one invalid area detected");
+#endif
     }
     else {
         // if the swipe is valid (after request to the delegate, implemented by SDK client)
@@ -115,7 +121,6 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //    NSLog(@"[IOC] touches moved");
     
     //If the gesture recognizer is interpreting a continuous gesture, it should set its state to UIGestureRecognizerStateChanged upon receiving this message. If at any point in its handling of the touch objects the gesture recognizer determines that the multi-touch event sequence is not its gesture, it should set it state to UIGestureRecognizerStateCancelled .
     
@@ -124,7 +129,9 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+#if DEBUG
     NSLog(@"[IOC] touches canceled");
+#endif
     
     //Upon receiving this message, the gesture recognizer for a continuous gesture should set its state to UIGestureRecognizerStateCancelled; a gesture recognizer for a discrete gesture should set its state to UIGestureRecognizerStateFailed.
     self.state = UIGestureRecognizerStateCancelled;
@@ -134,14 +141,18 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 -(ViewArea)touchStarted:(CGPoint)initialPoint inView:(UIView*)view
 {
+#if DEBUG
     NSLog(@"[IOC]touch started");
+#endif
     initialAreaTouched = [self getBelongingArea:initialPoint forView:view];
     return initialAreaTouched;
 }
 
 -(NSString*)touchEnded:(CGPoint)finalPoint inView:(UIView*)view
 {
+#if DEBUG
     NSLog(@"[IOC]touch ended");
+#endif
     finalAreaTouched = [self getBelongingArea:finalPoint forView:view];
     NSString *areas = [NSString stringWithFormat:@"%d%d", initialAreaTouched, finalAreaTouched];
     return areas;
