@@ -27,7 +27,6 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 //Gesture recognizer
 @property (nonatomic, strong) SMInnerOuterChecker *innerOuterChecker;
-@property (nonatomic, weak) UIView *attachedView;
 
 //Transfer
 @property (nonatomic, strong) NSMutableArray *sendQueue;
@@ -95,20 +94,19 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria
 {
     _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:self action:@selector(move:) criteria:criteria];
+    //This is the PanGestureRecognizer's delegate
     _innerOuterChecker.delegate = self;
+    //This is our custom movementDelegate
     _innerOuterChecker.movementDelegate = delegate;
+    _innerOuterChecker.attachedView = view;
     [view addGestureRecognizer:_innerOuterChecker];
     NSLog(@"%@ %@ panrecognizer view: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _innerOuterChecker.view);
-    _attachedView = view;
-    
-//    self.onMovementDelegate = delegate;
 }
 
 - (void)detachFromView:(UIView*)view
 {
     _innerOuterChecker.delegate = nil;
     _innerOuterChecker = nil;
-    _attachedView = nil;
     self.onServerEventDelegate = nil;
     [self closeConnection];
 }

@@ -25,6 +25,8 @@
 //@property(nonatomic, weak) id<SMInnerOuterCheckerDelegate> movementDelegate;
 @property(nonatomic, weak) id<SMOnMovementDelegate> movementDelegate;
 
+@property (nonatomic, weak) UIView *attachedView;
+
 //Init method with criteria
 - (id)initWithTarget:(id)target action:(SEL)action criteria:(NSString*)criteria;
 

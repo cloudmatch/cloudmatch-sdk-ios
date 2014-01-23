@@ -53,7 +53,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 {
     UITouch *touch = [touches anyObject];
     
-    CGPoint touchPoint = [touch locationInView:touch.view];
+    CGPoint touchPoint = [touch locationInView:self.view];
     
     NSLog(@"[IOC] touches began at point: %@", NSStringFromCGPoint(touchPoint));
     
@@ -66,7 +66,8 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *mytouch=[touches anyObject];
-    CGPoint np = [mytouch locationInView:mytouch.view];
+    CGPoint np = [mytouch locationInView:self.view
+                  ];
     NSLog(@"[IOC] touches ended at point: %@", NSStringFromCGPoint(np));
     
     NSString *movementStr = [self touchEnded:np inView:self.view];
