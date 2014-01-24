@@ -51,6 +51,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesBegan:touches withEvent:event];
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self.view];
     
@@ -66,6 +67,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesEnded:touches withEvent:event];
     UITouch *mytouch=[touches anyObject];
     CGPoint np = [mytouch locationInView:self.view];
     NSString *movementStr = [self touchEnded:np inView:self.view];
@@ -121,7 +123,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
+    [super touchesMoved:touches withEvent:event];
     //If the gesture recognizer is interpreting a continuous gesture, it should set its state to UIGestureRecognizerStateChanged upon receiving this message. If at any point in its handling of the touch objects the gesture recognizer determines that the multi-touch event sequence is not its gesture, it should set it state to UIGestureRecognizerStateCancelled .
     
     self.state = UIGestureRecognizerStateChanged;
@@ -129,6 +131,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesCancelled:touches withEvent:event];
 #if DEBUG
     NSLog(@"[IOC] touches canceled");
 #endif

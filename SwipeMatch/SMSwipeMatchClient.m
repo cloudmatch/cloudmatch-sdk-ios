@@ -93,7 +93,15 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria
 {
-    _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:self action:@selector(move:) criteria:criteria];
+    //TODO: suppress warning
+    if ([view respondsToSelector:@selector(panAction:)]) {
+        _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:view action:@selector(panAction:) criteria:criteria];
+    }
+    else
+    {
+        _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:nil action:nil criteria:criteria];
+
+    }
     //This is the PanGestureRecognizer's delegate
     _innerOuterChecker.delegate = self;
     //This is our custom movementDelegate
@@ -113,6 +121,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)move:(id)sender
 {
+//    NSLog(@"move: %@", NSStringFromCGPoint([_innerOuterChecker locationInView:_innerOuterChecker.attachedView]) );
     //Please keep this method for the time being, although movement detection is performed by InnerOuterChecker
 //    CGPoint locationInWindow = [_attachedView convertPoint:[_panRecognizer locationInView:_attachedView] toView:[[[UIApplication sharedApplication] delegate] window]];
 }
