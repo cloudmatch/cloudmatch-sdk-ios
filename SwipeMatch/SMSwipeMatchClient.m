@@ -93,7 +93,9 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria
 {
-    //TODO: suppress warning
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     if ([view respondsToSelector:@selector(panAction:)]) {
         _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:view action:@selector(panAction:) criteria:criteria];
     }
@@ -102,6 +104,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
         _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:nil action:nil criteria:criteria];
 
     }
+#pragma clang diagnostic pop
     //This is the PanGestureRecognizer's delegate
     _innerOuterChecker.delegate = self;
     //This is our custom movementDelegate

@@ -215,4 +215,15 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
     return [SMInnerOuterChecker isAnOuterArea:pointArea];
 }
 
+#pragma mark - UIPanGestureRecognizer subclass
+
+- (void)reset
+{
+    [super reset];
+    
+    initialAreaTouched = 0;
+    finalAreaTouched = 0;
+}
+
+
 @end
