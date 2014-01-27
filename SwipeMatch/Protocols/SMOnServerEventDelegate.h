@@ -24,7 +24,6 @@
 - (void)onDisconnectResponse:(SMDisconnectResponse*)response;
 - (void)onDeliveryResponse:(SMDeliveryResponse*)response;
 - (void)onMatcheeLeftMessage:(SMMatcheeLeftMessage*)message;
-//- (void)onMatcheeDeliveryMessage:(SMMatcheeDeliveryMessage*)message;
 - (void)onMatcheeDelivery:(SMMatcheeDelivery*)delivery;
 - (void)onMatcheeDeliveryProgress:(NSInteger)progress;
 - (void)onConnectionOpen;
