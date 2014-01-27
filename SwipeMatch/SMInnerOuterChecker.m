@@ -54,6 +54,10 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
     [super touchesBegan:touches withEvent:event];
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self.view];
+    NSUInteger numTaps = [touch tapCount];
+    if (numTaps >=2) {
+        [self ignoreTouch:touch forEvent:event];
+    }
     
 #if DEBUG
     NSLog(@"[IOC] touches began at point: %@", NSStringFromCGPoint(touchPoint));
@@ -110,6 +114,8 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
             
             // send match request
             [[[SMSwipeMatchClient sharedInstance] getMatcher] matchUsingCriteria:_mCriteria equalityParam:eqParam areaStart:start areaEnd:end];
+            
+            //TODO: Should inform that it's going to match
         }
         
     }
