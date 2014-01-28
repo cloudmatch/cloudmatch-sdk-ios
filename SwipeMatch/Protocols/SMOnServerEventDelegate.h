@@ -25,7 +25,7 @@
 - (void)onDeliveryResponse:(SMDeliveryResponse*)response;
 - (void)onMatcheeLeftMessage:(SMMatcheeLeftMessage*)message;
 - (void)onMatcheeDelivery:(SMMatcheeDelivery*)delivery;
-- (void)onMatcheeDeliveryProgress:(NSInteger)progress;
+- (void)onMatcheeDeliveryProgress:(NSInteger)progress forDeliveryId:(NSString*)deliveryId;
 - (void)onConnectionOpen;
 - (void)onConnectionClosedWithWSReason:(NSString*)WSreason;
 - (void)onConnectionError:(NSError*)error;

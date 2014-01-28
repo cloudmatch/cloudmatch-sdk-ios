@@ -236,6 +236,8 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
             }
             else{
                 [_webSocket send:dataToSend];
+                NSInteger progress =(NSInteger)(((idx+1) * 100)/[chunks count]);
+                [_onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
             }
 
         }

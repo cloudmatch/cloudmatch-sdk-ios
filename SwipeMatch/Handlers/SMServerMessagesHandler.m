@@ -96,7 +96,7 @@
                     
                     [receivedChunks insertObject:deliveryMessage.mPayload atIndex:deliveryMessage.mChunkNr];
                     if ([receivedChunks count] == deliveryMessage.mTotalChunks) {
-                        [_serverEventDelegate onMatcheeDeliveryProgress:100];
+                        [_serverEventDelegate onMatcheeDeliveryProgress:100 forDeliveryId:deliveryId];
                         
                         //1. remove object from dictionary
                         [_mPartialDeliveries removeObjectForKey:deliveryId];
@@ -115,7 +115,7 @@
                         
                         //2. deliver progress message to client
                         NSInteger progress = 100 * [receivedChunks count] / deliveryMessage.mTotalChunks;
-                        [_serverEventDelegate onMatcheeDeliveryProgress:progress];
+                        [_serverEventDelegate onMatcheeDeliveryProgress:progress forDeliveryId:deliveryId];
                     }
                 }
             }
