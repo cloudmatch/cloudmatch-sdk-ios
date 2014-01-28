@@ -17,12 +17,12 @@ extern NSString* const kLocationServicesGotBestAccuracyLocation;
 
 + (SMLocation*)sharedInstance;
 
-//Location Properties
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) CLLocation *currentLocation;
-
 //Location methods
 - (void) startLocationServices;
 - (void) stopLocationServices;
+
+- (double)getLatitude;
+- (double)getLongitude;
+- (BOOL)isLocationEnabled;
 
 @end

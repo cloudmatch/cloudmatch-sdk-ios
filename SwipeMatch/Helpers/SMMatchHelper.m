@@ -13,10 +13,12 @@
 
 - (void)matchUsingCriteria:(NSString *)criteria equalityParam:(NSString *)equalityParam areaStart:(NSString *)areaStart areaEnd:(NSString *)areaEnd
 {
-    // TODO: check for location services enabled
+    if ([[SMLocation sharedInstance] isLocationEnabled] != YES) {
+        @throw [NSException exceptionWithName:@"Location services disabled" reason:@"Location services disabled" userInfo:nil];
+    }
     
-    double latitude = [SMLocation sharedInstance].currentLocation.coordinate.latitude;
-    double longitude = [SMLocation sharedInstance].currentLocation.coordinate.longitude;
+    double latitude = [[SMLocation sharedInstance] getLatitude];
+    double longitude = [[SMLocation sharedInstance] getLongitude];
     
     SMMatchInput *matchInput = [[SMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
     
@@ -33,7 +35,7 @@
             [webSocket send:dataToSend];
         } else {
             NSLog(@"Socket not ready");
-            // TODO: deal with error states
+            // TODO: deal with error states or add to sendQueue in SMSwipeMatchClient
         }
     }
     

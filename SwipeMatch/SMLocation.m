@@ -13,6 +13,16 @@ NSString* const kLocationServicesFailure = @"kLocationServicesFailure";
 NSString* const kLocationServicesForbidden = @"kLocationServicesForbidden";
 NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGotBestAccuracyLocation";
 
+@interface SMLocation ()
+
+//Location Properties
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *currentLocation;
+@property (nonatomic, assign) BOOL locationServicesEnabled;
+
+@end
+
+
 @implementation SMLocation
 
 +(SMLocation *)sharedInstance {
@@ -20,8 +30,26 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
     static SMLocation *shared = nil;
     dispatch_once(&pred, ^{
         shared = [[SMLocation alloc] init];
+        shared.locationServicesEnabled = true;
     });
     return shared;
+}
+
+#pragma mark - Getters
+
+- (double)getLatitude
+{
+    return _currentLocation.coordinate.latitude;
+}
+
+- (double)getLongitude
+{
+    return _currentLocation.coordinate.longitude;
+}
+
+- (BOOL)isLocationEnabled
+{
+    return _locationServicesEnabled;
 }
 
 #pragma mark - Location Manager
@@ -50,8 +78,9 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
+    self.locationServicesEnabled = NO;
+    
     if ([error domain] == kCLErrorDomain) {
-        
         // We handle CoreLocation-related errors here
         switch ([error code]) {
                 // "Don't Allow" on two successive app launches is the same as saying "never allow". The user
@@ -79,17 +108,13 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
     CLLocation *currentLocation = [locations lastObject];
     NSDate* eventDate = currentLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-#if !TARGET_IPHONE_SIMULATOR
     if (abs(howRecent) < 15.0) {
         _currentLocation = currentLocation;
         [[NSNotificationCenter defaultCenter] postNotificationName:kLocationServicesGotBestAccuracyLocation object:nil];
-    }
-#else
-    if (abs(howRecent) < 15.0) {
-        _currentLocation = currentLocation;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kLocationServicesGotBestAccuracyLocation object:nil];
-    }
+#if DEBUG
+        NSLog(@"Location: %f %f", [self getLatitude], [self getLongitude] );
 #endif
+    }
 }
 
 @end
