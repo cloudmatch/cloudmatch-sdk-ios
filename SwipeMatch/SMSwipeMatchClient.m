@@ -22,8 +22,8 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 @property (nonatomic, strong) SRWebSocket *webSocket;
 
 //Delegates
-@property (weak) id<SMOnServerMessageDelegate> onServerMessageDelegate;
-@property (weak) id<SMOnServerEventDelegate> onServerEventDelegate;
+@property (strong) id<SMOnServerMessageDelegate> onServerMessageDelegate;
+@property (strong) id<SMOnServerEventDelegate> onServerEventDelegate;
 
 //Gesture recognizer
 @property (nonatomic, strong) SMInnerOuterChecker *innerOuterChecker;
@@ -71,6 +71,7 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 {
     _serverMessagesHandler = [[SMServerMessagesHandler alloc] initWithServerEventDelegate:serverEventDelegate];
     self.onServerMessageDelegate = _serverMessagesHandler;
+    self.onServerEventDelegate = serverEventDelegate;
     
     _appId = appId;
     _apiKey = apiKey;
@@ -236,8 +237,9 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
             }
             else{
                 [_webSocket send:dataToSend];
-                NSInteger progress =(NSInteger)(((idx+1) * 100)/[chunks count]);
-                [_onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
+                //TODO: check that progress update is sent
+                NSInteger progress = (NSInteger)(((idx+1) * 100)/[chunks count]);
+                [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
             }
 
         }
