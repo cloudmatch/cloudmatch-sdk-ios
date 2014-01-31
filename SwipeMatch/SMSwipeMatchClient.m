@@ -22,8 +22,8 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 @property (nonatomic, strong) SRWebSocket *webSocket;
 
 //Delegates
-@property (strong) id<SMOnServerMessageDelegate> onServerMessageDelegate;
-@property (strong) id<SMOnServerEventDelegate> onServerEventDelegate;
+@property (nonatomic, weak) id<SMOnServerMessageDelegate> onServerMessageDelegate;
+@property (nonatomic, weak) id<SMOnServerEventDelegate> onServerEventDelegate;
 
 //Gesture recognizer
 @property (nonatomic, strong) SMInnerOuterChecker *innerOuterChecker;

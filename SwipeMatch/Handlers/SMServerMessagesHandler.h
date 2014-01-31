@@ -17,7 +17,7 @@
 
 - (id)initWithServerEventDelegate:(id<SMOnServerEventDelegate>)delegate;
 
-@property (nonatomic, strong) id<SMOnServerEventDelegate> serverEventDelegate;
+@property (nonatomic, weak) id<SMOnServerEventDelegate> serverEventDelegate;
 @property (nonatomic, strong) NSMutableDictionary *mPartialDeliveries;
 
 @end
