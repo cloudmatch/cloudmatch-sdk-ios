@@ -29,6 +29,7 @@
 
 //Init method with criteria
 - (id)initWithTarget:(id)target action:(SEL)action criteria:(NSString*)criteria;
+- (id)initWithCriteria:(NSString*)criteria;
 
 // "public" stuff
 - (BOOL)touchStartedInOuterArea:(CGPoint)initialPoint forView:(UIView*)view;

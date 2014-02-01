@@ -47,6 +47,15 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
     return self;
 }
 
+- (id)initWithCriteria:(NSString*)criteria
+{
+    self = [super initWithTarget:nil action:nil];
+    if (self) {
+        self.mCriteria = criteria;
+    }
+    return self;
+}
+
 #pragma mark - Touches delegate
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -230,6 +239,5 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
     initialAreaTouched = 0;
     finalAreaTouched = 0;
 }
-
 
 @end

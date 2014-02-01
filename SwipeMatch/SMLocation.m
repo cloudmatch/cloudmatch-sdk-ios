@@ -111,9 +111,6 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
     if (abs(howRecent) < 15.0) {
         _currentLocation = currentLocation;
         [[NSNotificationCenter defaultCenter] postNotificationName:kLocationServicesGotBestAccuracyLocation object:nil];
-#if DEBUG
-        NSLog(@"Location: %f %f", [self getLatitude], [self getLongitude] );
-#endif
     }
 }
 

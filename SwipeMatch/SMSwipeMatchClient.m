@@ -94,23 +94,20 @@ NSInteger const kSMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<SMOnMovementDelegate>)delegate criteria:(NSString*)criteria
 {
-    
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    if ([view respondsToSelector:@selector(panAction:)]) {
-        _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:view action:@selector(panAction:) criteria:criteria];
-    }
-    else
-    {
-        _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithTarget:nil action:nil criteria:criteria];
+    //Initialize the innerOuterChecker (a subclass of PanGestureRecognizer)
+    _innerOuterChecker = [[SMInnerOuterChecker alloc] initWithCriteria:criteria];
 
-    }
-#pragma clang diagnostic pop
     //This is the PanGestureRecognizer's delegate
     _innerOuterChecker.delegate = self;
-    //This is our custom movementDelegate
+    //This is SwipeMatch onMovementDelegate
     _innerOuterChecker.movementDelegate = delegate;
+    //This is the view that the PanGestureRecognizer is attached to
     _innerOuterChecker.attachedView = view;
+    //Does not cancel touches in the view attached to PanGestureRecognizer so that touch events are forwarded immediately
+    _innerOuterChecker.cancelsTouchesInView = NO;
+    //Does not delay touches
+    _innerOuterChecker.delaysTouchesBegan = NO;
+    _innerOuterChecker.delaysTouchesEnded = NO;
     [view addGestureRecognizer:_innerOuterChecker];
     NSLog(@"%@ %@ panrecognizer view: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _innerOuterChecker.view);
 }
