@@ -1,0 +1,972 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E2F0C7E188D730300F9C014 /* GMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F0C7C188D730300F9C014 /* GMApiConstants.h */; };
+		3E2F0C7F188D730300F9C014 /* GMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F0C7D188D730300F9C014 /* GMApiConstants.m */; };
+		3E9AF7B3189008F700FB719D /* GMSwipeTranslationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B1189008F700FB719D /* GMSwipeTranslationHelper.h */; };
+		3E9AF7B4189008F700FB719D /* GMSwipeTranslationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7B2189008F700FB719D /* GMSwipeTranslationHelper.m */; };
+		3E9AF7B7189009BC00FB719D /* GMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B5189009BC00FB719D /* GMSwipeConstants.h */; };
+		3E9AF7BB18900BE000FB719D /* GMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7B918900BE000FB719D /* GMUtilities.h */; };
+		3E9AF7BC18900BE000FB719D /* GMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BA18900BE000FB719D /* GMUtilities.m */; };
+		3E9AF7BF18901AB300FB719D /* GMMatchHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7BD18901AB300FB719D /* GMMatchHelper.h */; };
+		3E9AF7C018901AB300FB719D /* GMMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BE18901AB300FB719D /* GMMatchHelper.m */; };
+		AC7D28E5188FD12D009CC433 /* GMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* GMOnMovementDelegate.h */; };
+		AC7D28E6188FD12D009CC433 /* GMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* GMOnServerEventDelegate.h */; };
+		AC7D28E7188FD12D009CC433 /* GMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* GMOnServerMessageDelegate.h */; };
+		AC8E765918881122001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765718881122001B7893 /* InfoPlist.strings */; };
+		AC8E765D18881122001B7893 /* GestureMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E765C18881122001B7893 /* GestureMatchSDK.m */; };
+		AC8E766518881123001B7893 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8E766418881123001B7893 /* XCTest.framework */; };
+		AC8E766C18881123001B7893 /* GestureMatchSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = AC8E765218881122001B7893 /* GestureMatchSDK.framework */; };
+		AC8E767218881123001B7893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC8E767018881123001B7893 /* InfoPlist.strings */; };
+		AC8E767418881123001B7893 /* GestureMatchSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E767318881123001B7893 /* GestureMatchSDKTests.m */; };
+		AC8E76B4188811C1001B7893 /* GMJsonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7680188811C1001B7893 /* GMJsonConstants.m */; };
+		AC8E76B5188811C1001B7893 /* GMJsonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7680188811C1001B7893 /* GMJsonConstants.m */; };
+		AC8E76B7188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7682188811C1001B7893 /* GMJsonGeneralLabels.m */; };
+		AC8E76B8188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7682188811C1001B7893 /* GMJsonGeneralLabels.m */; };
+		AC8E76BA188811C1001B7893 /* GMJsonInputLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7684188811C1001B7893 /* GMJsonInputLabels.m */; };
+		AC8E76BB188811C1001B7893 /* GMJsonInputLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7684188811C1001B7893 /* GMJsonInputLabels.m */; };
+		AC8E76BD188811C1001B7893 /* GMResponsesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7686188811C1001B7893 /* GMResponsesConstants.m */; };
+		AC8E76BE188811C1001B7893 /* GMResponsesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7686188811C1001B7893 /* GMResponsesConstants.m */; };
+		AC8E76C0188811C1001B7893 /* GMServerMessagesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7689188811C1001B7893 /* GMServerMessagesHandler.m */; };
+		AC8E76C1188811C1001B7893 /* GMServerMessagesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7689188811C1001B7893 /* GMServerMessagesHandler.m */; };
+		AC8E76C3188811C1001B7893 /* GMDeliveryInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E768D188811C1001B7893 /* GMDeliveryInput.m */; };
+		AC8E76C4188811C1001B7893 /* GMDeliveryInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E768D188811C1001B7893 /* GMDeliveryInput.m */; };
+		AC8E76C6188811C1001B7893 /* GMDisconnectInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E768F188811C1001B7893 /* GMDisconnectInput.m */; };
+		AC8E76C7188811C1001B7893 /* GMDisconnectInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E768F188811C1001B7893 /* GMDisconnectInput.m */; };
+		AC8E76C9188811C1001B7893 /* GMLeaveGroupInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7691188811C1001B7893 /* GMLeaveGroupInput.m */; };
+		AC8E76CA188811C1001B7893 /* GMLeaveGroupInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7691188811C1001B7893 /* GMLeaveGroupInput.m */; };
+		AC8E76CC188811C1001B7893 /* GMMatchInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7693188811C1001B7893 /* GMMatchInput.m */; };
+		AC8E76CD188811C1001B7893 /* GMMatchInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7693188811C1001B7893 /* GMMatchInput.m */; };
+		AC8E76CF188811C1001B7893 /* GMMatcheeDelivery.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7696188811C1001B7893 /* GMMatcheeDelivery.m */; };
+		AC8E76D0188811C1001B7893 /* GMMatcheeDelivery.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7696188811C1001B7893 /* GMMatcheeDelivery.m */; };
+		AC8E76D2188811C1001B7893 /* GMMatcheeDeliveryMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7698188811C1001B7893 /* GMMatcheeDeliveryMessage.m */; };
+		AC8E76D3188811C1001B7893 /* GMMatcheeDeliveryMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E7698188811C1001B7893 /* GMMatcheeDeliveryMessage.m */; };
+		AC8E76D5188811C1001B7893 /* GMMatcheeLeftMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769A188811C1001B7893 /* GMMatcheeLeftMessage.m */; };
+		AC8E76D6188811C1001B7893 /* GMMatcheeLeftMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769A188811C1001B7893 /* GMMatcheeLeftMessage.m */; };
+		AC8E76D8188811C1001B7893 /* GMDeliveryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769D188811C1001B7893 /* GMDeliveryResponse.m */; };
+		AC8E76D9188811C1001B7893 /* GMDeliveryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769D188811C1001B7893 /* GMDeliveryResponse.m */; };
+		AC8E76DB188811C1001B7893 /* GMDisconnectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769F188811C1001B7893 /* GMDisconnectResponse.m */; };
+		AC8E76DC188811C1001B7893 /* GMDisconnectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E769F188811C1001B7893 /* GMDisconnectResponse.m */; };
+		AC8E76DE188811C1001B7893 /* GMLeaveGroupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */; };
+		AC8E76DF188811C1001B7893 /* GMLeaveGroupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */; };
+		AC8E76E1188811C1001B7893 /* GMMatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A3188811C1001B7893 /* GMMatchResponse.m */; };
+		AC8E76E2188811C1001B7893 /* GMMatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A3188811C1001B7893 /* GMMatchResponse.m */; };
+		AC8E76E4188811C1001B7893 /* GMMatchee.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A5188811C1001B7893 /* GMMatchee.m */; };
+		AC8E76E5188811C1001B7893 /* GMMatchee.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A5188811C1001B7893 /* GMMatchee.m */; };
+		AC8E76E7188811C1001B7893 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A7188811C1001B7893 /* NSData+Base64.m */; };
+		AC8E76E8188811C1001B7893 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A7188811C1001B7893 /* NSData+Base64.m */; };
+		AC8E76EA188811C1001B7893 /* GMInnerOuterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A9188811C1001B7893 /* GMInnerOuterChecker.m */; };
+		AC8E76EB188811C1001B7893 /* GMInnerOuterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A9188811C1001B7893 /* GMInnerOuterChecker.m */; };
+		AC8E76ED188811C1001B7893 /* GMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76AB188811C1001B7893 /* GMLocation.m */; };
+		AC8E76EE188811C1001B7893 /* GMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76AB188811C1001B7893 /* GMLocation.m */; };
+		AC8E76F3188811C1001B7893 /* GMGestureMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B0188811C1001B7893 /* GMGestureMatchClient.m */; };
+		AC8E76F4188811C1001B7893 /* GMGestureMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76B0188811C1001B7893 /* GMGestureMatchClient.m */; };
+		AC8E77001888137D001B7893 /* GestureMatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E765B18881122001B7893 /* GestureMatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9814C18883CF5005C0C9F /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9814818883CF5005C0C9F /* SSKeychain.m */; };
+		ACB9814E18883CF5005C0C9F /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9814A18883CF5005C0C9F /* SSKeychainQuery.m */; };
+		ACB9815618883D4B005C0C9F /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB9815018883D4B005C0C9F /* base64.c */; };
+		ACB9815918883D4B005C0C9F /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9815318883D4B005C0C9F /* NSData+SRB64Additions.m */; };
+		ACB9815B18883D4B005C0C9F /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9815518883D4B005C0C9F /* SRWebSocket.m */; };
+		ACB9816F18883DB6005C0C9F /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816018883DB6005C0C9F /* SBJson4Parser.m */; };
+		ACB9817118883DB6005C0C9F /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816218883DB6005C0C9F /* SBJson4StreamParser.m */; };
+		ACB9817318883DB6005C0C9F /* SBJson4StreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816418883DB6005C0C9F /* SBJson4StreamParserState.m */; };
+		ACB9817518883DB6005C0C9F /* SBJson4StreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816618883DB6005C0C9F /* SBJson4StreamTokeniser.m */; };
+		ACB9817718883DB6005C0C9F /* SBJson4StreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816818883DB6005C0C9F /* SBJson4StreamWriter.m */; };
+		ACB9817918883DB6005C0C9F /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816A18883DB6005C0C9F /* SBJson4StreamWriterState.m */; };
+		ACB9817B18883DB6005C0C9F /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB9816C18883DB6005C0C9F /* SBJson4Writer.m */; };
+		ACB9817F18884129005C0C9F /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A6188811C1001B7893 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818018884129005C0C9F /* GMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A8188811C1001B7893 /* GMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818118884129005C0C9F /* GMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AA188811C1001B7893 /* GMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818518884129005C0C9F /* GMGestureMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76AF188811C1001B7893 /* GMGestureMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981871888414A005C0C9F /* GMJsonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E767F188811C1001B7893 /* GMJsonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981881888414A005C0C9F /* GMJsonGeneralLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7681188811C1001B7893 /* GMJsonGeneralLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981891888414A005C0C9F /* GMJsonInputLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7683188811C1001B7893 /* GMJsonInputLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818A1888414A005C0C9F /* GMResponsesConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7685188811C1001B7893 /* GMResponsesConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818B1888414A005C0C9F /* GMServerMessagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7688188811C1001B7893 /* GMServerMessagesHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818C1888414A005C0C9F /* GMDeliveryInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E768C188811C1001B7893 /* GMDeliveryInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818D1888414A005C0C9F /* GMDisconnectInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E768E188811C1001B7893 /* GMDisconnectInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818E1888414A005C0C9F /* GMLeaveGroupInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7690188811C1001B7893 /* GMLeaveGroupInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9818F1888414A005C0C9F /* GMMatchInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7692188811C1001B7893 /* GMMatchInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981901888414A005C0C9F /* GMMatcheeDelivery.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7695188811C1001B7893 /* GMMatcheeDelivery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981911888414A005C0C9F /* GMMatcheeDeliveryMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7697188811C1001B7893 /* GMMatcheeDeliveryMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981921888414A005C0C9F /* GMMatcheeLeftMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E7699188811C1001B7893 /* GMMatcheeLeftMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981931888414A005C0C9F /* GMDeliveryResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E769C188811C1001B7893 /* GMDeliveryResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981941888414A005C0C9F /* GMDisconnectResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E769E188811C1001B7893 /* GMDisconnectResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981951888414A005C0C9F /* GMLeaveGroupResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A0188811C1001B7893 /* GMLeaveGroupResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981961888414A005C0C9F /* GMMatchResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A2188811C1001B7893 /* GMMatchResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981971888414A005C0C9F /* GMMatchee.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A4188811C1001B7893 /* GMMatchee.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815E18883DB6005C0C9F /* SBJson4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB9819F188842FE005C0C9F /* SBJson4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815F18883DB6005C0C9F /* SBJson4Parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816118883DB6005C0C9F /* SBJson4StreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A1188842FE005C0C9F /* SBJson4StreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816318883DB6005C0C9F /* SBJson4StreamParserState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A2188842FE005C0C9F /* SBJson4StreamTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816518883DB6005C0C9F /* SBJson4StreamTokeniser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A3188842FE005C0C9F /* SBJson4StreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816718883DB6005C0C9F /* SBJson4StreamWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A4188842FE005C0C9F /* SBJson4StreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816918883DB6005C0C9F /* SBJson4StreamWriterState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A5188842FE005C0C9F /* SBJson4Writer.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816B18883DB6005C0C9F /* SBJson4Writer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A6188842FE005C0C9F /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815118883D4B005C0C9F /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A7188842FE005C0C9F /* NSData+SRB64Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815218883D4B005C0C9F /* NSData+SRB64Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A8188842FE005C0C9F /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815418883D4B005C0C9F /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981A9188842FE005C0C9F /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9814718883CF5005C0C9F /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACB981AA188842FE005C0C9F /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9814918883CF5005C0C9F /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC8E766A18881123001B7893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC8E764818881122001B7893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC8E765118881122001B7893;
+			remoteInfo = SwipeMatchSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E2F0C7C188D730300F9C014 /* GMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMApiConstants.h; sourceTree = "<group>"; };
+		3E2F0C7D188D730300F9C014 /* GMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMApiConstants.m; sourceTree = "<group>"; };
+		3E9AF7B1189008F700FB719D /* GMSwipeTranslationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSwipeTranslationHelper.h; sourceTree = "<group>"; };
+		3E9AF7B2189008F700FB719D /* GMSwipeTranslationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSwipeTranslationHelper.m; sourceTree = "<group>"; };
+		3E9AF7B5189009BC00FB719D /* GMSwipeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSwipeConstants.h; sourceTree = "<group>"; };
+		3E9AF7B918900BE000FB719D /* GMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUtilities.h; sourceTree = "<group>"; };
+		3E9AF7BA18900BE000FB719D /* GMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUtilities.m; sourceTree = "<group>"; };
+		3E9AF7BD18901AB300FB719D /* GMMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchHelper.h; sourceTree = "<group>"; };
+		3E9AF7BE18901AB300FB719D /* GMMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchHelper.m; sourceTree = "<group>"; };
+		AC7D28E1188FD12D009CC433 /* GMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnMovementDelegate.h; sourceTree = "<group>"; };
+		AC7D28E2188FD12D009CC433 /* GMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnServerEventDelegate.h; sourceTree = "<group>"; };
+		AC7D28E3188FD12D009CC433 /* GMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnServerMessageDelegate.h; sourceTree = "<group>"; };
+		AC8E765218881122001B7893 /* GestureMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8E765618881122001B7893 /* GestureMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureMatchSDK-Info.plist"; sourceTree = "<group>"; };
+		AC8E765818881122001B7893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC8E765A18881122001B7893 /* GestureMatchSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureMatchSDK-Prefix.pch"; sourceTree = "<group>"; };
+		AC8E765B18881122001B7893 /* GestureMatchSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureMatchSDK.h; sourceTree = "<group>"; };
+		AC8E765C18881122001B7893 /* GestureMatchSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureMatchSDK.m; sourceTree = "<group>"; };
+		AC8E766218881123001B7893 /* GestureMatchSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureMatchSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8E766418881123001B7893 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AC8E766F18881123001B7893 /* GestureMatchSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureMatchSDKTests-Info.plist"; sourceTree = "<group>"; };
+		AC8E767118881123001B7893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC8E767318881123001B7893 /* GestureMatchSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureMatchSDKTests.m; sourceTree = "<group>"; };
+		AC8E767F188811C1001B7893 /* GMJsonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJsonConstants.h; sourceTree = "<group>"; };
+		AC8E7680188811C1001B7893 /* GMJsonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJsonConstants.m; sourceTree = "<group>"; };
+		AC8E7681188811C1001B7893 /* GMJsonGeneralLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJsonGeneralLabels.h; sourceTree = "<group>"; };
+		AC8E7682188811C1001B7893 /* GMJsonGeneralLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJsonGeneralLabels.m; sourceTree = "<group>"; };
+		AC8E7683188811C1001B7893 /* GMJsonInputLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMJsonInputLabels.h; sourceTree = "<group>"; };
+		AC8E7684188811C1001B7893 /* GMJsonInputLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMJsonInputLabels.m; sourceTree = "<group>"; };
+		AC8E7685188811C1001B7893 /* GMResponsesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMResponsesConstants.h; sourceTree = "<group>"; };
+		AC8E7686188811C1001B7893 /* GMResponsesConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMResponsesConstants.m; sourceTree = "<group>"; };
+		AC8E7688188811C1001B7893 /* GMServerMessagesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMServerMessagesHandler.h; sourceTree = "<group>"; };
+		AC8E7689188811C1001B7893 /* GMServerMessagesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMServerMessagesHandler.m; sourceTree = "<group>"; };
+		AC8E768C188811C1001B7893 /* GMDeliveryInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDeliveryInput.h; sourceTree = "<group>"; };
+		AC8E768D188811C1001B7893 /* GMDeliveryInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDeliveryInput.m; sourceTree = "<group>"; };
+		AC8E768E188811C1001B7893 /* GMDisconnectInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDisconnectInput.h; sourceTree = "<group>"; };
+		AC8E768F188811C1001B7893 /* GMDisconnectInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDisconnectInput.m; sourceTree = "<group>"; };
+		AC8E7690188811C1001B7893 /* GMLeaveGroupInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLeaveGroupInput.h; sourceTree = "<group>"; };
+		AC8E7691188811C1001B7893 /* GMLeaveGroupInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLeaveGroupInput.m; sourceTree = "<group>"; };
+		AC8E7692188811C1001B7893 /* GMMatchInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchInput.h; sourceTree = "<group>"; };
+		AC8E7693188811C1001B7893 /* GMMatchInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchInput.m; sourceTree = "<group>"; };
+		AC8E7695188811C1001B7893 /* GMMatcheeDelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatcheeDelivery.h; sourceTree = "<group>"; };
+		AC8E7696188811C1001B7893 /* GMMatcheeDelivery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatcheeDelivery.m; sourceTree = "<group>"; };
+		AC8E7697188811C1001B7893 /* GMMatcheeDeliveryMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatcheeDeliveryMessage.h; sourceTree = "<group>"; };
+		AC8E7698188811C1001B7893 /* GMMatcheeDeliveryMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatcheeDeliveryMessage.m; sourceTree = "<group>"; };
+		AC8E7699188811C1001B7893 /* GMMatcheeLeftMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatcheeLeftMessage.h; sourceTree = "<group>"; };
+		AC8E769A188811C1001B7893 /* GMMatcheeLeftMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatcheeLeftMessage.m; sourceTree = "<group>"; };
+		AC8E769C188811C1001B7893 /* GMDeliveryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDeliveryResponse.h; sourceTree = "<group>"; };
+		AC8E769D188811C1001B7893 /* GMDeliveryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDeliveryResponse.m; sourceTree = "<group>"; };
+		AC8E769E188811C1001B7893 /* GMDisconnectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDisconnectResponse.h; sourceTree = "<group>"; };
+		AC8E769F188811C1001B7893 /* GMDisconnectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDisconnectResponse.m; sourceTree = "<group>"; };
+		AC8E76A0188811C1001B7893 /* GMLeaveGroupResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLeaveGroupResponse.h; sourceTree = "<group>"; };
+		AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLeaveGroupResponse.m; sourceTree = "<group>"; };
+		AC8E76A2188811C1001B7893 /* GMMatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchResponse.h; sourceTree = "<group>"; };
+		AC8E76A3188811C1001B7893 /* GMMatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchResponse.m; sourceTree = "<group>"; };
+		AC8E76A4188811C1001B7893 /* GMMatchee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchee.h; sourceTree = "<group>"; };
+		AC8E76A5188811C1001B7893 /* GMMatchee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchee.m; sourceTree = "<group>"; };
+		AC8E76A6188811C1001B7893 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		AC8E76A7188811C1001B7893 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		AC8E76A8188811C1001B7893 /* GMInnerOuterChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMInnerOuterChecker.h; sourceTree = "<group>"; };
+		AC8E76A9188811C1001B7893 /* GMInnerOuterChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMInnerOuterChecker.m; sourceTree = "<group>"; };
+		AC8E76AA188811C1001B7893 /* GMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLocation.h; sourceTree = "<group>"; };
+		AC8E76AB188811C1001B7893 /* GMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLocation.m; sourceTree = "<group>"; };
+		AC8E76AF188811C1001B7893 /* GMGestureMatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGestureMatchClient.h; sourceTree = "<group>"; };
+		AC8E76B0188811C1001B7893 /* GMGestureMatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGestureMatchClient.m; sourceTree = "<group>"; };
+		AC8E76F8188812A1001B7893 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AC8E76FA188812A6001B7893 /* libAWDProtobufLocation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufLocation.dylib; path = usr/lib/libAWDProtobufLocation.dylib; sourceTree = SDKROOT; };
+		AC8E76FC188812AD001B7893 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC8E76FE188812D1001B7893 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC8E77381888189C001B7893 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ACB9814718883CF5005C0C9F /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = sskeychain/SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		ACB9814818883CF5005C0C9F /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = sskeychain/SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		ACB9814918883CF5005C0C9F /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = sskeychain/SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
+		ACB9814A18883CF5005C0C9F /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = sskeychain/SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		ACB9815018883D4B005C0C9F /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base64.c; path = SocketRocket/SocketRocket/base64.c; sourceTree = "<group>"; };
+		ACB9815118883D4B005C0C9F /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = SocketRocket/SocketRocket/base64.h; sourceTree = "<group>"; };
+		ACB9815218883D4B005C0C9F /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+SRB64Additions.h"; path = "SocketRocket/SocketRocket/NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		ACB9815318883D4B005C0C9F /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+SRB64Additions.m"; path = "SocketRocket/SocketRocket/NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		ACB9815418883D4B005C0C9F /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		ACB9815518883D4B005C0C9F /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		ACB9815E18883DB6005C0C9F /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
+		ACB9815F18883DB6005C0C9F /* SBJson4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Parser.h; sourceTree = "<group>"; };
+		ACB9816018883DB6005C0C9F /* SBJson4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Parser.m; sourceTree = "<group>"; };
+		ACB9816118883DB6005C0C9F /* SBJson4StreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParser.h; sourceTree = "<group>"; };
+		ACB9816218883DB6005C0C9F /* SBJson4StreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParser.m; sourceTree = "<group>"; };
+		ACB9816318883DB6005C0C9F /* SBJson4StreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParserState.h; sourceTree = "<group>"; };
+		ACB9816418883DB6005C0C9F /* SBJson4StreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParserState.m; sourceTree = "<group>"; };
+		ACB9816518883DB6005C0C9F /* SBJson4StreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamTokeniser.h; sourceTree = "<group>"; };
+		ACB9816618883DB6005C0C9F /* SBJson4StreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamTokeniser.m; sourceTree = "<group>"; };
+		ACB9816718883DB6005C0C9F /* SBJson4StreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriter.h; sourceTree = "<group>"; };
+		ACB9816818883DB6005C0C9F /* SBJson4StreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriter.m; sourceTree = "<group>"; };
+		ACB9816918883DB6005C0C9F /* SBJson4StreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriterState.h; sourceTree = "<group>"; };
+		ACB9816A18883DB6005C0C9F /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriterState.m; sourceTree = "<group>"; };
+		ACB9816B18883DB6005C0C9F /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
+		ACB9816C18883DB6005C0C9F /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
+		ACC09054188D7C6F0059A6E6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		ACC09056188D7C750059A6E6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC8E764D18881122001B7893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC8E765F18881123001B7893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8E766518881123001B7893 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E9AF7B0189008A000FB719D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3E9AF7B918900BE000FB719D /* GMUtilities.h */,
+				3E9AF7BA18900BE000FB719D /* GMUtilities.m */,
+				3E9AF7B1189008F700FB719D /* GMSwipeTranslationHelper.h */,
+				3E9AF7B2189008F700FB719D /* GMSwipeTranslationHelper.m */,
+				3E9AF7BD18901AB300FB719D /* GMMatchHelper.h */,
+				3E9AF7BE18901AB300FB719D /* GMMatchHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AC7D28DF188FD12D009CC433 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AC7D28E1188FD12D009CC433 /* GMOnMovementDelegate.h */,
+				AC7D28E2188FD12D009CC433 /* GMOnServerEventDelegate.h */,
+				AC7D28E3188FD12D009CC433 /* GMOnServerMessageDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AC8E764718881122001B7893 = {
+			isa = PBXGroup;
+			children = (
+				ACB9814618883CE6005C0C9F /* Vendor */,
+				AC8E767D188811C1001B7893 /* GestureMatch */,
+				AC8E765418881122001B7893 /* GestureMatchSDK */,
+				AC8E766D18881123001B7893 /* GestureMatchSDKTests */,
+				AC8E766318881123001B7893 /* Frameworks */,
+				AC8E765318881122001B7893 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC8E765318881122001B7893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E765218881122001B7893 /* GestureMatchSDK.framework */,
+				AC8E766218881123001B7893 /* GestureMatchSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC8E765418881122001B7893 /* GestureMatchSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E765B18881122001B7893 /* GestureMatchSDK.h */,
+				AC8E765C18881122001B7893 /* GestureMatchSDK.m */,
+				AC8E765518881122001B7893 /* Supporting Files */,
+			);
+			path = GestureMatchSDK;
+			sourceTree = "<group>";
+		};
+		AC8E765518881122001B7893 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E765618881122001B7893 /* GestureMatchSDK-Info.plist */,
+				AC8E765718881122001B7893 /* InfoPlist.strings */,
+				AC8E765A18881122001B7893 /* GestureMatchSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC8E766318881123001B7893 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACC09056188D7C750059A6E6 /* CFNetwork.framework */,
+				ACC09054188D7C6F0059A6E6 /* libicucore.dylib */,
+				AC8E77381888189C001B7893 /* Security.framework */,
+				AC8E76FE188812D1001B7893 /* Foundation.framework */,
+				AC8E76FC188812AD001B7893 /* CoreLocation.framework */,
+				AC8E76FA188812A6001B7893 /* libAWDProtobufLocation.dylib */,
+				AC8E76F8188812A1001B7893 /* UIKit.framework */,
+				AC8E766418881123001B7893 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC8E766D18881123001B7893 /* GestureMatchSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E767318881123001B7893 /* GestureMatchSDKTests.m */,
+				AC8E766E18881123001B7893 /* Supporting Files */,
+			);
+			path = GestureMatchSDKTests;
+			sourceTree = "<group>";
+		};
+		AC8E766E18881123001B7893 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E766F18881123001B7893 /* GestureMatchSDKTests-Info.plist */,
+				AC8E767018881123001B7893 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC8E767D188811C1001B7893 /* GestureMatch */ = {
+			isa = PBXGroup;
+			children = (
+				3E9AF7B0189008A000FB719D /* Helpers */,
+				AC7D28DF188FD12D009CC433 /* Protocols */,
+				AC8E767E188811C1001B7893 /* Const */,
+				AC8E7687188811C1001B7893 /* Handlers */,
+				AC8E768A188811C1001B7893 /* Models */,
+				AC8E76A6188811C1001B7893 /* NSData+Base64.h */,
+				AC8E76A7188811C1001B7893 /* NSData+Base64.m */,
+				AC8E76A8188811C1001B7893 /* GMInnerOuterChecker.h */,
+				AC8E76A9188811C1001B7893 /* GMInnerOuterChecker.m */,
+				AC8E76AA188811C1001B7893 /* GMLocation.h */,
+				AC8E76AB188811C1001B7893 /* GMLocation.m */,
+				AC8E76AF188811C1001B7893 /* GMGestureMatchClient.h */,
+				AC8E76B0188811C1001B7893 /* GMGestureMatchClient.m */,
+			);
+			path = GestureMatch;
+			sourceTree = "<group>";
+		};
+		AC8E767E188811C1001B7893 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E767F188811C1001B7893 /* GMJsonConstants.h */,
+				AC8E7680188811C1001B7893 /* GMJsonConstants.m */,
+				AC8E7681188811C1001B7893 /* GMJsonGeneralLabels.h */,
+				AC8E7682188811C1001B7893 /* GMJsonGeneralLabels.m */,
+				AC8E7683188811C1001B7893 /* GMJsonInputLabels.h */,
+				AC8E7684188811C1001B7893 /* GMJsonInputLabels.m */,
+				AC8E7685188811C1001B7893 /* GMResponsesConstants.h */,
+				AC8E7686188811C1001B7893 /* GMResponsesConstants.m */,
+				3E2F0C7C188D730300F9C014 /* GMApiConstants.h */,
+				3E2F0C7D188D730300F9C014 /* GMApiConstants.m */,
+				3E9AF7B5189009BC00FB719D /* GMSwipeConstants.h */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		AC8E7687188811C1001B7893 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E7688188811C1001B7893 /* GMServerMessagesHandler.h */,
+				AC8E7689188811C1001B7893 /* GMServerMessagesHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		AC8E768A188811C1001B7893 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E768B188811C1001B7893 /* Inputs */,
+				AC8E7694188811C1001B7893 /* Messages */,
+				AC8E769B188811C1001B7893 /* Responses */,
+				AC8E76A4188811C1001B7893 /* GMMatchee.h */,
+				AC8E76A5188811C1001B7893 /* GMMatchee.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC8E768B188811C1001B7893 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E768C188811C1001B7893 /* GMDeliveryInput.h */,
+				AC8E768D188811C1001B7893 /* GMDeliveryInput.m */,
+				AC8E768E188811C1001B7893 /* GMDisconnectInput.h */,
+				AC8E768F188811C1001B7893 /* GMDisconnectInput.m */,
+				AC8E7690188811C1001B7893 /* GMLeaveGroupInput.h */,
+				AC8E7691188811C1001B7893 /* GMLeaveGroupInput.m */,
+				AC8E7692188811C1001B7893 /* GMMatchInput.h */,
+				AC8E7693188811C1001B7893 /* GMMatchInput.m */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		AC8E7694188811C1001B7893 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E7695188811C1001B7893 /* GMMatcheeDelivery.h */,
+				AC8E7696188811C1001B7893 /* GMMatcheeDelivery.m */,
+				AC8E7697188811C1001B7893 /* GMMatcheeDeliveryMessage.h */,
+				AC8E7698188811C1001B7893 /* GMMatcheeDeliveryMessage.m */,
+				AC8E7699188811C1001B7893 /* GMMatcheeLeftMessage.h */,
+				AC8E769A188811C1001B7893 /* GMMatcheeLeftMessage.m */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		AC8E769B188811C1001B7893 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E769C188811C1001B7893 /* GMDeliveryResponse.h */,
+				AC8E769D188811C1001B7893 /* GMDeliveryResponse.m */,
+				AC8E769E188811C1001B7893 /* GMDisconnectResponse.h */,
+				AC8E769F188811C1001B7893 /* GMDisconnectResponse.m */,
+				AC8E76A0188811C1001B7893 /* GMLeaveGroupResponse.h */,
+				AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */,
+				AC8E76A2188811C1001B7893 /* GMMatchResponse.h */,
+				AC8E76A3188811C1001B7893 /* GMMatchResponse.m */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		ACB9814618883CE6005C0C9F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9815D18883DB6005C0C9F /* SBJSON4 */,
+				ACB9815C18883D6E005C0C9F /* SRWebSocket */,
+				ACB9814F18883CFE005C0C9F /* SSKeychain */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		ACB9814F18883CFE005C0C9F /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9814718883CF5005C0C9F /* SSKeychain.h */,
+				ACB9814818883CF5005C0C9F /* SSKeychain.m */,
+				ACB9814918883CF5005C0C9F /* SSKeychainQuery.h */,
+				ACB9814A18883CF5005C0C9F /* SSKeychainQuery.m */,
+			);
+			name = SSKeychain;
+			sourceTree = "<group>";
+		};
+		ACB9815C18883D6E005C0C9F /* SRWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9815018883D4B005C0C9F /* base64.c */,
+				ACB9815118883D4B005C0C9F /* base64.h */,
+				ACB9815218883D4B005C0C9F /* NSData+SRB64Additions.h */,
+				ACB9815318883D4B005C0C9F /* NSData+SRB64Additions.m */,
+				ACB9815418883D4B005C0C9F /* SRWebSocket.h */,
+				ACB9815518883D4B005C0C9F /* SRWebSocket.m */,
+			);
+			name = SRWebSocket;
+			sourceTree = "<group>";
+		};
+		ACB9815D18883DB6005C0C9F /* SBJSON4 */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9815E18883DB6005C0C9F /* SBJson4.h */,
+				ACB9815F18883DB6005C0C9F /* SBJson4Parser.h */,
+				ACB9816018883DB6005C0C9F /* SBJson4Parser.m */,
+				ACB9816118883DB6005C0C9F /* SBJson4StreamParser.h */,
+				ACB9816218883DB6005C0C9F /* SBJson4StreamParser.m */,
+				ACB9816318883DB6005C0C9F /* SBJson4StreamParserState.h */,
+				ACB9816418883DB6005C0C9F /* SBJson4StreamParserState.m */,
+				ACB9816518883DB6005C0C9F /* SBJson4StreamTokeniser.h */,
+				ACB9816618883DB6005C0C9F /* SBJson4StreamTokeniser.m */,
+				ACB9816718883DB6005C0C9F /* SBJson4StreamWriter.h */,
+				ACB9816818883DB6005C0C9F /* SBJson4StreamWriter.m */,
+				ACB9816918883DB6005C0C9F /* SBJson4StreamWriterState.h */,
+				ACB9816A18883DB6005C0C9F /* SBJson4StreamWriterState.m */,
+				ACB9816B18883DB6005C0C9F /* SBJson4Writer.h */,
+				ACB9816C18883DB6005C0C9F /* SBJson4Writer.m */,
+			);
+			name = SBJSON4;
+			path = "json-framework/src/main/objc";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AC8E764E18881122001B7893 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7D28E7188FD12D009CC433 /* GMOnServerMessageDelegate.h in Headers */,
+				AC8E77001888137D001B7893 /* GestureMatchSDK.h in Headers */,
+				ACB981871888414A005C0C9F /* GMJsonConstants.h in Headers */,
+				3E2F0C7E188D730300F9C014 /* GMApiConstants.h in Headers */,
+				ACB981881888414A005C0C9F /* GMJsonGeneralLabels.h in Headers */,
+				ACB981891888414A005C0C9F /* GMJsonInputLabels.h in Headers */,
+				ACB9818A1888414A005C0C9F /* GMResponsesConstants.h in Headers */,
+				3E9AF7BB18900BE000FB719D /* GMUtilities.h in Headers */,
+				ACB9818B1888414A005C0C9F /* GMServerMessagesHandler.h in Headers */,
+				3E9AF7B3189008F700FB719D /* GMSwipeTranslationHelper.h in Headers */,
+				ACB9818C1888414A005C0C9F /* GMDeliveryInput.h in Headers */,
+				ACB9818D1888414A005C0C9F /* GMDisconnectInput.h in Headers */,
+				ACB9818E1888414A005C0C9F /* GMLeaveGroupInput.h in Headers */,
+				ACB9818F1888414A005C0C9F /* GMMatchInput.h in Headers */,
+				ACB981901888414A005C0C9F /* GMMatcheeDelivery.h in Headers */,
+				ACB981911888414A005C0C9F /* GMMatcheeDeliveryMessage.h in Headers */,
+				ACB981921888414A005C0C9F /* GMMatcheeLeftMessage.h in Headers */,
+				ACB981931888414A005C0C9F /* GMDeliveryResponse.h in Headers */,
+				ACB981941888414A005C0C9F /* GMDisconnectResponse.h in Headers */,
+				ACB981951888414A005C0C9F /* GMLeaveGroupResponse.h in Headers */,
+				ACB981961888414A005C0C9F /* GMMatchResponse.h in Headers */,
+				ACB981971888414A005C0C9F /* GMMatchee.h in Headers */,
+				ACB9817F18884129005C0C9F /* NSData+Base64.h in Headers */,
+				ACB9818018884129005C0C9F /* GMInnerOuterChecker.h in Headers */,
+				ACB9818118884129005C0C9F /* GMLocation.h in Headers */,
+				AC7D28E5188FD12D009CC433 /* GMOnMovementDelegate.h in Headers */,
+				ACB9818518884129005C0C9F /* GMGestureMatchClient.h in Headers */,
+				3E9AF7B7189009BC00FB719D /* GMSwipeConstants.h in Headers */,
+				ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */,
+				ACB9819F188842FE005C0C9F /* SBJson4Parser.h in Headers */,
+				ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */,
+				ACB981A1188842FE005C0C9F /* SBJson4StreamParserState.h in Headers */,
+				ACB981A2188842FE005C0C9F /* SBJson4StreamTokeniser.h in Headers */,
+				3E9AF7BF18901AB300FB719D /* GMMatchHelper.h in Headers */,
+				ACB981A3188842FE005C0C9F /* SBJson4StreamWriter.h in Headers */,
+				ACB981A4188842FE005C0C9F /* SBJson4StreamWriterState.h in Headers */,
+				ACB981A5188842FE005C0C9F /* SBJson4Writer.h in Headers */,
+				ACB981A6188842FE005C0C9F /* base64.h in Headers */,
+				ACB981A7188842FE005C0C9F /* NSData+SRB64Additions.h in Headers */,
+				AC7D28E6188FD12D009CC433 /* GMOnServerEventDelegate.h in Headers */,
+				ACB981A8188842FE005C0C9F /* SRWebSocket.h in Headers */,
+				ACB981A9188842FE005C0C9F /* SSKeychain.h in Headers */,
+				ACB981AA188842FE005C0C9F /* SSKeychainQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AC8E765118881122001B7893 /* GestureMatchSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC8E767718881123001B7893 /* Build configuration list for PBXNativeTarget "GestureMatchSDK" */;
+			buildPhases = (
+				AC8E764C18881122001B7893 /* Sources */,
+				AC8E764D18881122001B7893 /* Frameworks */,
+				AC8E764E18881122001B7893 /* Headers */,
+				AC8E764F18881122001B7893 /* Resources */,
+				AC8E765018881122001B7893 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureMatchSDK;
+			productName = SwipeMatchSDK;
+			productReference = AC8E765218881122001B7893 /* GestureMatchSDK.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+		AC8E766118881123001B7893 /* GestureMatchSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC8E767A18881123001B7893 /* Build configuration list for PBXNativeTarget "GestureMatchSDKTests" */;
+			buildPhases = (
+				AC8E765E18881123001B7893 /* Sources */,
+				AC8E765F18881123001B7893 /* Frameworks */,
+				AC8E766018881123001B7893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC8E766B18881123001B7893 /* PBXTargetDependency */,
+			);
+			name = GestureMatchSDKTests;
+			productName = SwipeMatchSDKTests;
+			productReference = AC8E766218881123001B7893 /* GestureMatchSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC8E764818881122001B7893 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = LimeBamboo;
+				TargetAttributes = {
+					AC8E766118881123001B7893 = {
+						TestTargetID = AC8E765118881122001B7893;
+					};
+				};
+			};
+			buildConfigurationList = AC8E764B18881122001B7893 /* Build configuration list for PBXProject "GestureMatchSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AC8E764718881122001B7893;
+			productRefGroup = AC8E765318881122001B7893 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC8E765118881122001B7893 /* GestureMatchSDK */,
+				AC8E766118881123001B7893 /* GestureMatchSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC8E764F18881122001B7893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8E765918881122001B7893 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC8E766018881123001B7893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8E766C18881123001B7893 /* GestureMatchSDK.framework in Resources */,
+				AC8E767218881123001B7893 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC8E765018881122001B7893 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/python;
+			shellScript = "# TAG: BUILD SCRIPT (do not remove this comment)\n# Build script generated using https://github.com/kstenerud/iOS-Universal-Framework Mk 8 (beta 2012-06-16)\nimport logging\n\n\n##############################################################################\n#\n# Configuration\n#\n##############################################################################\n\n# Select which kind of framework to build.\n#\n# Note: Due to issues with Xcode's build process, if you select\n#       'embeddedframework', it will still show the regular framework\n#       (as a symlink) along side of the embedded framework. Be sure to\n#       instruct your users to copy/move the embedded framework in this case!\n#\n# If your framework contains resources such as images, nibs, momds, plists,\n# zipfiles and such, choose 'embeddedframework'.\n#\n# If your framework contains no resources, choose 'framework'.\n#\nconfig_framework_type = 'framework'\n#config_framework_type = 'embeddedframework'\n\n# Open the build directory in Finder when the universal framework is\n# successfully built.\n#\n# This value can be overridden by setting the UFW_OPEN_BUILD_DIR env variable\n# to True or False.\n#\n# Recommended setting: True\n#\nconfig_open_build_dir = True\n\n# If true, ensures that all public headers are stored in the framework under\n# the same directory hierarchy as they were in the source tree.\n#\n# Xcode by default places all headers at the same top level, but every other\n# build tool in the known universe preserves directory structure. For simple\n# libraries it doesn't really matter much, but for ports of existing software\n# packages or for bigger libraries, it makes sense to have more structure.\n#\n# The default is set to \"False\" since that's what most Xcode users are used to.\n#\n# Recommended setting: True for deep hierarchy projects, False otherwise.\n#\nconfig_deep_header_hierarchy = False\n\n# Specify where the top of the public header hierarchy is. This path is\n# relative to the project's dir (PROJECT_DIR). You can reference environment\n# variables using templating syntax (e.g. \"${TARGET_NAME}/Some/Subdir\")\n#\n# NOTE: Only used if config_deep_header_hierarchy is True.\n#\n# If this is set to None, the script will attempt to figure out for itself\n# where the top of the header hierarchy is by looking for common path prefixes\n# in the public header files. This process can fail if:\n# - You only have one public header file.\n# - Your source header files don't all have a common root.\n#\n# A common approach is to use \"${TARGET_NAME}\", working under the assumption\n# that all of your header files share the common root of a directory under\n# your project with the same name as your target (which is the Xcode default).\n#\n# Recommended setting: \"${TARGET_NAME}\"\n#\nconfig_deep_header_top = \"${TARGET_NAME}\"\n\n# Warn when \"DerivedData\" is detected in any of the header, library, or\n# framework search paths. In almost all cases, references to directories under\n# DerivedData are added as a result of an Xcode bug and must be manually\n# removed.\n#\n# Recommended setting: True\n#\nconfig_warn_derived_data = True\n\n# Warn if no headers were marked public in this framework.\n#\n# Recommended setting: True\n#\nconfig_warn_no_public_headers = True\n\n# Cause the build to fail if any warnings are issued.\n#\n# Recommended setting: True\n#\nconfig_fail_on_warnings = True\n\n# Minimum log level\n#\n# Recommended setting: logging.INFO\n#\nconfig_log_level = logging.INFO\n\n\n##############################################################################\n#\n# Don't touch anything below here unless you know what you're doing.\n#\n##############################################################################\n\nimport collections\nimport json\nimport os\nimport re\nimport shlex\nimport shutil\nimport string\nimport subprocess\nimport sys\nimport time\nimport traceback\n\n\n##############################################################################\n#\n# Globals\n#\n##############################################################################\n\nlog = logging.getLogger('UFW')\n\nissued_warnings = False\n\n\n##############################################################################\n#\n# Classes\n#\n##############################################################################\n\n# Allows the slave build to communicate with the master build.\n#\nclass BuildState:\n\n    def __init__(self):\n        self.reload()\n\n    def reset(self):\n        self.slave_platform = None\n        self.slave_architectures = []\n        self.slave_linked_archive_paths = []\n        self.slave_built_fw_path = None\n        self.slave_built_embedded_fw_path = None\n\n    def set_slave_properties(self, architectures,\n                             linked_archive_paths,\n                             built_fw_path,\n                             built_embedded_fw_path):\n        self.slave_platform = os.environ['PLATFORM_NAME']\n        self.slave_architectures = architectures\n        self.slave_linked_archive_paths = linked_archive_paths\n        self.slave_built_fw_path = built_fw_path\n        self.slave_built_embedded_fw_path = built_embedded_fw_path\n\n    def get_save_path(self):\n        return os.path.join(os.environ['PROJECT_TEMP_DIR'], \"ufw_build_state.json\")\n\n    def persist(self):\n        filename = self.get_save_path()\n        parent = os.path.dirname(filename)\n        if not os.path.isdir(parent):\n            os.makedirs(parent)\n        with open(filename, \"w\") as f:\n            f.write(json.dumps(self.__dict__))\n\n    def reload(self):\n        self.reset()\n        filename = self.get_save_path()\n        if os.path.exists(filename):\n            with open(filename, \"r\") as f:\n                new_dict = json.loads(f.read())\n                if new_dict is not None:\n                    self.__dict__ = dict(self.__dict__.items() + new_dict.items())\n\n\n# Holds information about the current project and build environment.\n#\nclass Project:\n\n    def __init__(self, filename):\n        sourcecode_types = ['sourcecode.c.c',\n                            'sourcecode.c.objc',\n                            'sourcecode.cpp.cpp',\n                            'sourcecode.cpp.objcpp',\n                            'sourcecode.asm.asm',\n                            'sourcecode.asm.llvm',\n                            'sourcecode.nasm']\n\n        self.build_state = BuildState()\n        self.project_data = self.load_from_file(filename)\n        self.target = filter(lambda x: x['name'] == os.environ['TARGET_NAME'], self.project_data['targets'])[0]\n        self.public_headers = self.get_build_phase_files('PBXHeadersBuildPhase', lambda x: x.get('settings', False) and x['settings'].get('ATTRIBUTES', False) and 'Public' in x['settings']['ATTRIBUTES'])\n        self.static_libraries = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'archive.ar' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.static_frameworks = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'wrapper.framework' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.compilable_sources = self.get_build_phase_files('PBXSourcesBuildPhase', lambda x: x['fileRef']['fileType'] in sourcecode_types)\n        self.header_paths = [os.path.join(*x['pathComponents']) for x in self.public_headers]\n\n        self.headers_dir = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['CONTENTS_FOLDER_PATH'], 'Headers')\n        self.libtool_path = os.path.join(os.environ['DT_TOOLCHAIN_DIR'], 'usr', 'bin', 'libtool')\n        self.project_filename = os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\")\n        self.local_exe_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])\n        self.local_architectures = os.environ['ARCHS'].split(' ')\n        self.local_built_fw_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['WRAPPER_NAME'])\n        self.local_built_embedded_fw_path = os.path.splitext(self.local_built_fw_path)[0] + \".embeddedframework\"\n        self.local_linked_archive_paths = [self.get_linked_ufw_archive_path(arch) for arch in self.local_architectures]\n        self.local_platform = os.environ['PLATFORM_NAME']\n        other_platforms = os.environ['SUPPORTED_PLATFORMS'].split(' ')\n        other_platforms.remove(self.local_platform)\n        self.other_platform = other_platforms[0]\n\n        sdk_name = os.environ['SDK_NAME']\n        if not sdk_name.startswith(self.local_platform):\n            raise Exception(\"%s didn't start with %s\" % (sdk_name, self.local_platform))\n        self.sdk_version = sdk_name[len(self.local_platform):]\n\n    # Load an Xcode project file.\n    #\n    def load_from_file(self, filename):\n        project_file = json.loads(subprocess.check_output([\"plutil\", \"-convert\", \"json\", \"-o\", \"-\", filename]))\n        all_objects = project_file['objects']\n        del project_file['objects']\n        for obj in all_objects.values():\n            self.fix_keys(obj)\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, project_file))\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, all_objects.values()))\n        project_data = project_file['rootObject']\n        self.build_full_paths(project_data, splitpath(os.environ['SOURCE_ROOT']))\n        return project_data\n\n    def is_key(self, obj):        \n        return isinstance(obj, basestring) and len(obj) == 24 and re.search('^[0-9a-fA-F]+$', obj) is not None\n    \n    def build_dereference_list(self, all_objects, parent, key, obj):\n        deref_list = []\n        if self.is_key(obj):\n            dereferenced = all_objects.get(obj, obj)\n            if dereferenced is not obj:\n                deref_list.append((parent, key, obj, dereferenced))\n        elif isinstance(obj, collections.Mapping):\n            for k, v in obj.iteritems():\n                deref_list += self.build_dereference_list(all_objects, obj, k, v)\n        elif isinstance(obj, collections.Iterable) and not isinstance(obj, basestring):\n            for item in obj:\n                deref_list += self.build_dereference_list(all_objects, obj, None, item)\n        return deref_list\n    \n    def unpack_objects(self, deref_list):\n        for parent, key, orig, obj in deref_list:\n            if key is None:\n                parent.remove(orig)\n                parent.append(obj)\n            else:\n                parent[key] = obj\n\n    # Store the full path, separated into components, to a node inside the node\n    # as \"pathComponents\". Also recurse into that node if it's a group.\n    #\n    def build_full_paths(self, node, base_path):\n        # Some nodes are relative to a different source tree, specified as an\n        # env variable.\n        if node.get('sourceTree', '<group>') != '<group>':\n            new_base_path = os.environ.get(node['sourceTree'], None)\n            if new_base_path:\n                base_path = splitpath(new_base_path)\n        # Add the current node's path, if any.\n        if node.get('path', False):\n            base_path = base_path + splitpath(node['path'])\n        node['pathComponents'] = base_path\n        # Recurse if this is a group.\n        if node['isa'] == 'PBXGroup':\n            for child in node['children']:\n                self.build_full_paths(child, base_path)\n        elif node['isa'] == 'PBXProject':\n            self.build_full_paths(node['mainGroup'], base_path)\n            self.build_full_paths(node['productRefGroup'], base_path)\n            for child in node['targets']:\n                self.build_full_paths(child, base_path)\n            projectRefs = node.get('projectReferences', None)\n            if projectRefs is not None:\n                for child in projectRefs[0].values():\n                    self.build_full_paths(child, base_path)\n\n    # Fix up any inconvenient keys.\n    #\n    def fix_keys(self, obj):\n        key_remappings = {'lastKnownFileType': 'fileType', 'explicitFileType': 'fileType'}\n        for key in list(set(key_remappings.keys()) & set(obj.keys())):\n            obj[key_remappings[key]] = obj[key]\n            del obj[key]\n\n    # Get the files from a build phase.\n    #\n    def get_build_phase_files(self, build_phase_name, filter_func):\n        build_phase = filter(lambda x: x['isa'] == build_phase_name, self.target['buildPhases'])[0]\n        build_files = filter(filter_func, build_phase['files'])\n        return [x['fileRef'] for x in build_files]\n\n    # Get the truncated paths of all headers that start with the specified\n    # relative path. Paths are read and returned as fully separated lists.\n    # e.g. ['Some', 'Path', 'To', 'A', 'Header'] with relative_path of\n    # ['Some', 'Path'] gets truncated to ['To', 'A', 'Header']\n    #\n    def movable_headers_relative_to(self, relative_path):\n        rel_path_length = len(relative_path)\n        result = filter(lambda path: len(path) >= rel_path_length and\n                                     path[:rel_path_length] == relative_path, self.header_paths)\n        return [path[rel_path_length:] for path in result]\n\n    # Get the full path to where a linkable archive (library or framework)\n    # is supposed to be.\n    #\n    def get_linked_archive_path(self, architecture):\n        return os.path.join(os.environ['OBJECT_FILE_DIR_%s' % os.environ['CURRENT_VARIANT']],\n                            architecture,\n                            os.environ['EXECUTABLE_NAME'])\n\n    # Get the full path to our custom linked archive of the project.\n    #\n    def get_linked_ufw_archive_path(self, architecture):\n        return self.get_linked_archive_path(architecture) + \".ufwbuild\"\n\n    # Get the full path to the executable of an archive.\n    #\n    def get_exe_path(self, node):\n        path = os.path.join(*node['pathComponents'])\n        if node['fileType'] == 'wrapper.framework':\n            # Frameworks are directories, so go one deeper\n            path = os.path.join(path, os.path.splitext(node['pathComponents'][-1])[0])\n        return path\n\n    # Get the path to the directory containing the archive.\n    #\n    def get_containing_path(self, node):\n        return os.path.join(*node['pathComponents'])\n    \n    def get_archive_search_paths(self):\n        log.info(\"Search paths = %s\" % set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries]))\n        return set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries])\n\n    # Command to link all objects of a single architecture.\n    #\n    def get_single_arch_link_command(self, architecture):\n        cmd = [self.libtool_path,\n               \"-static\",\n               \"-arch_only\", architecture,\n               \"-syslibroot\", os.environ['SDKROOT'],\n               \"-L%s\" % os.environ['TARGET_BUILD_DIR'],\n               \"-filelist\", os.environ['LINK_FILE_LIST_%s_%s' % (os.environ['CURRENT_VARIANT'], architecture)]]\n        if os.environ.get('OTHER_LDFLAGS', False):\n            cmd += [os.environ['OTHER_LDFLAGS']]\n        if os.environ.get('WARNING_LDFLAGS', False):\n            cmd += [os.environ['WARNING_LDFLAGS']]\n#        cmd += [\"-L%s\" % libpath for libpath in self.get_archive_search_paths()]\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", self.get_linked_ufw_archive_path(architecture)]\n        return cmd\n\n    # Command to link all local architectures for the current configuration\n    # into an archive. This reads all libraries + the UFW-built archives and\n    # overwrites the final product.\n    #\n    def get_local_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Command to link all architectures into a universal archive.\n    # This reads all UFW-built archives and overwrites the final product.\n    #\n    def get_all_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths + self.build_state.slave_linked_archive_paths\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Build up an environment for the slave process. This uses BUILD_ROOT\n    # and TEMP_ROOT to convert all environment variables to values suitable\n    # for the slave build environment so that xcodebuild doesn't try to build\n    # in the project directory under \"build\".\n    #\n    def get_slave_environment(self):\n        ignored = ['LD_MAP_FILE_PATH',\n        'HEADER_SEARCH_PATHS',\n        'LIBRARY_SEARCH_PATHS',\n        'FRAMEWORK_SEARCH_PATHS']\n        build_root = os.environ['BUILD_ROOT']\n        temp_root = os.environ['TEMP_ROOT']\n        newenv = {}\n        for key, value in os.environ.items():\n            if key not in ignored and not key.startswith('LINK_FILE_LIST_') and not key.startswith('LD_DEPENDENCY_'):\n                if build_root in value or temp_root in value:\n                    newenv[key] = value.replace(self.local_platform, self.other_platform)\n        return newenv\n\n    # Command to invoke xcodebuild on the slave platform.\n    #\n    def get_slave_project_build_command(self):\n        cmd = [\"xcodebuild\",\n               \"-project\",\n               os.environ['PROJECT_FILE_PATH'],\n               \"-target\",\n               os.environ['TARGET_NAME'],\n               \"-configuration\",\n               os.environ['CONFIGURATION'],\n               \"-sdk\",\n               self.other_platform + self.sdk_version]\n        cmd += [\"%s=%s\" % (key, value) for key, value in self.get_slave_environment().items()]\n        cmd += [\"UFW_MASTER_PLATFORM=\" + os.environ['PLATFORM_NAME']]\n        cmd += [os.environ['ACTION']]\n        return cmd\n\n\n\n##############################################################################\n#\n# Utility Functions\n#\n##############################################################################\n\n# Split a path into a list of path components.\n#\ndef splitpath(path, maxdepth=20):\n     (head, tail) = os.path.split(path)\n     return splitpath(head, maxdepth - 1) + [tail] if maxdepth and head and head != path else [ head or tail ]\n\n# Remove all subdirectories under a path.\n#\ndef remove_subdirs(path, ignore_files):\n    if os.path.exists(path):\n        for filename in filter(lambda x: x not in ignore_files, os.listdir(path)):\n            fullpath = os.path.join(path, filename)\n            if os.path.isdir(fullpath):\n                log.info(\"Remove %s\" % fullpath)\n                shutil.rmtree(fullpath)\n\n# Make whatever parent paths are necessary for a path to exist.\n#\ndef ensure_path_exists(path):\n    if not os.path.isdir(path):\n        os.makedirs(path)\n\n# Make whatever parent paths are necessary for a path's parent to exist.\n#\ndef ensure_parent_exists(path):\n    parent = os.path.dirname(path)\n    if not os.path.isdir(parent):\n        os.makedirs(parent)\n\n# Remove a file or dir if it exists.\n#\ndef remove_path(path):\n    if os.path.exists(path):\n        if os.path.isdir(path) and not os.path.islink(path):\n            shutil.rmtree(path)\n        else:\n            os.remove(path)\n\n# Move a file or dir, replacing the destination if it exists.\n#\ndef move_file(src, dst):\n    if src == dst or not os.path.isfile(src):\n        return\n    log.info(\"Move %s to %s\" % (src, dst))\n    ensure_parent_exists(dst)\n    remove_path(dst)\n    shutil.move(src, dst)\n\n# Copy a file or dir, replacing the destination if it exists already.\n#\ndef copy_overwrite(src, dst):\n    if src != dst:\n        remove_path(dst)\n        ensure_parent_exists(dst)\n        shutil.copytree(src, dst, symlinks=True)\n\n# Attempt to symlink link_path -> link_to.\n# link_to must be a path relative to link_path's parent and must exist.\n# If link_path already exists, do nothing.\n#\ndef attempt_symlink(link_path, link_to):\n    # Only allow linking to an existing file\n    os.stat(os.path.abspath(os.path.join(link_path, \"..\", link_to)))\n\n    # Only make the link if it hasn't already been made\n    if not os.path.exists(link_path):\n        log.info(\"Symlink %s -> %s\" % (link_path, link_to))\n        os.symlink(link_to, link_path)\n\n# Takes the last entry in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef top_level_file_path(base_path, path_list):\n    return os.path.join(base_path, os.path.split(path_list[-1])[-1])\n\n# Takes all entries in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef full_file_path(base_path, path_list):\n    return os.path.join(*([base_path] + path_list))\n\n# Print a command before executing it.\n# Also print out all output from the command to STDOUT.\n#\ndef print_and_call(cmd):\n    log.info(\"Cmd \" + \" \".join(cmd))\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0]\n    if len(result) > 0:\n        log.info(result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Special print-and-call command for the slave build that strips out\n# xcodebuild's spammy list of environment variables.\n#\ndef print_and_call_slave_build(cmd, other_platform):\n    separator = '=== BUILD NATIVE TARGET '\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0].split(separator)\n    if len(result) == 1:\n        result = result[0]\n    else:\n        result = separator + result[1]\n    log.info(\"Cmd \" + \" \".join(cmd) + \"\\n\" + result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Issue a warning and record that a warning has been issued.\n#\ndef issue_warning(msg, *args, **kwargs):\n    global issued_warnings\n    issued_warnings = True\n    log.warn(msg, *args, **kwargs)\n\n\n\n##############################################################################\n#\n# Main Application\n#\n##############################################################################\n\n# Check if we are running as master.\n#\ndef is_master():\n    return os.environ.get('UFW_MASTER_PLATFORM', os.environ['PLATFORM_NAME']) == os.environ['PLATFORM_NAME']\n\n# DerivedData should almost never appear in any framework, library, or header\n# search paths. However, Xcode will sometimes add them in, so we check to make\n# sure.\n#\ndef check_for_derived_data_in_search_paths(project):\n    search_path_keys = [\"FRAMEWORK_SEARCH_PATHS\", \"LIBRARY_SEARCH_PATHS\", \"HEADER_SEARCH_PATHS\"]\n    build_configs = project.target['buildConfigurationList']['buildConfigurations']\n    build_settings = filter(lambda x: x['name'] == os.environ['CONFIGURATION'], build_configs)[0]['buildSettings']\n    \n    found_something = False\n    for path_key in filter(lambda x: x in build_settings, search_path_keys):\n        path = build_settings[path_key]\n        if \"DerivedData\" in path:\n            found_something = True\n            log.warn(\"Derived data in %s\" % path)\n            issue_warning(\"'%s' contains reference to 'DerivedData'.\" % path_key)\n    if found_something:\n        log.warn(\"Check your build settings and remove any entries that contain paths inside the DerivedData folder.\")\n        log.warn(\"Otherwise you can disable this warning by changing 'config_warn_derived_data' in this script.\")\n\n# Link local architectures into their respective archives.\n#\ndef link_local_archs(project):\n    for arch in project.local_architectures:\n        print_and_call(project.get_single_arch_link_command(arch))\n\n# Link only the local architectures into the final product, not the slave\n# architectures. For iphoneos, this will be armv6, armv7. For simulator, this\n# will be i386.\n#\ndef link_combine_local_archs(project):\n    print_and_call(project.get_local_archs_link_command())\n\n# Link all architectures into the final product.\n#\ndef link_combine_all_archs(project):\n    print_and_call(project.get_all_archs_link_command())\n\n# Check if we should open the build directory after a successful build.\n#\ndef should_open_build_dir():\n    env_setting = os.environ.get('UFW_OPEN_BUILD_DIR', None)\n    if env_setting is not None:\n        return env_setting\n\n    return config_open_build_dir\n\n# Open the build dir in Finder.\n#\ndef open_build_dir():\n    print_and_call(['open', os.environ['TARGET_BUILD_DIR']])\n\n# Check if the build was started by selecting \"Archive\" under \"Product\" in\n# Xcode.\n#\ndef is_archive_build():\n    # ACTION is always 'build', but perhaps Apple will fix this someday?\n    archive_build = os.environ['ACTION'] == 'archive'\n\n    if not archive_build:\n        # This can be passed in as an env variable when building from command line.\n        archive_build = os.environ.get('UFW_ACTION', None) == 'archive'\n\n    build_dir = splitpath(os.environ['BUILD_DIR'])\n    if not archive_build:\n        # This partial path is used when you select \"archive\" from within Xcode.\n        archive_build = 'ArchiveIntermediates' in build_dir\n\n    # It only counts as a full archive build if this target is being built into\n    # its own build dir (not being built as a dependency of another target)\n    if archive_build:\n        archive_build = os.environ['TARGET_NAME'] in build_dir\n    \n    return archive_build\n\n# Xcode by default throws all public headers into the top level directory.\n# This function moves them to their expected deep hierarchy.\n#\ndef build_deep_header_hierarchy(project):\n    header_path_top = config_deep_header_top\n    if not header_path_top:\n        header_path_top = os.path.commonprefix(project.header_paths)\n    else:\n        header_path_top = splitpath(header_path_top)\n\n    built_headers_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['PUBLIC_HEADERS_FOLDER_PATH'])\n    movable_headers = project.movable_headers_relative_to(header_path_top)\n\n    # Remove subdirs if they only contain files that have been rebuilt\n    ignore_headers = filter(lambda x: not os.path.isfile(top_level_file_path(built_headers_path, x)), movable_headers)\n    remove_subdirs(built_headers_path, [file[0] for file in ignore_headers])\n\n    # Move rebuilt headers into their proper subdirs\n    for header in movable_headers:\n        move_file(top_level_file_path(built_headers_path, header), full_file_path(built_headers_path, header))\n\n# Add all symlinks needed to make a full framework structure:\n#\n# MyFramework.framework\n# |-- MyFramework -> Versions/Current/MyFramework\n# |-- Headers -> Versions/Current/Headers\n# |-- Resources -> Versions/Current/Resources\n# `-- Versions\n#     |-- A\n#     |   |-- MyFramework\n#     |   |-- Headers\n#     |   |   `-- MyFramework.h\n#     |   `-- Resources\n#     |       |-- Info.plist\n#     |       |-- MyViewController.nib\n#     |       `-- en.lproj\n#     |           `-- InfoPlist.strings\n#     `-- Current -> A\n#\ndef add_symlinks_to_framework(project):\n    base_dir = project.local_built_fw_path\n    attempt_symlink(os.path.join(base_dir, \"Versions\", \"Current\"), os.environ['FRAMEWORK_VERSION'])\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Headers\")):\n        attempt_symlink(os.path.join(base_dir, \"Headers\"), os.path.join(\"Versions\", \"Current\", \"Headers\"))\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Resources\")):\n        attempt_symlink(os.path.join(base_dir, \"Resources\"), os.path.join(\"Versions\", \"Current\", \"Resources\"))\n    attempt_symlink(os.path.join(base_dir, os.environ['EXECUTABLE_NAME']), os.path.join(\"Versions\", \"Current\", os.environ['EXECUTABLE_NAME']))\n\n# Build an embedded framework structure.\n# An embedded framework contains the actual framework, plus a \"Resources\"\n# directory containing symlinks to all resources found in the actual framework,\n# with the exception of \"Info.plist\" and anything ending in \".lproj\":\n#\n# MyFramework.embeddedframework\n# |-- MyFramework.framework\n# |   |-- MyFramework -> Versions/Current/MyFramework\n# |   |-- Headers -> Versions/Current/Headers\n# |   |-- Resources -> Versions/Current/Resources\n# |   `-- Versions\n# |       |-- A\n# |       |   |-- MyFramework\n# |       |   |-- Headers\n# |       |   |   `-- MyFramework.h\n# |       |   `-- Resources\n# |       |       |-- Info.plist\n# |       |       |-- MyViewController.nib\n# |       |       `-- en.lproj\n# |       |           `-- InfoPlist.strings\n# |       `-- Current -> A\n# `-- Resources\n#     `-- MyViewController.nib -> ../MyFramework.framework/Resources/MyViewController.nib\n#\ndef build_embedded_framework(project):\n    fw_path = project.local_built_fw_path\n    embedded_path = project.local_built_embedded_fw_path\n    fw_name = os.environ['WRAPPER_NAME']\n\n    if (os.path.islink(fw_path)):\n        # If the framework path is a link, the build result already in embeddedframework.\n        # Just recreate embeddedframework's Resources\n        remove_path(os.path.join(embedded_path, \"Resources\"))\n    else:\n        remove_path(embedded_path)\n        ensure_path_exists(embedded_path)\n        copy_overwrite(fw_path, os.path.join(embedded_path, fw_name))\n\n    # Create embeddedframework's Resources        \n    ensure_path_exists(os.path.join(embedded_path, \"Resources\"))\n    symlink_source = os.path.join(\"..\", fw_name, \"Resources\")\n    symlink_path = os.path.join(embedded_path, \"Resources\")\n    if os.path.isdir(os.path.join(fw_path, \"Resources\")):\n        for file in filter(lambda x: x != \"Info.plist\" and not x.endswith(\".lproj\"), os.listdir(os.path.join(fw_path, \"Resources\"))):\n            attempt_symlink(os.path.join(symlink_path, file), os.path.join(symlink_source, file))\n\n    # Remove the normal framework and replace it with a symlink to the copy\n    # in the embedded framework. This is needed because Xcode runs its strip\n    # phase AFTER the script runs.\n    embed_fw_wrapper = os.path.splitext(os.environ['WRAPPER_NAME'])[0] + \".embeddedframework\"\n    remove_path(fw_path)\n    attempt_symlink(fw_path, os.path.join(embed_fw_wrapper, os.environ['WRAPPER_NAME']))\n\n\n# Run the build process in slave mode to build the other configuration\n# (device/simulator).\n#\ndef run_slave_build(project):\n    print_and_call_slave_build(project.get_slave_project_build_command(), project.other_platform)\n\n# Run the build process.\n#\ndef run_build():\n    project = Project(os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\"))\n\n    # Issue warnings only if we're master.\n    if is_master():\n        if len(project.compilable_sources) == 0:\n            raise Exception(\"No compilable sources found. Please add at least one source file to build target %s.\" % os.environ['TARGET_NAME'])\n\n        if config_warn_derived_data:\n            check_for_derived_data_in_search_paths(project)\n        if config_warn_no_public_headers and len(project.public_headers) == 0:\n            issue_warning('No headers in build target %s were marked public. Please move at least one header to \"Public\" in the \"Copy Headers\" build phase.' % os.environ['TARGET_NAME'])\n\n    # Only build slave if this is an archive build.\n    if is_archive_build():\n        if is_master():\n            log.debug(\"Building as MASTER\")\n            # The slave-side linker tries to include this (nonexistent) path as\n            # a library path.\n            ensure_path_exists(project.get_slave_environment()['BUILT_PRODUCTS_DIR'])\n            project.build_state.persist()\n            run_slave_build(project)\n            project.build_state.reload()\n        else:\n            log.debug(\"Building as SLAVE\")\n            project.build_state.reload()\n            project.build_state.set_slave_properties(project.local_architectures,\n                                                     project.local_linked_archive_paths,\n                                                     project.local_built_fw_path,\n                                                     project.local_built_embedded_fw_path)\n            project.build_state.persist()\n\n    link_local_archs(project)\n    \n    # Only do a universal binary when building an archive.\n    if is_archive_build() and is_master():\n        link_combine_all_archs(project)\n    else:\n        link_combine_local_archs(project)\n\n    if config_deep_header_hierarchy:\n        build_deep_header_hierarchy(project)\n\n    add_symlinks_to_framework(project)\n    \n    if is_master():\n        if config_framework_type == 'embeddedframework':\n            build_embedded_framework(project)\n        elif config_framework_type != 'framework':\n            raise Exception(\"%s: Unknown framework type for config_framework_type\" % config_framework_type)\n\n\nif __name__ == \"__main__\":\n    log_handler = logging.StreamHandler()\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n    log.addHandler(log_handler)\n    log.setLevel(config_log_level)\n\n    error_code = 0\n    prefix = \"M\" if is_master() else \"S\"\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + prefix + \" \" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n\n    log.debug(\"Begin build process\")\n\n    if config_deep_header_top:\n        config_deep_header_top = string.Template(config_deep_header_top).substitute(os.environ)\n\n    try:\n        run_build()\n        if issued_warnings:\n            if config_fail_on_warnings:\n                error_code = 1\n            log.warn(\"Build completed with warnings\")\n        else:\n            log.info(\"Build completed\")\n        if not is_archive_build():\n            log.info(\"Note: This is *NOT* a universal framework build. To build as a universal framework, do an archive build.\")\n            log.info(\"To do an archive build from command line, use \\\"xcodebuild -configuration Release UFW_ACTION=archive clean build\\\"\")\n    except Exception:\n        traceback.print_exc(file=sys.stdout)\n        error_code = 1\n        log.error(\"Build failed\")\n    finally:\n        if error_code == 0 and is_archive_build() and is_master():\n            log.info(\"Built framework is in \" + os.environ['TARGET_BUILD_DIR'])\n            if should_open_build_dir():\n                open_build_dir()\n        sys.exit(error_code)\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC8E764C18881122001B7893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8E76E7188811C1001B7893 /* NSData+Base64.m in Sources */,
+				AC8E76C6188811C1001B7893 /* GMDisconnectInput.m in Sources */,
+				AC8E76CF188811C1001B7893 /* GMMatcheeDelivery.m in Sources */,
+				ACB9815B18883D4B005C0C9F /* SRWebSocket.m in Sources */,
+				AC8E76F3188811C1001B7893 /* GMGestureMatchClient.m in Sources */,
+				AC8E76D8188811C1001B7893 /* GMDeliveryResponse.m in Sources */,
+				AC8E76B7188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */,
+				3E9AF7BC18900BE000FB719D /* GMUtilities.m in Sources */,
+				AC8E76C9188811C1001B7893 /* GMLeaveGroupInput.m in Sources */,
+				AC8E76E4188811C1001B7893 /* GMMatchee.m in Sources */,
+				AC8E765D18881122001B7893 /* GestureMatchSDK.m in Sources */,
+				3E9AF7C018901AB300FB719D /* GMMatchHelper.m in Sources */,
+				ACB9815618883D4B005C0C9F /* base64.c in Sources */,
+				3E9AF7B4189008F700FB719D /* GMSwipeTranslationHelper.m in Sources */,
+				ACB9817918883DB6005C0C9F /* SBJson4StreamWriterState.m in Sources */,
+				AC8E76D2188811C1001B7893 /* GMMatcheeDeliveryMessage.m in Sources */,
+				3E2F0C7F188D730300F9C014 /* GMApiConstants.m in Sources */,
+				ACB9817B18883DB6005C0C9F /* SBJson4Writer.m in Sources */,
+				AC8E76B4188811C1001B7893 /* GMJsonConstants.m in Sources */,
+				AC8E76E1188811C1001B7893 /* GMMatchResponse.m in Sources */,
+				ACB9816F18883DB6005C0C9F /* SBJson4Parser.m in Sources */,
+				AC8E76BA188811C1001B7893 /* GMJsonInputLabels.m in Sources */,
+				AC8E76EA188811C1001B7893 /* GMInnerOuterChecker.m in Sources */,
+				ACB9817318883DB6005C0C9F /* SBJson4StreamParserState.m in Sources */,
+				AC8E76BD188811C1001B7893 /* GMResponsesConstants.m in Sources */,
+				ACB9814E18883CF5005C0C9F /* SSKeychainQuery.m in Sources */,
+				ACB9817118883DB6005C0C9F /* SBJson4StreamParser.m in Sources */,
+				ACB9817518883DB6005C0C9F /* SBJson4StreamTokeniser.m in Sources */,
+				AC8E76DE188811C1001B7893 /* GMLeaveGroupResponse.m in Sources */,
+				ACB9814C18883CF5005C0C9F /* SSKeychain.m in Sources */,
+				AC8E76D5188811C1001B7893 /* GMMatcheeLeftMessage.m in Sources */,
+				ACB9815918883D4B005C0C9F /* NSData+SRB64Additions.m in Sources */,
+				AC8E76DB188811C1001B7893 /* GMDisconnectResponse.m in Sources */,
+				AC8E76C0188811C1001B7893 /* GMServerMessagesHandler.m in Sources */,
+				ACB9817718883DB6005C0C9F /* SBJson4StreamWriter.m in Sources */,
+				AC8E76CC188811C1001B7893 /* GMMatchInput.m in Sources */,
+				AC8E76C3188811C1001B7893 /* GMDeliveryInput.m in Sources */,
+				AC8E76ED188811C1001B7893 /* GMLocation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC8E765E18881123001B7893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8E76E8188811C1001B7893 /* NSData+Base64.m in Sources */,
+				AC8E76C7188811C1001B7893 /* GMDisconnectInput.m in Sources */,
+				AC8E76D0188811C1001B7893 /* GMMatcheeDelivery.m in Sources */,
+				AC8E76F4188811C1001B7893 /* GMGestureMatchClient.m in Sources */,
+				AC8E76D9188811C1001B7893 /* GMDeliveryResponse.m in Sources */,
+				AC8E76B8188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */,
+				AC8E76CA188811C1001B7893 /* GMLeaveGroupInput.m in Sources */,
+				AC8E76E5188811C1001B7893 /* GMMatchee.m in Sources */,
+				AC8E767418881123001B7893 /* GestureMatchSDKTests.m in Sources */,
+				AC8E76D3188811C1001B7893 /* GMMatcheeDeliveryMessage.m in Sources */,
+				AC8E76B5188811C1001B7893 /* GMJsonConstants.m in Sources */,
+				AC8E76E2188811C1001B7893 /* GMMatchResponse.m in Sources */,
+				AC8E76BB188811C1001B7893 /* GMJsonInputLabels.m in Sources */,
+				AC8E76EB188811C1001B7893 /* GMInnerOuterChecker.m in Sources */,
+				AC8E76BE188811C1001B7893 /* GMResponsesConstants.m in Sources */,
+				AC8E76DF188811C1001B7893 /* GMLeaveGroupResponse.m in Sources */,
+				AC8E76D6188811C1001B7893 /* GMMatcheeLeftMessage.m in Sources */,
+				AC8E76DC188811C1001B7893 /* GMDisconnectResponse.m in Sources */,
+				AC8E76C1188811C1001B7893 /* GMServerMessagesHandler.m in Sources */,
+				AC8E76CD188811C1001B7893 /* GMMatchInput.m in Sources */,
+				AC8E76C4188811C1001B7893 /* GMDeliveryInput.m in Sources */,
+				AC8E76EE188811C1001B7893 /* GMLocation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC8E766B18881123001B7893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC8E765118881122001B7893 /* GestureMatchSDK */;
+			targetProxy = AC8E766A18881123001B7893 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC8E765718881122001B7893 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8E765818881122001B7893 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC8E767018881123001B7893 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8E767118881123001B7893 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC8E767518881123001B7893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC8E767618881123001B7893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC8E767818881123001B7893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "GestureMatchSDK/GestureMatchSDK-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = GestureMatchSDK;
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		AC8E767918881123001B7893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "GestureMatchSDK/GestureMatchSDK-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = GestureMatchSDK;
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		AC8E767B18881123001B7893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GestureMatchSDKTests/GestureMatchSDKTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					"$(UFW_FAKE_FRAMEWORK_NAME)",
+				);
+				PRODUCT_NAME = GestureMatchSDKTests;
+				UFW_FAKE_FRAMEWORK_NAME = GestureMatchSDK;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AC8E767C18881123001B7893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "GestureMatchSDKTests/GestureMatchSDKTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					"$(UFW_FAKE_FRAMEWORK_NAME)",
+				);
+				PRODUCT_NAME = GestureMatchSDKTests;
+				UFW_FAKE_FRAMEWORK_NAME = GestureMatchSDK;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC8E764B18881122001B7893 /* Build configuration list for PBXProject "GestureMatchSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC8E767518881123001B7893 /* Debug */,
+				AC8E767618881123001B7893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC8E767718881123001B7893 /* Build configuration list for PBXNativeTarget "GestureMatchSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC8E767818881123001B7893 /* Debug */,
+				AC8E767918881123001B7893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC8E767A18881123001B7893 /* Build configuration list for PBXNativeTarget "GestureMatchSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC8E767B18881123001B7893 /* Debug */,
+				AC8E767C18881123001B7893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC8E764818881122001B7893 /* Project object */;
+}
