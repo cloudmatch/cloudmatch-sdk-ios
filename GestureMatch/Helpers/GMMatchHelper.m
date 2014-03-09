@@ -8,6 +8,10 @@
 
 #import "GMMatchHelper.h"
 #import "GMMatchInput.h"
+#import "GMLocation.h"
+#import "SBJson4Writer.h"
+#import "SRWebSocket.h"
+#import "GMGestureMatchClient.h"
 
 @implementation GMMatchHelper
 

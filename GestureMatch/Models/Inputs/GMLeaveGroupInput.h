@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMJsonGeneralLabels.h"
-#import "GMJsonConstants.h"
 
 @interface GMLeaveGroupInput : NSObject
 

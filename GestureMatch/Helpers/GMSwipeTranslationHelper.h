@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "GMSwipeConstants.h"
-#import "GMJsonConstants.h"
 
 @interface GMSwipeTranslationHelper : NSObject
 

@@ -8,6 +8,31 @@
 
 #import "GMGestureMatchClient.h"
 #import "GMApiConstants.h"
+#import "GMMatchHelper.h"
+
+#import "GMLocation.h"
+#import "NSData+Base64.h"
+#import "GMInnerOuterChecker.h"
+#import "GMUtilities.h"
+#import "SBJson4.h"
+
+//Constants
+#import "GMJsonConstants.h"
+#import "GMResponsesConstants.h"
+#import "GMJsonGeneralLabels.h"
+
+//Models
+#import "GMDeliveryInput.h"
+#import "GMDeliveryResponse.h"
+#import "GMDisconnectInput.h"
+#import "GMDisconnectResponse.h"
+#import "GMLeaveGroupInput.h"
+#import "GMLeaveGroupResponse.h"
+#import "GMMatcheeDelivery.h"
+#import "GMMatcheeDeliveryMessage.h"
+#import "GMMatcheeLeftMessage.h"
+#import "GMMatchInput.h"
+#import "GMMatchResponse.h"
 
 //CHUNK SIZE
 NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;

@@ -7,7 +7,8 @@
 //
 
 #import "GMMatchInput.h"
-
+#import "GMGestureMatchClient.h"
+#import "GMJsonConstants.h"
 
 static NSString* MATCH_INPUT_CRITERIA = @"criteria";
 static NSString* MATCH_INPUT_LATITUDE = @"latitude";

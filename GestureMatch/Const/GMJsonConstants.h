@@ -16,8 +16,7 @@ extern NSString* const kGMAreaInner;
 extern NSString* const kGMAreaBottom;
 
 extern NSString* const kGMCriteriaUndefined;
-extern NSString* const kGMCriteriaPosition;
-extern NSString* const kGMCriteriaPresence;
+extern NSString* const kGMCriteriaSwipe;
 extern NSString* const kGMCriteriaPinch;
 
 extern NSString* const kGMKindResponse;

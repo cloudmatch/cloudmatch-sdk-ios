@@ -8,14 +8,18 @@
 
 #import "GMServerMessagesHandler.h"
 
+#import "GMJsonGeneralLabels.h"
+#import "GMJsonConstants.h"
+#import "GMResponsesConstants.h"
+
 //Models
-#import "GMMatchee.h"
 #import "GMDeliveryInput.h"
 #import "GMDeliveryResponse.h"
 #import "GMDisconnectInput.h"
 #import "GMDisconnectResponse.h"
 #import "GMLeaveGroupInput.h"
 #import "GMLeaveGroupResponse.h"
+#import "GMMatcheeDelivery.h"
 #import "GMMatcheeDeliveryMessage.h"
 #import "GMMatcheeLeftMessage.h"
 #import "GMMatchInput.h"

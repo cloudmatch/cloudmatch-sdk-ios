@@ -7,6 +7,8 @@
 //
 
 #import "GMLeaveGroupInput.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMJsonConstants.h"
 
 @implementation GMLeaveGroupInput
 

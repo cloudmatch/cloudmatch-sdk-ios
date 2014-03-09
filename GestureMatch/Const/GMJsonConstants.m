@@ -16,8 +16,7 @@ NSString* const kGMAreaInner = @"inner";
 NSString* const kGMAreaBottom = @"bottom";
 
 NSString* const kGMCriteriaUndefined = @"undefined";
-NSString* const kGMCriteriaPosition = @"position";
-NSString* const kGMCriteriaPresence = @"presence";
+NSString* const kGMCriteriaSwipe = @"swipe";
 NSString* const kGMCriteriaPinch = @"pinch";
 
 NSString* const kGMKindResponse = @"response";

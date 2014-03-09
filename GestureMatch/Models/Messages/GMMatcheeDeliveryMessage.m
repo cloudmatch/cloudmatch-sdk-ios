@@ -7,6 +7,8 @@
 //
 
 #import "GMMatcheeDeliveryMessage.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMJsonInputLabels.h"
 
 @implementation GMMatcheeDeliveryMessage
 

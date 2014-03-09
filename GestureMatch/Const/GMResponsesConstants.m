@@ -18,17 +18,6 @@ NSString* const kGMDeliveryReasonPartiallyDelivered = @"partiallyDelivered";
 NSString* const kGMDeliveryReasonNotDelivered = @"notDelivered";
 NSString* const kGMDeliveryReasonDelivered = @"delivered";
 
-NSString* const kGMScreenPositionUnknown = @"unknown";
-NSString* const kGMScreenPositionUndetermined = @"undetermined";
-NSString* const kGMScreenPositionLeft = @"left";
-NSString* const kGMScreenPositionRight = @"right";
-NSString* const kGMScreenPositionTop = @"top";
-NSString* const kGMScreenPositionBottom = @"bottom";
-NSString* const kGMScreenPositionTopLeft = @"topleft";
-NSString* const kGMScreenPositionTopRight = @"topright";
-NSString* const kGMScreenPositionBottomLeft = @"bottomleft";
-NSString* const kGMScreenPositionBottomRight = @"bottomright";
-
 @implementation GMResponsesConstants
 
 @end

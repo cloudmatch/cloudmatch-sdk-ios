@@ -12,6 +12,7 @@ extern const NSString *PAYLOAD;
 extern const NSString *GROUP_ID;
 extern const NSString *REASON;
 extern const NSString *MATCHEE_ID;
+extern const NSString *POSITION_SCHEME;
 
 extern const NSString *KIND;
 extern const NSString *TYPE;

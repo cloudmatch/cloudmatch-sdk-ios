@@ -7,6 +7,7 @@
 //
 
 #import "GMInnerOuterChecker.h"
+#import "GMGestureMatchClient.h"
 
 @interface GMInnerOuterChecker ()
 

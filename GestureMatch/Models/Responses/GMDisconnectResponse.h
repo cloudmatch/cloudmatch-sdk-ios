@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMJsonGeneralLabels.h"
-#import "GMResponsesConstants.h"
 
 @interface GMDisconnectResponse : NSObject
 

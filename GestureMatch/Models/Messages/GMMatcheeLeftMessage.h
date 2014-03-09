@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMJsonGeneralLabels.h"
 
 @interface GMMatcheeLeftMessage : NSObject
 

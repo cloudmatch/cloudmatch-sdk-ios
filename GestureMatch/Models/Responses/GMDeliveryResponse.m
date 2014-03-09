@@ -7,6 +7,8 @@
 //
 
 #import "GMDeliveryResponse.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMResponsesConstants.h"
 
 @implementation GMDeliveryResponse
 

@@ -7,6 +7,7 @@
 //
 
 #import "GMMatcheeLeftMessage.h"
+#import "GMJsonGeneralLabels.h"
 
 @implementation GMMatcheeLeftMessage
 

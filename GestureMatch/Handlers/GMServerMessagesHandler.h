@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "GMOnServerEventDelegate.h"
 #import "GMOnServerMessageDelegate.h"
-#import "GMJsonGeneralLabels.h"
-#import "GMJsonConstants.h"
-#import "GMResponsesConstants.h"
 
 @interface GMServerMessagesHandler : NSObject <GMOnServerMessageDelegate>
 

@@ -19,8 +19,7 @@
 #import "GMResponsesConstants.h"
 #import "GMJsonGeneralLabels.h"
 
-//Models
-#import "GMMatchee.h"
+// Models
 #import "GMDeliveryInput.h"
 #import "GMDeliveryResponse.h"
 #import "GMDisconnectInput.h"

@@ -7,6 +7,8 @@
 //
 
 #import "GMLeaveGroupResponse.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMResponsesConstants.h"
 
 @implementation GMLeaveGroupResponse
 

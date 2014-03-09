@@ -16,6 +16,12 @@
 		3E9AF7BC18900BE000FB719D /* GMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BA18900BE000FB719D /* GMUtilities.m */; };
 		3E9AF7BF18901AB300FB719D /* GMMatchHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9AF7BD18901AB300FB719D /* GMMatchHelper.h */; };
 		3E9AF7C018901AB300FB719D /* GMMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AF7BE18901AB300FB719D /* GMMatchHelper.m */; };
+		3EE0FD2818CB15BB008A55B7 /* GMDeviceInScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EE0FD2618CB15BB008A55B7 /* GMDeviceInScheme.h */; };
+		3EE0FD2918CB15BB008A55B7 /* GMDeviceInScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0FD2718CB15BB008A55B7 /* GMDeviceInScheme.m */; };
+		3EE0FD3618CB1BF3008A55B7 /* GMIntegerPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EE0FD3418CB1BF3008A55B7 /* GMIntegerPoint.h */; };
+		3EE0FD3718CB1BF3008A55B7 /* GMIntegerPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0FD3518CB1BF3008A55B7 /* GMIntegerPoint.m */; };
+		3EE0FD3A18CC5F08008A55B7 /* GMPositionScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EE0FD3818CC5F08008A55B7 /* GMPositionScheme.h */; };
+		3EE0FD3B18CC5F08008A55B7 /* GMPositionScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0FD3918CC5F08008A55B7 /* GMPositionScheme.m */; };
 		AC7D28E5188FD12D009CC433 /* GMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E1188FD12D009CC433 /* GMOnMovementDelegate.h */; };
 		AC7D28E6188FD12D009CC433 /* GMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E2188FD12D009CC433 /* GMOnServerEventDelegate.h */; };
 		AC7D28E7188FD12D009CC433 /* GMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7D28E3188FD12D009CC433 /* GMOnServerMessageDelegate.h */; };
@@ -57,8 +63,6 @@
 		AC8E76DF188811C1001B7893 /* GMLeaveGroupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */; };
 		AC8E76E1188811C1001B7893 /* GMMatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A3188811C1001B7893 /* GMMatchResponse.m */; };
 		AC8E76E2188811C1001B7893 /* GMMatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A3188811C1001B7893 /* GMMatchResponse.m */; };
-		AC8E76E4188811C1001B7893 /* GMMatchee.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A5188811C1001B7893 /* GMMatchee.m */; };
-		AC8E76E5188811C1001B7893 /* GMMatchee.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A5188811C1001B7893 /* GMMatchee.m */; };
 		AC8E76E7188811C1001B7893 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A7188811C1001B7893 /* NSData+Base64.m */; };
 		AC8E76E8188811C1001B7893 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A7188811C1001B7893 /* NSData+Base64.m */; };
 		AC8E76EA188811C1001B7893 /* GMInnerOuterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8E76A9188811C1001B7893 /* GMInnerOuterChecker.m */; };
@@ -100,7 +104,6 @@
 		ACB981941888414A005C0C9F /* GMDisconnectResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E769E188811C1001B7893 /* GMDisconnectResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981951888414A005C0C9F /* GMLeaveGroupResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A0188811C1001B7893 /* GMLeaveGroupResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981961888414A005C0C9F /* GMMatchResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A2188811C1001B7893 /* GMMatchResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACB981971888414A005C0C9F /* GMMatchee.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8E76A4188811C1001B7893 /* GMMatchee.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815E18883DB6005C0C9F /* SBJson4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB9819F188842FE005C0C9F /* SBJson4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9815F18883DB6005C0C9F /* SBJson4Parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB9816118883DB6005C0C9F /* SBJson4StreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,6 +139,12 @@
 		3E9AF7BA18900BE000FB719D /* GMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUtilities.m; sourceTree = "<group>"; };
 		3E9AF7BD18901AB300FB719D /* GMMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchHelper.h; sourceTree = "<group>"; };
 		3E9AF7BE18901AB300FB719D /* GMMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchHelper.m; sourceTree = "<group>"; };
+		3EE0FD2618CB15BB008A55B7 /* GMDeviceInScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDeviceInScheme.h; sourceTree = "<group>"; };
+		3EE0FD2718CB15BB008A55B7 /* GMDeviceInScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDeviceInScheme.m; sourceTree = "<group>"; };
+		3EE0FD3418CB1BF3008A55B7 /* GMIntegerPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMIntegerPoint.h; sourceTree = "<group>"; };
+		3EE0FD3518CB1BF3008A55B7 /* GMIntegerPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMIntegerPoint.m; sourceTree = "<group>"; };
+		3EE0FD3818CC5F08008A55B7 /* GMPositionScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPositionScheme.h; sourceTree = "<group>"; };
+		3EE0FD3918CC5F08008A55B7 /* GMPositionScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPositionScheme.m; sourceTree = "<group>"; };
 		AC7D28E1188FD12D009CC433 /* GMOnMovementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnMovementDelegate.h; sourceTree = "<group>"; };
 		AC7D28E2188FD12D009CC433 /* GMOnServerEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnServerEventDelegate.h; sourceTree = "<group>"; };
 		AC7D28E3188FD12D009CC433 /* GMOnServerMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOnServerMessageDelegate.h; sourceTree = "<group>"; };
@@ -182,8 +191,6 @@
 		AC8E76A1188811C1001B7893 /* GMLeaveGroupResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLeaveGroupResponse.m; sourceTree = "<group>"; };
 		AC8E76A2188811C1001B7893 /* GMMatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchResponse.h; sourceTree = "<group>"; };
 		AC8E76A3188811C1001B7893 /* GMMatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchResponse.m; sourceTree = "<group>"; };
-		AC8E76A4188811C1001B7893 /* GMMatchee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMatchee.h; sourceTree = "<group>"; };
-		AC8E76A5188811C1001B7893 /* GMMatchee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMatchee.m; sourceTree = "<group>"; };
 		AC8E76A6188811C1001B7893 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		AC8E76A7188811C1001B7893 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		AC8E76A8188811C1001B7893 /* GMInnerOuterChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMInnerOuterChecker.h; sourceTree = "<group>"; };
@@ -395,8 +402,12 @@
 				AC8E768B188811C1001B7893 /* Inputs */,
 				AC8E7694188811C1001B7893 /* Messages */,
 				AC8E769B188811C1001B7893 /* Responses */,
-				AC8E76A4188811C1001B7893 /* GMMatchee.h */,
-				AC8E76A5188811C1001B7893 /* GMMatchee.m */,
+				3EE0FD2618CB15BB008A55B7 /* GMDeviceInScheme.h */,
+				3EE0FD2718CB15BB008A55B7 /* GMDeviceInScheme.m */,
+				3EE0FD3418CB1BF3008A55B7 /* GMIntegerPoint.h */,
+				3EE0FD3518CB1BF3008A55B7 /* GMIntegerPoint.m */,
+				3EE0FD3818CC5F08008A55B7 /* GMPositionScheme.h */,
+				3EE0FD3918CC5F08008A55B7 /* GMPositionScheme.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -520,6 +531,7 @@
 				3E9AF7B3189008F700FB719D /* GMSwipeTranslationHelper.h in Headers */,
 				ACB9818C1888414A005C0C9F /* GMDeliveryInput.h in Headers */,
 				ACB9818D1888414A005C0C9F /* GMDisconnectInput.h in Headers */,
+				3EE0FD2818CB15BB008A55B7 /* GMDeviceInScheme.h in Headers */,
 				ACB9818E1888414A005C0C9F /* GMLeaveGroupInput.h in Headers */,
 				ACB9818F1888414A005C0C9F /* GMMatchInput.h in Headers */,
 				ACB981901888414A005C0C9F /* GMMatcheeDelivery.h in Headers */,
@@ -529,7 +541,6 @@
 				ACB981941888414A005C0C9F /* GMDisconnectResponse.h in Headers */,
 				ACB981951888414A005C0C9F /* GMLeaveGroupResponse.h in Headers */,
 				ACB981961888414A005C0C9F /* GMMatchResponse.h in Headers */,
-				ACB981971888414A005C0C9F /* GMMatchee.h in Headers */,
 				ACB9817F18884129005C0C9F /* NSData+Base64.h in Headers */,
 				ACB9818018884129005C0C9F /* GMInnerOuterChecker.h in Headers */,
 				ACB9818118884129005C0C9F /* GMLocation.h in Headers */,
@@ -539,9 +550,11 @@
 				ACB9819E188842FE005C0C9F /* SBJson4.h in Headers */,
 				ACB9819F188842FE005C0C9F /* SBJson4Parser.h in Headers */,
 				ACB981A0188842FE005C0C9F /* SBJson4StreamParser.h in Headers */,
+				3EE0FD3618CB1BF3008A55B7 /* GMIntegerPoint.h in Headers */,
 				ACB981A1188842FE005C0C9F /* SBJson4StreamParserState.h in Headers */,
 				ACB981A2188842FE005C0C9F /* SBJson4StreamTokeniser.h in Headers */,
 				3E9AF7BF18901AB300FB719D /* GMMatchHelper.h in Headers */,
+				3EE0FD3A18CC5F08008A55B7 /* GMPositionScheme.h in Headers */,
 				ACB981A3188842FE005C0C9F /* SBJson4StreamWriter.h in Headers */,
 				ACB981A4188842FE005C0C9F /* SBJson4StreamWriterState.h in Headers */,
 				ACB981A5188842FE005C0C9F /* SBJson4Writer.h in Headers */,
@@ -675,9 +688,9 @@
 				AC8E76F3188811C1001B7893 /* GMGestureMatchClient.m in Sources */,
 				AC8E76D8188811C1001B7893 /* GMDeliveryResponse.m in Sources */,
 				AC8E76B7188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */,
+				3EE0FD3718CB1BF3008A55B7 /* GMIntegerPoint.m in Sources */,
 				3E9AF7BC18900BE000FB719D /* GMUtilities.m in Sources */,
 				AC8E76C9188811C1001B7893 /* GMLeaveGroupInput.m in Sources */,
-				AC8E76E4188811C1001B7893 /* GMMatchee.m in Sources */,
 				AC8E765D18881122001B7893 /* GestureMatchSDK.m in Sources */,
 				3E9AF7C018901AB300FB719D /* GMMatchHelper.m in Sources */,
 				ACB9815618883D4B005C0C9F /* base64.c in Sources */,
@@ -688,11 +701,13 @@
 				ACB9817B18883DB6005C0C9F /* SBJson4Writer.m in Sources */,
 				AC8E76B4188811C1001B7893 /* GMJsonConstants.m in Sources */,
 				AC8E76E1188811C1001B7893 /* GMMatchResponse.m in Sources */,
+				3EE0FD3B18CC5F08008A55B7 /* GMPositionScheme.m in Sources */,
 				ACB9816F18883DB6005C0C9F /* SBJson4Parser.m in Sources */,
 				AC8E76BA188811C1001B7893 /* GMJsonInputLabels.m in Sources */,
 				AC8E76EA188811C1001B7893 /* GMInnerOuterChecker.m in Sources */,
 				ACB9817318883DB6005C0C9F /* SBJson4StreamParserState.m in Sources */,
 				AC8E76BD188811C1001B7893 /* GMResponsesConstants.m in Sources */,
+				3EE0FD2918CB15BB008A55B7 /* GMDeviceInScheme.m in Sources */,
 				ACB9814E18883CF5005C0C9F /* SSKeychainQuery.m in Sources */,
 				ACB9817118883DB6005C0C9F /* SBJson4StreamParser.m in Sources */,
 				ACB9817518883DB6005C0C9F /* SBJson4StreamTokeniser.m in Sources */,
@@ -720,7 +735,6 @@
 				AC8E76D9188811C1001B7893 /* GMDeliveryResponse.m in Sources */,
 				AC8E76B8188811C1001B7893 /* GMJsonGeneralLabels.m in Sources */,
 				AC8E76CA188811C1001B7893 /* GMLeaveGroupInput.m in Sources */,
-				AC8E76E5188811C1001B7893 /* GMMatchee.m in Sources */,
 				AC8E767418881123001B7893 /* GestureMatchSDKTests.m in Sources */,
 				AC8E76D3188811C1001B7893 /* GMMatcheeDeliveryMessage.m in Sources */,
 				AC8E76B5188811C1001B7893 /* GMJsonConstants.m in Sources */,

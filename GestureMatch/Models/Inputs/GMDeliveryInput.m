@@ -8,6 +8,10 @@
 
 #import "GMDeliveryInput.h"
 
+#import "GMJsonGeneralLabels.h"
+#import "GMJsonInputLabels.h"
+#import "GMJsonConstants.h"
+
 @implementation GMDeliveryInput
 
 - (id)initWithRecipients:(NSArray *)recipients payload:(NSString *)payload groupId:(NSString *)groupId;
@@ -26,8 +30,8 @@
     self = [self init];
     if (self) {
         NSMutableArray *recs = [[NSMutableArray alloc] init];
-        for (GMMatchee *matchee in recipients) {
-            [recs addObject:[NSNumber numberWithInteger:matchee.mIdInGroup]];
+        for (NSNumber *recipient in recipients) {
+            [recs addObject:recipient];
         }
         self.mRecipients = [recs copy];
         self.mDeliveryId = deliveryId;

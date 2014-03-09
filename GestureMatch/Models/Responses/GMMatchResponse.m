@@ -7,9 +7,11 @@
 //
 
 #import "GMMatchResponse.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMResponsesConstants.h"
 
-static NSString* ME_IN_GROUP = @"myselfInGroup";
-static NSString* OTHERS_IN_GROUP = @"othersInGroup";
+static NSString* MY_ID_IN_GROUP = @"myId";
+static NSString* DEVICES_IN_GROUP = @"group";
 
 @implementation GMMatchResponse
 
@@ -28,15 +30,15 @@ static NSString* OTHERS_IN_GROUP = @"othersInGroup";
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
         self.mOutcome = [dict objectForKey:OUTCOME];
         self.mResponseReason = [dict objectForKey:REASON];
-        self.mMyselfInGroup = [GMMatchee modelObjectWithDictionary:[dict objectForKey:ME_IN_GROUP]];
+        self.mMyIdInGroup = [[dict objectForKey:MY_ID_IN_GROUP] integerValue];
         self.mGroupId = [dict objectForKey:GROUP_ID];
         
-        NSMutableArray *others = [[NSMutableArray alloc] init];
-        for (NSDictionary* matcheeDict in [dict objectForKey:OTHERS_IN_GROUP]) {
-            [others addObject:[GMMatchee modelObjectWithDictionary:matcheeDict]];
+        NSMutableArray *devices = [[NSMutableArray alloc] init];
+        for  (NSNumber *did in [dict objectForKey:DEVICES_IN_GROUP]) {
+            [devices addObject:did];
         }
-        self.mOthersInGroup = [others copy];
-        
+        self.mGroupSize = [devices count];
+        self.mDevicesInGroup = [devices copy];
     }
     return self;
     

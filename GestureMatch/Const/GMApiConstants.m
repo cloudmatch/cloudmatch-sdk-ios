@@ -10,7 +10,7 @@
 
 @implementation GMApiConstants
 
-NSString* const kGMApiEndpoint = @"wss://swipematch.herokuapp.com:443/open";
+NSString* const kGMApiEndpoint = @"wss://gesturematch.herokuapp.com:443/v1/open";
 NSString* const kGMApiParamApiKey = @"apiKey";
 NSString* const kGMApiParamAppId = @"appId";
 NSString* const kGMApiParamOS = @"os";

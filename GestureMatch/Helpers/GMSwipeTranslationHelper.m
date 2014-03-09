@@ -8,6 +8,8 @@
 
 #import "GMSwipeTranslationHelper.h"
 
+#import "GMJsonConstants.h"
+
 @implementation GMSwipeTranslationHelper
 
 + (Movement)decodeMovement:(NSString*)movementStr

@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMGestureMatchClient.h"
-#import "GMJsonConstants.h"
-
-
 
 @interface GMMatchInput : NSObject
 

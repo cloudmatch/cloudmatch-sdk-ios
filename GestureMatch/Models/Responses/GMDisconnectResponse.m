@@ -7,6 +7,8 @@
 //
 
 #import "GMDisconnectResponse.h"
+#import "GMJsonGeneralLabels.h"
+#import "GMResponsesConstants.h"
 
 @implementation GMDisconnectResponse
 

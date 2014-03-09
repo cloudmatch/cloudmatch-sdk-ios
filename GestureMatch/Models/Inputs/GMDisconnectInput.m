@@ -8,6 +8,9 @@
 
 #import "GMDisconnectInput.h"
 
+#import "GMJsonGeneralLabels.h"
+#import "GMJsonConstants.h"
+
 @implementation GMDisconnectInput
 
 - (id)initWithReason:(NSString *)reason
