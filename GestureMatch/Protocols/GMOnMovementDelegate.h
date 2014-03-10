@@ -13,6 +13,8 @@
 
 - (BOOL)isSwipeValid;
 - (NSString*)getEqualityParam;
+
+// TODO: add screen coordinates
 - (void)onMovementDetection:(Movement)movement swipeType:(NSInteger)swipeType;
 
 @optional
