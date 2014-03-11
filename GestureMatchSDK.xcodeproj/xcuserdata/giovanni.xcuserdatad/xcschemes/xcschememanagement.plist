@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SwipeMatchSDK.xcscheme</key>
+		<key>GestureMatchSDK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AC8E765118881122001B7893</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC8E766118881123001B7893</key>
+		<key>AC7E925D18CF64DD00656C47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
