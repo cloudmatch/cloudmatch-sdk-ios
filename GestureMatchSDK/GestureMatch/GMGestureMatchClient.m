@@ -229,7 +229,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
             //if range is out of string length, reduce the range
             range = NSMakeRange(start, payload.length - start);
         }
-        NSLog(@"loop %d range: %@", start, NSStringFromRange(range));
+        NSLog(@"loop %ld range: %@", (long)start, NSStringFromRange(range));
         [array addObject:[payload substringWithRange:range] ];
     }
     return [array copy];
