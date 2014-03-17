@@ -119,13 +119,14 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
             [self.movementDelegate onMovementDetection:move swipeType:swipeType];
             
             NSString *eqParam = [self.movementDelegate getEqualityParam];
+            if (eqParam == (id)[NSNull null] || eqParam.length == 0) {
+                eqParam = @"";
+            }
             NSString *start = [GMSwipeTranslationHelper convertViewAreaToString:first];
             NSString *end = [GMSwipeTranslationHelper convertViewAreaToString:second];
             
             // send match request
             [[[GMGestureMatchClient sharedInstance] getMatcher] matchUsingCriteria:_mCriteria equalityParam:eqParam areaStart:start areaEnd:end];
-            
-            //TODO: Should inform that it's going to match
         }
         
     }
