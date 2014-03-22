@@ -124,15 +124,20 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
     //This is the PanGestureRecognizer's delegate
     _innerOuterChecker.delegate = self;
+    
     //This is GestureMatch onMovementDelegate
     _innerOuterChecker.movementDelegate = delegate;
+    
     //This is the view that the PanGestureRecognizer is attached to
     _innerOuterChecker.attachedView = view;
+    
     //Does not cancel touches in the view attached to PanGestureRecognizer so that touch events are forwarded immediately
     _innerOuterChecker.cancelsTouchesInView = NO;
+    
     //Does not delay touches
     _innerOuterChecker.delaysTouchesBegan = NO;
     _innerOuterChecker.delaysTouchesEnded = NO;
+    
     [view addGestureRecognizer:_innerOuterChecker];
     NSLog(@"%@ %@ panrecognizer view: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _innerOuterChecker.view);
 }
@@ -233,6 +238,11 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
         [array addObject:[payload substringWithRange:range] ];
     }
     return [array copy];
+}
+
+- (void)deliverPayload:(NSString*)payload toGroup:(NSString*)groupId
+{
+    [self deliverPayload:payload ToRecipients:nil inGroup:groupId];
 }
 
 - (void)deliverPayload:(NSString *)payload ToRecipients:(NSArray *)recipients inGroup:(NSString *)groupId

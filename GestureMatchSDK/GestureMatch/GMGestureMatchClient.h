@@ -64,5 +64,6 @@ extern NSInteger const kGMMaxDeliveryChunkSize;
 - (void)connect;
 - (void)closeConnection;
 - (void)deliverPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
+- (void)deliverPayload:(NSString*)payload toGroup:(NSString*)groupId;
 
 @end
