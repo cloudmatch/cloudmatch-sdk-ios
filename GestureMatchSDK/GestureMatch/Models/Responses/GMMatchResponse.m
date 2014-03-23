@@ -10,9 +10,11 @@
 #import "GMJsonConstants.h"
 #import "GMJsonGeneralLabels.h"
 #import "GMResponsesConstants.h"
+#import "GMPositionScheme.h"
 
 static NSString* MY_ID_IN_GROUP = @"myId";
 static NSString* DEVICES_IN_GROUP = @"group";
+static NSString* POSITION_SCHEME = @"scheme";
 
 @implementation GMMatchResponse
 
@@ -31,8 +33,7 @@ static NSString* DEVICES_IN_GROUP = @"group";
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
         self.mOutcome = [GMResponsesConstants getOutcomeFromString:[dict objectForKey:OUTCOME]];
         self.mResponseReason = [GMResponsesConstants getReasonFromString:[dict objectForKey:REASON]];
-
-        self.mMyIdInGroup = [[dict objectForKey:MY_ID_IN_GROUP] integerValue];
+        self.mMyIdInGroup = [(NSNumber*)[dict objectForKey:MY_ID_IN_GROUP] integerValue];
         self.mGroupId = [dict objectForKey:GROUP_ID];
         
         NSMutableArray *devices = [[NSMutableArray alloc] init];
@@ -41,6 +42,7 @@ static NSString* DEVICES_IN_GROUP = @"group";
         }
         self.mGroupSize = [devices count];
         self.mDevicesInGroup = [devices copy];
+        self.mPositionScheme = [GMPositionScheme modelObjectWithDictionary: [dict objectForKey:POSITION_SCHEME]];
     }
     return self;
     

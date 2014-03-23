@@ -31,6 +31,9 @@
 #import "GMMatcheeLeftMessage.h"
 #import "GMMatchInput.h"
 #import "GMMatchResponse.h"
+#import "GMIntegerPoint.h"
+#import "GMDeviceInScheme.h"
+#import "GMPositionScheme.h"
 
 //Handler
 #import "GMServerMessagesHandler.h"

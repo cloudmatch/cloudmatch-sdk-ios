@@ -40,4 +40,14 @@ static NSString* DEVICES = @"devices";
     return self;
 }
 
+- (GMDeviceInScheme*)getDeviceForId:(NSInteger)deviceId
+{
+    for (GMDeviceInScheme *dev in self.mDevices) {
+        if (dev.mIdInGroup == deviceId) {
+            return dev;
+        }
+    }
+    return nil;
+}
+
 @end

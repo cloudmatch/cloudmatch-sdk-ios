@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class GMDeviceInScheme;
 
 @interface GMPositionScheme : NSObject
 
@@ -16,5 +17,6 @@
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary*)dict;
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
+- (GMDeviceInScheme*)getDeviceForId:(NSInteger)deviceId;
 
 @end
