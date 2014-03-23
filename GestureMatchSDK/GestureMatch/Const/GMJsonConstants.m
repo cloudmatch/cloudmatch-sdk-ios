@@ -23,6 +23,16 @@ NSString* const kGMKindResponse = @"response";
 NSString* const kGMKindMessage = @"message";
 NSString* const kGMKindError = @"error";
 
+NSString* const kGMOutcomeUnknown = @"unknown";
+NSString* const kGMOutcomeFail = @"fail";
+NSString* const kGMOutcomeOk = @"ok";
+
+NSString* const kGMMatchReasonInvalidRequest = @"invalidRequest";
+NSString* const kGMMatchReasonUnknown = @"unknown";
+NSString* const kGMMatchReasonTimeout = @"timeout";
+NSString* const kGMMatchReasonError = @"error";
+NSString* const kGMMatchReasonUncertain = @"uncertain";
+
 NSString* const kGMResponseTypeUnknown = @"unknown";
 NSString* const kGMResponseTypeMatch = @"match";
 NSString* const kGMResponseTypeLeaveGroup = @"leaveGroup";
@@ -32,6 +42,14 @@ NSString* const kGMResponseTypeDelivery = @"delivery";
 NSString* const kGMInputTypeMatcheeLeft = @"matcheeLeft";
 NSString* const kGMInputTypeDelivery = @"delivery";
 
+NSString* const kGMDeliveryReasonUnknown = @"unknown";
+NSString* const kGMDeliveryReasonNotPartOfAnyGroup = @"notPartOfAnyGroup";
+NSString* const kGMDeliveryReasonPartiallyDelivered = @"partiallyDelivered";
+NSString* const kGMDeliveryReasonNotDelivered = @"notDelivered";
+NSString* const kGMDeliveryReasonDelivered = @"delivered";
+
+NSString* const kGMLeaveGroupResponseNotPartOfThisGroup = @"notPartOfThisGroup";
+NSString* const kGMLeaveGroupResponseNotPartOfAnyGroup = @"notPartOfAnyGroup";
 
 @implementation GMJsonConstants
 

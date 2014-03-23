@@ -7,6 +7,7 @@
 //
 
 #import "GMDeliveryResponse.h"
+#import "GMJsonConstants.h"
 #import "GMJsonGeneralLabels.h"
 #import "GMResponsesConstants.h"
 
@@ -25,8 +26,8 @@
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.mDeliveryReason = [dict objectForKey:REASON];
-        self.mOutcome = [dict objectForKey:OUTCOME];
+        self.mOutcome = [GMResponsesConstants getOutcomeFromString:[dict objectForKey:OUTCOME]];
+        self.mDeliveryReason = [GMResponsesConstants getDeliveryOutcomeFromString:[dict objectForKey:REASON]];
         self.mGroupId = [dict objectForKey:GROUP_ID];
     }
     return self;

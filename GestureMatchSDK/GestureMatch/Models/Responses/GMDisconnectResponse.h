@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMResponsesConstants.h"
 
 @interface GMDisconnectResponse : NSObject
 
-@property (nonatomic, strong) NSString* mOutcome;
+@property (nonatomic, assign) Outcomes mOutcome;
 @property (nonatomic, strong) NSString* mBreakConnectionReason;
 @property (nonatomic, strong) NSString* mGroupId;
 

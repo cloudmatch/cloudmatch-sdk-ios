@@ -9,17 +9,40 @@
 #import <Foundation/Foundation.h>
 
 //The possible outcomes
-extern NSString* const kGMOutcomeUnknown;
-extern NSString* const kGMOutcomeFail;
-extern NSString* const kGMOutcomeOk;
+typedef enum {
+    OutcomeUnknown,
+    OutcomeOk,
+    OutcomeFail
+} Outcomes;
 
 //The possible delivery reasons
-extern NSString* const kGMDeliveryReasonUnknown;
-extern NSString* const kGMDeliveryReasonNotPartOfAnyGroup;
-extern NSString* const kGMDeliveryReasonPartiallyDelivered;
-extern NSString* const kGMDeliveryReasonNotDelivered;
-extern NSString* const kGMDeliveryReasonDelivered;
+typedef enum {
+    DeliveryOutcomeUnknown,
+    DeliveryOutcomeNotPartOfAnyGroup,
+    DeliveryOutcomePartiallyDelivered,
+    DeliveryOutcomeNotDelivered,
+    DeliveryOutcomeDelivered
+} DeliveryOutcome;
+
+typedef enum {
+    MatchReasonUnknown,
+    MatchReasonError,
+    MatchReasonTimeout,
+    MatchReasonUncertain,
+    MatchReasonInvalidRequest
+} MatchReasons;
+
+typedef enum {
+    LeaveGroupReasonUnknown,
+    LeaveGroupReasonNotPartOfAnyGroup,
+    LeaveGroupReasonNotPartOfThisGroup
+} LeaveGroupReason;
 
 @interface GMResponsesConstants : NSObject
+
++(Outcomes)getOutcomeFromString:(NSString*)outcome;
++(MatchReasons)getReasonFromString:(NSString*)reason;
++(DeliveryOutcome)getDeliveryOutcomeFromString:(NSString*)deliveryOutcome;
++(LeaveGroupReason)getLeaveGroupReasonFromString:(NSString*)leaveGroupReason;
 
 @end

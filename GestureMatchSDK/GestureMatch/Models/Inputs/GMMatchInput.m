@@ -54,7 +54,6 @@ static NSString* MATCH_INPUT_EQUALITYPARAM = @"equalityParam";
         self.mEqualityParam = [dict objectForKey:MATCH_INPUT_EQUALITYPARAM];
     }
     return self;
-    
 }
 
 - (id)init

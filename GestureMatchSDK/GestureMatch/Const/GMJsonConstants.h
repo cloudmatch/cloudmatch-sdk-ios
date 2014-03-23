@@ -23,6 +23,16 @@ extern NSString* const kGMKindResponse;
 extern NSString* const kGMKindMessage;
 extern NSString* const kGMKindError;
 
+extern NSString* const kGMOutcomeUnknown;
+extern NSString* const kGMOutcomeFail;
+extern NSString* const kGMOutcomeOk;
+
+extern NSString* const kGMMatchReasonInvalidRequest;
+extern NSString* const kGMMatchReasonUnknown;
+extern NSString* const kGMMatchReasonTimeout;
+extern NSString* const kGMMatchReasonError;
+extern NSString* const kGMMatchReasonUncertain;
+
 extern NSString* const kGMResponseTypeUnknown;
 extern NSString* const kGMResponseTypeMatch;
 extern NSString* const kGMResponseTypeLeaveGroup;
@@ -31,6 +41,15 @@ extern NSString* const kGMResponseTypeDelivery;
 
 extern NSString* const kGMInputTypeMatcheeLeft;
 extern NSString* const kGMInputTypeDelivery;
+
+extern NSString* const kGMDeliveryReasonUnknown;
+extern NSString* const kGMDeliveryReasonNotPartOfAnyGroup;
+extern NSString* const kGMDeliveryReasonPartiallyDelivered;
+extern NSString* const kGMDeliveryReasonNotDelivered;
+extern NSString* const kGMDeliveryReasonDelivered;
+
+extern NSString* const kGMLeaveGroupResponseNotPartOfThisGroup;
+extern NSString* const kGMLeaveGroupResponseNotPartOfAnyGroup;
 
 @interface GMJsonConstants : NSObject
 

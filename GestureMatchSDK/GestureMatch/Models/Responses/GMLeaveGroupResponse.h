@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMResponsesConstants.h"
 
 @interface GMLeaveGroupResponse : NSObject
 
-@property (nonatomic, strong) NSString* mOutcome;
-@property (nonatomic, strong) NSString* mLeaveGroupReason;
+@property (nonatomic, assign) Outcomes mOutcome;
+@property (nonatomic, assign) LeaveGroupReason mLeaveGroupReason;
 @property (nonatomic, strong) NSString* mGroupId;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary*)dict;
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
-
 
 @end

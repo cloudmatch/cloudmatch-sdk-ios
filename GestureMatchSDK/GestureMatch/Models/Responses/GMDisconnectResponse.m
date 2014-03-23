@@ -9,6 +9,7 @@
 #import "GMDisconnectResponse.h"
 #import "GMJsonGeneralLabels.h"
 #import "GMResponsesConstants.h"
+#import "GMJsonConstants.h"
 
 @implementation GMDisconnectResponse
 
@@ -25,8 +26,8 @@
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
+        self.mOutcome = [GMResponsesConstants getOutcomeFromString:[dict objectForKey:OUTCOME]];
         self.mBreakConnectionReason = [dict objectForKey:REASON];
-        self.mOutcome = [dict objectForKey:OUTCOME];
         self.mGroupId = [dict objectForKey:GROUP_ID];
     }
     return self;

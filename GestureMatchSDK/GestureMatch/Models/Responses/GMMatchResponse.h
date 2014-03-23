@@ -7,30 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMResponsesConstants.h"
+
 @class GMPositionScheme;
 
 @interface GMMatchResponse : NSObject
 
-
-//public ResponseReasons mReason = ResponseReasons.unknown;
-//public String mGroupId;
-//public Integer mGroupSize;
-//public Matchee mMyselfInGroup;
-//public ArrayList<Matchee> mOthersInGroup = new ArrayList<Matchee>();
-
-//private static final String MY_ID_IN_GROUP = "myId";
-//private static final String DEVICES_IN_GROUP = "group";
-//
-//public Outcomes mOutcome = Outcomes.unknown;
-//public ResponseReasons mReason = ResponseReasons.unknown;
-//public String mGroupId;
-//public Integer mGroupSize;
-//public Integer mMyIdInGroup;
-//public ArrayList<Integer> mDevicesInGroup = new ArrayList<Integer>();
-//public PositionScheme mPositionScheme;
-
-@property (nonatomic, strong) NSString *mOutcome;
-@property (nonatomic, strong) NSString *mResponseReason;
+@property (nonatomic, assign) Outcomes mOutcome;
+@property (nonatomic, assign) MatchReasons mResponseReason;
 @property (nonatomic, strong) NSString *mGroupId;
 @property (nonatomic, assign) NSInteger mMyIdInGroup;
 @property (nonatomic, assign) NSInteger mGroupSize;

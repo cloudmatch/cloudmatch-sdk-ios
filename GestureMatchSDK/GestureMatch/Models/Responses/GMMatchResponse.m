@@ -7,6 +7,7 @@
 //
 
 #import "GMMatchResponse.h"
+#import "GMJsonConstants.h"
 #import "GMJsonGeneralLabels.h"
 #import "GMResponsesConstants.h"
 
@@ -28,13 +29,14 @@ static NSString* DEVICES_IN_GROUP = @"group";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.mOutcome = [dict objectForKey:OUTCOME];
-        self.mResponseReason = [dict objectForKey:REASON];
+        self.mOutcome = [GMResponsesConstants getOutcomeFromString:[dict objectForKey:OUTCOME]];
+        self.mResponseReason = [GMResponsesConstants getReasonFromString:[dict objectForKey:REASON]];
+
         self.mMyIdInGroup = [[dict objectForKey:MY_ID_IN_GROUP] integerValue];
         self.mGroupId = [dict objectForKey:GROUP_ID];
         
         NSMutableArray *devices = [[NSMutableArray alloc] init];
-        for  (NSNumber *did in [dict objectForKey:DEVICES_IN_GROUP]) {
+        for (NSNumber *did in [dict objectForKey:DEVICES_IN_GROUP]) {
             [devices addObject:did];
         }
         self.mGroupSize = [devices count];

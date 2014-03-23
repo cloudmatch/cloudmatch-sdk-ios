@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMResponsesConstants.h"
 
 @interface GMDeliveryResponse : NSObject
 
-@property (nonatomic, strong) NSString* mOutcome;
-@property (nonatomic, strong) NSString* mDeliveryReason;
+@property (nonatomic, assign) Outcomes mOutcome;
+@property (nonatomic, assign) DeliveryOutcome mDeliveryReason;
 @property (nonatomic, strong) NSString* mGroupId;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary*)dict;
