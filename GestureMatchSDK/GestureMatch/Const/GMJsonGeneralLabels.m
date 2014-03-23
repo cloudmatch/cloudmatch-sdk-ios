@@ -13,7 +13,6 @@ const NSString *GROUP_ID = @"groupId";
 const NSString *GROUP_SIZE = @"groupSize";
 const NSString *REASON = @"reason";
 const NSString *MATCHEE_ID = @"matcheeId";
-const NSString *POSITION_SCHEME = @"scheme";
 
 const NSString *KIND = @"kind";
 const NSString *TYPE = @"type";

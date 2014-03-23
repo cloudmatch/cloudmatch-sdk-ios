@@ -12,9 +12,9 @@
 #import "GMResponsesConstants.h"
 #import "GMPositionScheme.h"
 
+static NSString* POSITION_SCHEME = @"scheme";
 static NSString* MY_ID_IN_GROUP = @"myId";
 static NSString* DEVICES_IN_GROUP = @"group";
-static NSString* POSITION_SCHEME = @"scheme";
 
 @implementation GMMatchResponse
 
