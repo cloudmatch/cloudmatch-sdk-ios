@@ -249,7 +249,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 {
     //Prepare the array of chunks
     NSArray *chunks = [self splitEqually:payload chunkSize:kGMMaxDeliveryChunkSize];
-    NSString *deliveryId = [GMUtilities generateDeliveryUUID];
+    NSString *deliveryId = [[GMUtilities generateDeliveryUUID] substringToIndex:8];
     
     //Iterate over the array and send each chunk
     [chunks enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
