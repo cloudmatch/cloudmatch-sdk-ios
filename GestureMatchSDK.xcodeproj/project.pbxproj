@@ -544,7 +544,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = LimeBamboo;
+				ORGANIZATIONNAME = Fabway;
 			};
 			buildConfigurationList = AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "GestureMatchSDK" */;
 			compatibilityVersion = "Xcode 3.2";
