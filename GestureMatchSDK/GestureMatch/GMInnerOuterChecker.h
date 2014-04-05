@@ -23,6 +23,7 @@
 #import "GMMatchInput.h"
 
 @interface GMInnerOuterChecker : UIPanGestureRecognizer {
+    CGPoint startPoint;
     ViewArea initialAreaTouched;
     ViewArea finalAreaTouched;
 }

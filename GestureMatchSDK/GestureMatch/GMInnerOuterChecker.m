@@ -124,7 +124,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
             Movement move = [GMSwipeTranslationHelper decodeMovement:movementStr];
             SwipeType swipeType = [GMSwipeTranslationHelper decodeSwipe:move];
             
-            [self.movementDelegate onMovementDetection:move swipeType:swipeType];
+            [self.movementDelegate onMovementDetection:move swipeType:swipeType pointStart:startPoint pointEnd:np];
             
             NSString *eqParam = [self.movementDelegate getEqualityParam];
             if (eqParam == (id)[NSNull null] || eqParam.length == 0) {
@@ -172,6 +172,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 #if DEBUG
     NSLog(@"[IOC]touch started");
 #endif
+    startPoint = initialPoint;
     initialAreaTouched = [self getBelongingArea:initialPoint forView:view];
     return initialAreaTouched;
 }
@@ -246,6 +247,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 {
     [super reset];
     
+    startPoint = CGPointMake(-1.0, -1.0);
     initialAreaTouched = 0;
     finalAreaTouched = 0;
 }
