@@ -21,7 +21,7 @@
 
 - (BOOL)isSwipeValid;
 - (NSString*)getEqualityParam;
-- (void)onMovementDetection:(Movement)movement swipeType:(NSInteger)swipeType pointStart:(CGPoint)pointStart pointEnd:(CGPoint)pointEnd;
+- (void)onMovementDetection:(Movement)movement swipeType:(SwipeType)swipeType pointStart:(CGPoint)pointStart pointEnd:(CGPoint)pointEnd;
 
 @optional
 
