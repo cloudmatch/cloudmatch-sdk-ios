@@ -18,7 +18,7 @@
 
 @interface GMUtilities : NSObject
 
-+ (NSString*)getDeviceIdForAppId:(NSString*)appID;
++ (NSString*)getDeviceIdForAppId;
 + (NSString*)generateDeliveryUUID;
 
 @end
