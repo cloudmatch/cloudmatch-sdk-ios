@@ -208,7 +208,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSString *deviceID = [GMUtilities getDeviceIdForAppId:_appId];
+    NSString *deviceID = [GMUtilities getDeviceIdForAppId];
 
     NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kGMApiEndpoint, kGMApiParamApiKey, self.apiKey, kGMApiParamAppId, self.appId, kGMApiParamOS, @"ios", kGMApiParamDeviceId, deviceID];
     

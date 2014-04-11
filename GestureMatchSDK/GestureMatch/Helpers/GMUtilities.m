@@ -19,15 +19,16 @@
 
 @implementation GMUtilities
 
-+ (NSString*)getDeviceIdForAppId:(NSString*)appID
++ (NSString*)getDeviceIdForAppId
 {
     // Get device UDID
     // getting the unique key (if present ) from keychain , assuming "your app identifier" as a key
-    NSString *deviceID = [SSKeychain passwordForService:@"ch.swipemat" account:appID];
-    if (deviceID == nil) { // if this is the first time app lunching , create key for device
+    NSString *deviceID = [SSKeychain passwordForService:@"com.gesturematch" account:@"deviceId"];
+    if (deviceID == nil) {
+        // if this is the first time app lunching , create key for device
         NSString *uuid  = [self createNewUUID];
         // save newly created key to Keychain
-        [SSKeychain setPassword:uuid forService:@"ch.swipemat" account:appID];
+        [SSKeychain setPassword:uuid forService:@"com.gesturematch" account:@"deviceId"];
         // this is the one time process
         deviceID = uuid;
     }
