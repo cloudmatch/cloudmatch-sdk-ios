@@ -49,11 +49,6 @@
 {
     NSLog(@"onMessage: %@", message);
     @try {
-        if ([message isEqualToString:@"k"]) {
-            // keepalive message
-            return;
-        }
-        
         NSError *jsonError = nil;
         NSDictionary* msgJson = [NSJSONSerialization JSONObjectWithData:[message dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&jsonError];
         if ([msgJson objectForKey:KIND] == nil) {

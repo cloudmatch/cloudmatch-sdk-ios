@@ -18,7 +18,9 @@
 
 @implementation GMApiConstants
 
-NSString* const kGMApiEndpoint = @"wss://gesturematch.herokuapp.com:443/v1/open";
+// TODO: insert here your web server url, eg: "ws://my-server.com:80/v1/open"
+NSString* const kGMApiEndpoint = @"DUMMY-API";
+
 NSString* const kGMApiParamApiKey = @"apiKey";
 NSString* const kGMApiParamAppId = @"appId";
 NSString* const kGMApiParamOS = @"os";
