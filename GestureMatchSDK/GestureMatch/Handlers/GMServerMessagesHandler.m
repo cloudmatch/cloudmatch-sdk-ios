@@ -47,15 +47,16 @@
 
 - (void)onServerMessage:(NSString *)message
 {
-    NSLog(@"onMessage: %@", message);
     @try {
         NSError *jsonError = nil;
         NSDictionary* msgJson = [NSJSONSerialization JSONObjectWithData:[message dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&jsonError];
         if ([msgJson objectForKey:KIND] == nil) {
-            NSLog(@"%@ error: no Kind specified!", [[self class] description]);
+            // TODO: throw an error
+            return;
         }
         if ([msgJson objectForKey:TYPE] == nil) {
-            NSLog(@"%@ error: no Type specified!", [[self class] description]);
+            // TODO: throw an error
+            return;
         }
         
         NSString* kind = [msgJson objectForKey:KIND];
@@ -77,8 +78,7 @@
                 GMDeliveryResponse *deliveryResponse = [GMDeliveryResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onDeliveryResponse:deliveryResponse];
             }
-        }
-        else if([kind isEqualToString:kGMKindMessage]){
+        } else if([kind isEqualToString:kGMKindMessage]){
             NSString* messageType = [msgJson objectForKey:TYPE];
             if ([messageType isEqualToString:kGMInputTypeDelivery]) {
                 GMMatcheeDeliveryMessage *deliveryMessage = [GMMatcheeDeliveryMessage modelObjectWithDictionary:msgJson];
@@ -86,8 +86,7 @@
                     //this is not part of a chunked transfer
                     GMMatcheeDelivery *delivery = [[GMMatcheeDelivery alloc] initWithSenderMatchee:deliveryMessage.mSenderMatchee payload:deliveryMessage.mPayload groupId:deliveryMessage.mGroupId];
                     [_serverEventDelegate onMatcheeDelivery:delivery];
-                }
-                else{
+                } else{
                     //this is part of a chunked transfer
                     NSString *deliveryId = deliveryMessage.mDeliveryId;
                     if (deliveryId == nil) {
@@ -125,25 +124,18 @@
                         [_serverEventDelegate onMatcheeDeliveryProgress:progress forDeliveryId:deliveryId];
                     }
                 }
-            }
-            else if ([messageType isEqualToString:kGMInputTypeMatcheeLeft]){
+            } else if ([messageType isEqualToString:kGMInputTypeMatcheeLeft]){
                 GMMatcheeLeftMessage *matcheeLeftMessage = [GMMatcheeLeftMessage modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onMatcheeLeftMessage:matcheeLeftMessage];
             }
+        } else if([kind isEqualToString:kGMKindError]){
+            // TODO: manage the error
+        } else {
+            // TODO: We should not get here
         }
-        else if([kind isEqualToString:kGMKindError]){
-            NSLog(@"%@ server encountered error: %@ ", [[self class] description], [msgJson objectForKey:REASON]);
-            //TODO: manage the error
-        }
-        else{
-            //TODO: We should not get here
-        }
-            
-        
     }
     @catch (NSException *exception) {
-        //TODO: handle
-        NSLog(@"%@ exception: %@", [[self class] description], [exception description]);
+        // TODO: handle
     }
     @finally {
         

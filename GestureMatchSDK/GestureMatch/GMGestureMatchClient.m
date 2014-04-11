@@ -147,7 +147,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
     _innerOuterChecker.delaysTouchesEnded = NO;
     
     [view addGestureRecognizer:_innerOuterChecker];
-    NSLog(@"%@ %@ panrecognizer view: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _innerOuterChecker.view);
 }
 
 - (void)detachFromView:(UIView*)view
@@ -160,7 +159,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)move:(id)sender
 {
-//    NSLog(@"move: %@", NSStringFromCGPoint([_innerOuterChecker locationInView:_innerOuterChecker.attachedView]) );
     //Please keep this method for the time being, although movement detection is performed by InnerOuterChecker
 //    CGPoint locationInWindow = [_attachedView convertPoint:[_panRecognizer locationInView:_attachedView] toView:[[[UIApplication sharedApplication] delegate] window]];
 }
@@ -169,7 +167,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket;
 {
-    NSLog(@"Websocket Connected");
     [self.onServerEventDelegate onConnectionOpen];
     
     //If there's data to send, send it
@@ -182,7 +179,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
 {
-    NSLog(@":( Websocket Failed With Error %@", error);
     _webSocket = nil;
     [self.onServerEventDelegate onConnectionError:error];
 }
@@ -190,7 +186,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
 {
     NSString *m;
-    NSLog(@"WebSocketDidReceiveMessage");
     if([message isKindOfClass:[NSData class]]){
         m = [[NSString alloc] initWithData:message encoding:NSUTF8StringEncoding];
     }
@@ -202,7 +197,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 {
-    NSLog(@"WebSocket closed with code: %ld reason: %@", (long)code, reason);
     _webSocket = nil;
     [self.onServerEventDelegate onConnectionClosedWithWSReason:reason];
 }
@@ -222,7 +216,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
     _webSocket.delegate = self;
     
-    NSLog(@"Opening WebSocket connection");
     [_webSocket open];
 }
 
@@ -242,7 +235,6 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
             //if range is out of string length, reduce the range
             range = NSMakeRange(start, payload.length - start);
         }
-        NSLog(@"loop %ld range: %@", (long)start, NSStringFromRange(range));
         [array addObject:[payload substringWithRange:range] ];
     }
     return [array copy];
@@ -284,7 +276,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 
         }
         @catch (NSException *exception) {
-            NSLog(@"[%@] Exception in deliverPayload: %@", [[self class] description], [exception description]);
+            // TODO: handle exception
         }
         
     }];

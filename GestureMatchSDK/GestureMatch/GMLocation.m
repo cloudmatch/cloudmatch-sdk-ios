@@ -65,7 +65,6 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
 - (void)startLocationServices
 {
     if (![CLLocationManager locationServicesEnabled]) {
-        NSLog(@"location services are disabled");
         return;
     }
     

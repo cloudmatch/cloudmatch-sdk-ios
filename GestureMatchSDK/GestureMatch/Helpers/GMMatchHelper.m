@@ -40,19 +40,17 @@
         if (writer.error != nil) {
             @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:writer.error userInfo:nil];
         }
-        NSLog(@"%@ Ready to send: %@", [[self class] description], dataToSend);
         
         SRWebSocket* webSocket = [[GMGestureMatchClient sharedInstance] getWebSocket];
         if (webSocket.readyState == SR_OPEN) {
             [webSocket send:dataToSend];
         } else {
-            NSLog(@"Socket not ready");
             // TODO: deal with error states or add to sendQueue in GMGestureMatchClient
         }
     }
     
     @catch (NSException *exception) {
-        NSLog(@"[%@] Exception in matchUsingCriteria: %@", [[self class] description], [exception description]);
+        // TODO: deal with exception
     }
     
 }
