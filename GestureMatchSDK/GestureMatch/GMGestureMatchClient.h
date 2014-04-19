@@ -55,26 +55,81 @@
 
 extern NSInteger const kGMMaxDeliveryChunkSize;
 
+/** The GMGestureMatchClient is the interface with the client application. It
+ * should be used in its "static" form -- obtaining it through the sharedInstance method.
+ *
+ */
 @interface GMGestureMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate>
 
 //Some properties for the client
 @property (nonatomic, assign) BOOL GMClientShouldStopUpdatingLocationOnDealloc;
 
+/**-----------------------------------------------------------------------------
+ * @name Accessing the shared GestureMatch Instance
+ * -----------------------------------------------------------------------------
+ */
+
+/** Returns the shared `GMGestureMatchClient` instance, creating it if necessary.
+ *
+ * @return The shared `GMGestureMatchClient` instance.
+ */
 +(GMGestureMatchClient*)sharedInstance;
 
-//SDK view methods
+/**-----------------------------------------------------------------------------
+ * @name Initializing or shutting down the shared GestureMatch Instance
+ * -----------------------------------------------------------------------------
+ */
+
+/** Passes to the Gesture Match a specific view to attach itself to, a movement criteria and
+ * an implementation of the GMOnMovementDelegate protocol.
+ *
+ */
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<GMOnMovementDelegate>)delegate criteria:(NSString*)criteria;
-- (void)detachFromView:(UIView*)view;
+
+/** Sets the server event delegate to which the Gesture Match will notify all server events.
+ * It needs to be an implementation of the GMOnServerEventDelegate protocol.
+ *
+ */
 - (void)setServerEventDelegate:(id<GMOnServerEventDelegate>)serverEventDelegate;
+
+/** Detaches the Gesture Match from the passed view and closes the WebSocket connection.
+ *
+ */
+- (void)detachFromView:(UIView*)view;
+
+/**-----------------------------------------------------------------------------
+ * @name Using the shared GestureMatch Instance
+ * -----------------------------------------------------------------------------
+ */
+
+/** Connects the Gesture Match instance.
+ *
+ */
+- (void)connect;
+
+/** Closes the WebSocket connection.
+ *
+ */
+- (void)closeConnection;
+
+/** Delivers payload to a list of recipient.
+ *
+ * @param payload The string containing the payload to deliver.
+ * @param recipients An array of integer indicating the receipients to which send the payload.
+ * @param groupId the id of the group to which the recipients belong.
+ */
+- (void)deliverPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
+
+/** Delivers payload to an entire group.
+ *
+ * @param payload The payload to deliver.
+ * @param groupId The group to which deliver the payload.
+ */
+- (void)deliverPayload:(NSString*)payload toGroup:(NSString*)groupId;
 
 // SDK private methods
 - (GMMatchHelper*)getMatcher;
 - (SRWebSocket*)getWebSocket;
 
-//SDK Methods
-- (void)connect;
-- (void)closeConnection;
-- (void)deliverPayload:(NSString*)payload ToRecipients:(NSArray*)recipients inGroup:(NSString*)groupId;
-- (void)deliverPayload:(NSString*)payload toGroup:(NSString*)groupId;
 
 @end
