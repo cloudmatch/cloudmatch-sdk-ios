@@ -18,7 +18,7 @@
 
 @implementation GMApiConstants
 
-NSString* const kGMApiEndpoint = @"wss://api.gesturematch.com:443/v1/open";
+NSString* const kGMApiEndpoint = @"wss://api.cloudmatch.io:443/v1/open";
 NSString* const kGMApiParamApiKey = @"apiKey";
 NSString* const kGMApiParamAppId = @"appId";
 NSString* const kGMApiParamOS = @"os";
