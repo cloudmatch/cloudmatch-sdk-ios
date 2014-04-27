@@ -153,7 +153,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
 -(NSString*)touchEnded:(CGPoint)finalPoint inView:(UIView*)view
 {
     finalAreaTouched = [self getBelongingArea:finalPoint forView:view];
-    NSString *areas = [NSString stringWithFormat:@"%ld%ld", initialAreaTouched, finalAreaTouched];
+    NSString *areas = [NSString stringWithFormat:@"%d%d", (int)initialAreaTouched, (int)finalAreaTouched];
     return areas;
 }
 
