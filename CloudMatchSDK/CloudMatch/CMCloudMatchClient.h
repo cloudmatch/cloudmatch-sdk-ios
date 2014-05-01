@@ -90,7 +90,7 @@ extern NSInteger const kCMMaxDeliveryChunkSize;
  * It needs to be an implementation of the CMOnServerEventDelegate protocol.
  *
  */
-- (void)setServerEventDelegate:(id<CMOnServerEventDelegate>)serverEventDelegate;
+- (void)setServerEventDelegate:(id<CMOnServerEventDelegate>)serverEventDelegate apiKey:(NSString*)apiKey appId:(NSString*)appId;
 
 /** Detaches the CloudMatch from the passed view and closes the WebSocket connection.
  *
