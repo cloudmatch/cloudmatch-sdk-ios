@@ -15,7 +15,7 @@
  */
 
 #import "CMInnerOuterChecker.h"
-#import "CMGestureMatchClient.h"
+#import "CMCloudMatchClient.h"
 
 @interface CMInnerOuterChecker ()
 
@@ -113,7 +113,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
             NSString *end = [CMSwipeTranslationHelper convertViewAreaToString:second];
             
             // send match request
-            [[[CMGestureMatchClient sharedInstance] getMatcher] matchUsingCriteria:_mCriteria equalityParam:eqParam areaStart:start areaEnd:end];
+            [[[CMCloudMatchClient sharedInstance] getMatcher] matchUsingCriteria:_mCriteria equalityParam:eqParam areaStart:start areaEnd:end];
         }
         
     }

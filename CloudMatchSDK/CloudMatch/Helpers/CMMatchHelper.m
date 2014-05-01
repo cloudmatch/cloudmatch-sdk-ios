@@ -19,7 +19,7 @@
 #import "CMLocation.h"
 #import "SBJson4Writer.h"
 #import "SRWebSocket.h"
-#import "CMGestureMatchClient.h"
+#import "CMCloudMatchClient.h"
 
 @implementation CMMatchHelper
 
@@ -41,11 +41,11 @@
             @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:writer.error userInfo:nil];
         }
         
-        SRWebSocket* webSocket = [[CMGestureMatchClient sharedInstance] getWebSocket];
+        SRWebSocket* webSocket = [[CMCloudMatchClient sharedInstance] getWebSocket];
         if (webSocket.readyState == SR_OPEN) {
             [webSocket send:dataToSend];
         } else {
-            // TODO: deal with error states or add to sendQueue in GMGestureMatchClient
+            // TODO: deal with error states or add to sendQueue in CMCloudMatchClient
         }
     }
     

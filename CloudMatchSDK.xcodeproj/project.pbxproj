@@ -49,8 +49,8 @@
 		AC7E92FB18CF65BB00656C47 /* CMResponsesConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BA18CF65BB00656C47 /* CMResponsesConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC7E92FC18CF65BB00656C47 /* CMResponsesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92BB18CF65BB00656C47 /* CMResponsesConstants.m */; };
 		AC7E92FD18CF65BB00656C47 /* CMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BC18CF65BB00656C47 /* CMSwipeConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E92FE18CF65BB00656C47 /* CMGestureMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BD18CF65BB00656C47 /* CMGestureMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E92FF18CF65BB00656C47 /* CMGestureMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92BE18CF65BB00656C47 /* CMGestureMatchClient.m */; };
+		AC7E92FE18CF65BB00656C47 /* CMCloudMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BD18CF65BB00656C47 /* CMCloudMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC7E92FF18CF65BB00656C47 /* CMCloudMatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92BE18CF65BB00656C47 /* CMCloudMatchClient.m */; };
 		AC7E930018CF65BB00656C47 /* CMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BF18CF65BB00656C47 /* CMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC7E930118CF65BB00656C47 /* CMInnerOuterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92C018CF65BB00656C47 /* CMInnerOuterChecker.m */; };
 		AC7E930218CF65BB00656C47 /* CMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C118CF65BB00656C47 /* CMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,8 +146,8 @@
 		AC7E92BA18CF65BB00656C47 /* CMResponsesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMResponsesConstants.h; sourceTree = "<group>"; };
 		AC7E92BB18CF65BB00656C47 /* CMResponsesConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMResponsesConstants.m; sourceTree = "<group>"; };
 		AC7E92BC18CF65BB00656C47 /* CMSwipeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSwipeConstants.h; sourceTree = "<group>"; };
-		AC7E92BD18CF65BB00656C47 /* CMGestureMatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGestureMatchClient.h; sourceTree = "<group>"; };
-		AC7E92BE18CF65BB00656C47 /* CMGestureMatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGestureMatchClient.m; sourceTree = "<group>"; };
+		AC7E92BD18CF65BB00656C47 /* CMCloudMatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCloudMatchClient.h; sourceTree = "<group>"; };
+		AC7E92BE18CF65BB00656C47 /* CMCloudMatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCloudMatchClient.m; sourceTree = "<group>"; };
 		AC7E92BF18CF65BB00656C47 /* CMInnerOuterChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInnerOuterChecker.h; sourceTree = "<group>"; };
 		AC7E92C018CF65BB00656C47 /* CMInnerOuterChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInnerOuterChecker.m; sourceTree = "<group>"; };
 		AC7E92C118CF65BB00656C47 /* CMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLocation.h; sourceTree = "<group>"; };
@@ -334,8 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				AC7E92B118CF65BB00656C47 /* Const */,
-				AC7E92BD18CF65BB00656C47 /* CMGestureMatchClient.h */,
-				AC7E92BE18CF65BB00656C47 /* CMGestureMatchClient.m */,
+				AC7E92BD18CF65BB00656C47 /* CMCloudMatchClient.h */,
+				AC7E92BE18CF65BB00656C47 /* CMCloudMatchClient.m */,
 				AC7E92BF18CF65BB00656C47 /* CMInnerOuterChecker.h */,
 				AC7E92C018CF65BB00656C47 /* CMInnerOuterChecker.m */,
 				AC7E92C118CF65BB00656C47 /* CMLocation.h */,
@@ -491,7 +491,7 @@
 				AC7E931218CF65BB00656C47 /* CMDeliveryInput.h in Headers */,
 				AC7E932B18CF65BB00656C47 /* CMOnServerEventDelegate.h in Headers */,
 				AC7E931018CF65BB00656C47 /* CMPositionScheme.h in Headers */,
-				AC7E92FE18CF65BB00656C47 /* CMGestureMatchClient.h in Headers */,
+				AC7E92FE18CF65BB00656C47 /* CMCloudMatchClient.h in Headers */,
 				AC7E930E18CF65BB00656C47 /* CMIntegerPoint.h in Headers */,
 				AC7E932018CF65BB00656C47 /* CMDeliveryResponse.h in Headers */,
 				AC7E930C18CF65BB00656C47 /* CMDeviceInScheme.h in Headers */,
@@ -533,7 +533,7 @@
 			dependencies = (
 			);
 			name = CloudMatchSDK;
-			productName = GestureMatchSDK;
+			productName = CloudMatchSDK;
 			productReference = AC7E925E18CF64DD00656C47 /* CloudMatchSDK.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -544,7 +544,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Fabway;
+				ORGANIZATIONNAME = CloudMatch;
 			};
 			buildConfigurationList = AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "CloudMatchSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -623,7 +623,7 @@
 				AC7E92A618CF657400656C47 /* SRWebSocket.m in Sources */,
 				AC7E92A018CF657400656C47 /* base64.c in Sources */,
 				AC7E932318CF65BB00656C47 /* CMDisconnectResponse.m in Sources */,
-				AC7E92FF18CF65BB00656C47 /* CMGestureMatchClient.m in Sources */,
+				AC7E92FF18CF65BB00656C47 /* CMCloudMatchClient.m in Sources */,
 				AC7E929118CF655600656C47 /* SBJson4StreamWriterState.m in Sources */,
 				AC7E931B18CF65BB00656C47 /* CMMatcheeDelivery.m in Sources */,
 				AC7E931118CF65BB00656C47 /* CMPositionScheme.m in Sources */,

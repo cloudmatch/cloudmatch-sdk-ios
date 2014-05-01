@@ -55,54 +55,54 @@
 
 extern NSInteger const kCMMaxDeliveryChunkSize;
 
-/** The GMGestureMatchClient is the interface with the client application. It
+/** The CMCloudMatchClient is the interface with the client application. It
  * should be used in its "static" form -- obtaining it through the sharedInstance method.
  *
  */
-@interface CMGestureMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate>
+@interface CMCloudMatchClient : NSObject <SRWebSocketDelegate, UIGestureRecognizerDelegate>
 
 //Some properties for the client
 @property (nonatomic, assign) BOOL GMClientShouldStopUpdatingLocationOnDealloc;
 
 /**-----------------------------------------------------------------------------
- * @name Accessing the shared GestureMatch Instance
+ * @name Accessing the shared CloudMatch Instance
  * -----------------------------------------------------------------------------
  */
 
-/** Returns the shared `GMGestureMatchClient` instance, creating it if necessary.
+/** Returns the shared `CMCloudMatchClient` instance, creating it if necessary.
  *
- * @return The shared `GMGestureMatchClient` instance.
+ * @return The shared `CMCloudMatchClient` instance.
  */
-+(CMGestureMatchClient*)sharedInstance;
++(CMCloudMatchClient*)sharedInstance;
 
 /**-----------------------------------------------------------------------------
- * @name Initializing or shutting down the shared GestureMatch Instance
+ * @name Initializing or shutting down the shared CloudMatch Instance
  * -----------------------------------------------------------------------------
  */
 
-/** Passes to the Gesture Match a specific view to attach itself to, a movement criteria and
- * an implementation of the GMOnMovementDelegate protocol.
+/** Passes to the CloudMatch a specific view to attach itself to, a movement criteria and
+ * an implementation of the CMOnMovementDelegate protocol.
  *
  */
 - (void)attachToView:(UIView*)view withMovementDelegate:(id<CMOnMovementDelegate>)delegate criteria:(NSString*)criteria;
 
-/** Sets the server event delegate to which the Gesture Match will notify all server events.
- * It needs to be an implementation of the GMOnServerEventDelegate protocol.
+/** Sets the server event delegate to which the CloudMatch will notify all server events.
+ * It needs to be an implementation of the CMOnServerEventDelegate protocol.
  *
  */
 - (void)setServerEventDelegate:(id<CMOnServerEventDelegate>)serverEventDelegate;
 
-/** Detaches the Gesture Match from the passed view and closes the WebSocket connection.
+/** Detaches the CloudMatch from the passed view and closes the WebSocket connection.
  *
  */
 - (void)detachFromView:(UIView*)view;
 
 /**-----------------------------------------------------------------------------
- * @name Using the shared GestureMatch Instance
+ * @name Using the shared CloudMatch Instance
  * -----------------------------------------------------------------------------
  */
 
-/** Connects the Gesture Match instance.
+/** Connects the CloudMatch instance.
  *
  */
 - (void)connect;

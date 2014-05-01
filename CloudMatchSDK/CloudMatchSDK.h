@@ -15,12 +15,12 @@
  */
 
 #ifndef __CFNETWORK__
-#pragma message("CFNetwork framework not found in project, or not included in precompiled header. Be sure to include all required frameworks for GestureMatchSDK.")
+#pragma message("CFNetwork framework not found in project, or not included in precompiled header. Be sure to include all required frameworks for CloudMatchSDK.")
 #endif
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CMGestureMatchClient.h"
+#import "CMCloudMatchClient.h"
 
 @interface CloudMatchSDK : NSObject
 

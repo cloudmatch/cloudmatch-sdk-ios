@@ -15,7 +15,7 @@
  */
 
 #import "CMMatchInput.h"
-#import "CMGestureMatchClient.h"
+#import "CMCloudMatchClient.h"
 #import "CMJsonConstants.h"
 
 static NSString* MATCH_INPUT_CRITERIA = @"criteria";

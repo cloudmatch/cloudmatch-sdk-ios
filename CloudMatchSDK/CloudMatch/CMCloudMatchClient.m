@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "CMGestureMatchClient.h"
+#import "CMCloudMatchClient.h"
 #import "CMApiConstants.h"
 #import "CMMatchHelper.h"
 
@@ -45,7 +45,7 @@
 //CHUNK SIZE
 NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
-@interface CMGestureMatchClient ()
+@interface CMCloudMatchClient ()
 
 //WebSocket connection
 @property (nonatomic, strong) SRWebSocket *webSocket;
@@ -66,13 +66,13 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
 @end
 
-@implementation CMGestureMatchClient
+@implementation CMCloudMatchClient
 
-+(CMGestureMatchClient *)sharedInstance {
++(CMCloudMatchClient *)sharedInstance {
     static dispatch_once_t pred;
-    static CMGestureMatchClient *shared = nil;
+    static CMCloudMatchClient *shared = nil;
     dispatch_once(&pred, ^{
-        shared = [[CMGestureMatchClient alloc] init];
+        shared = [[CMCloudMatchClient alloc] init];
     });
     return shared;
 }
