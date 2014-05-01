@@ -100,10 +100,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC7E925E18CF64DD00656C47 /* GestureMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC7E926218CF64DD00656C47 /* GestureMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureMatchSDK-Info.plist"; sourceTree = "<group>"; };
+		AC7E925E18CF64DD00656C47 /* CloudMatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudMatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7E926218CF64DD00656C47 /* CloudMatchSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloudMatchSDK-Info.plist"; sourceTree = "<group>"; };
 		AC7E926418CF64DD00656C47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AC7E926618CF64DD00656C47 /* GestureMatchSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureMatchSDK-Prefix.pch"; sourceTree = "<group>"; };
+		AC7E926618CF64DD00656C47 /* CloudMatchSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudMatchSDK-Prefix.pch"; sourceTree = "<group>"; };
 		AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudMatchSDK.h; sourceTree = "<group>"; };
 		AC7E926818CF64DD00656C47 /* CloudMatchSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudMatchSDK.m; sourceTree = "<group>"; };
 		AC7E927118CF655600656C47 /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		AC7E925F18CF64DD00656C47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC7E925E18CF64DD00656C47 /* GestureMatchSDK.framework */,
+				AC7E925E18CF64DD00656C47 /* CloudMatchSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,9 +237,9 @@
 		AC7E926118CF64DD00656C47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AC7E926218CF64DD00656C47 /* GestureMatchSDK-Info.plist */,
+				AC7E926218CF64DD00656C47 /* CloudMatchSDK-Info.plist */,
 				AC7E926318CF64DD00656C47 /* InfoPlist.strings */,
-				AC7E926618CF64DD00656C47 /* GestureMatchSDK-Prefix.pch */,
+				AC7E926618CF64DD00656C47 /* CloudMatchSDK-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -518,9 +518,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AC7E925D18CF64DD00656C47 /* GestureMatchSDK */ = {
+		AC7E925D18CF64DD00656C47 /* CloudMatchSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC7E926C18CF64DD00656C47 /* Build configuration list for PBXNativeTarget "GestureMatchSDK" */;
+			buildConfigurationList = AC7E926C18CF64DD00656C47 /* Build configuration list for PBXNativeTarget "CloudMatchSDK" */;
 			buildPhases = (
 				AC7E925818CF64DD00656C47 /* Sources */,
 				AC7E925918CF64DD00656C47 /* Frameworks */,
@@ -532,9 +532,9 @@
 			);
 			dependencies = (
 			);
-			name = GestureMatchSDK;
+			name = CloudMatchSDK;
 			productName = GestureMatchSDK;
-			productReference = AC7E925E18CF64DD00656C47 /* GestureMatchSDK.framework */;
+			productReference = AC7E925E18CF64DD00656C47 /* CloudMatchSDK.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -546,7 +546,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Fabway;
 			};
-			buildConfigurationList = AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "GestureMatchSDK" */;
+			buildConfigurationList = AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "CloudMatchSDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -558,7 +558,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC7E925D18CF64DD00656C47 /* GestureMatchSDK */,
+				AC7E925D18CF64DD00656C47 /* CloudMatchSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -733,13 +733,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
-				INFOPLIST_FILE = "GestureMatchSDK/GestureMatchSDK-Info.plist";
+				GCC_PREFIX_HEADER = "GestureMatchSDK/CloudMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "GestureMatchSDK/CloudMatchSDK-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudMatchSDK;
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
@@ -755,13 +755,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GestureMatchSDK/GestureMatchSDK-Prefix.pch";
-				INFOPLIST_FILE = "GestureMatchSDK/GestureMatchSDK-Info.plist";
+				GCC_PREFIX_HEADER = "GestureMatchSDK/CloudMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "GestureMatchSDK/CloudMatchSDK-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudMatchSDK;
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
@@ -771,7 +771,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "GestureMatchSDK" */ = {
+		AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "CloudMatchSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC7E926A18CF64DD00656C47 /* Debug */,
@@ -780,7 +780,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC7E926C18CF64DD00656C47 /* Build configuration list for PBXNativeTarget "GestureMatchSDK" */ = {
+		AC7E926C18CF64DD00656C47 /* Build configuration list for PBXNativeTarget "CloudMatchSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC7E926D18CF64DD00656C47 /* Debug */,

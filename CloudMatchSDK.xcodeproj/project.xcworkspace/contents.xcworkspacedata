@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GestureMatchSDK.xcodeproj">
+      location = "self:CloudMatchSDK.xcodeproj">
    </FileRef>
 </Workspace>
