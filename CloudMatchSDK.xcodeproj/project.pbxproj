@@ -210,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7E929718CF656100656C47 /* Vendor */,
-				AC7E926018CF64DD00656C47 /* GestureMatchSDK */,
+				AC7E926018CF64DD00656C47 /* CloudMatchSDK */,
 				AC7E925F18CF64DD00656C47 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -223,15 +223,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC7E926018CF64DD00656C47 /* GestureMatchSDK */ = {
+		AC7E926018CF64DD00656C47 /* CloudMatchSDK */ = {
 			isa = PBXGroup;
 			children = (
-				AC7E92B018CF65BB00656C47 /* GestureMatch */,
+				AC7E92B018CF65BB00656C47 /* CloudMatch */,
 				AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */,
 				AC7E926818CF64DD00656C47 /* CloudMatchSDK.m */,
 				AC7E926118CF64DD00656C47 /* Supporting Files */,
 			);
-			path = GestureMatchSDK;
+			path = CloudMatchSDK;
 			sourceTree = "<group>";
 		};
 		AC7E926118CF64DD00656C47 /* Supporting Files */ = {
@@ -330,7 +330,7 @@
 			name = SSKeychain;
 			sourceTree = "<group>";
 		};
-		AC7E92B018CF65BB00656C47 /* GestureMatch */ = {
+		AC7E92B018CF65BB00656C47 /* CloudMatch */ = {
 			isa = PBXGroup;
 			children = (
 				AC7E92B118CF65BB00656C47 /* Const */,
@@ -347,7 +347,7 @@
 				AC7E92EE18CF65BB00656C47 /* NSData+Base64.m */,
 				AC7E92EF18CF65BB00656C47 /* Protocols */,
 			);
-			path = GestureMatch;
+			path = CloudMatch;
 			sourceTree = "<group>";
 		};
 		AC7E92B118CF65BB00656C47 /* Const */ = {
@@ -733,8 +733,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GestureMatchSDK/CloudMatchSDK-Prefix.pch";
-				INFOPLIST_FILE = "GestureMatchSDK/CloudMatchSDK-Info.plist";
+				GCC_PREFIX_HEADER = "CloudMatchSDK/CloudMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "CloudMatchSDK/CloudMatchSDK-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
@@ -755,8 +755,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GestureMatchSDK/CloudMatchSDK-Prefix.pch";
-				INFOPLIST_FILE = "GestureMatchSDK/CloudMatchSDK-Info.plist";
+				GCC_PREFIX_HEADER = "CloudMatchSDK/CloudMatchSDK-Prefix.pch";
+				INFOPLIST_FILE = "CloudMatchSDK/CloudMatchSDK-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
