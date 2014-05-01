@@ -53,7 +53,7 @@
 
 #import "GMOnServerMessageDelegate.h"
 
-extern NSInteger const kGMMaxDeliveryChunkSize;
+extern NSInteger const kCMMaxDeliveryChunkSize;
 
 /** The GMGestureMatchClient is the interface with the client application. It
  * should be used in its "static" form -- obtaining it through the sharedInstance method.

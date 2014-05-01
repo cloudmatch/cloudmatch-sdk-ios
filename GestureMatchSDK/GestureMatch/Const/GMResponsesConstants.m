@@ -22,9 +22,9 @@
 +(Outcomes)getOutcomeFromString:(NSString *)outcome
 {
     Outcomes result = OutcomeUnknown;
-    if ([outcome isEqualToString:kGMOutcomeFail]) {
+    if ([outcome isEqualToString:kCMOutcomeFail]) {
         result = OutcomeFail;
-    } else if ([outcome isEqualToString:kGMOutcomeOk]) {
+    } else if ([outcome isEqualToString:kCMOutcomeOk]) {
         result = OutcomeOk;
     }
     return result;
@@ -33,13 +33,13 @@
 +(MatchReasons)getReasonFromString:(NSString *)reason
 {
     MatchReasons result = MatchReasonUnknown;
-    if ([reason isEqualToString:kGMMatchReasonError]) {
+    if ([reason isEqualToString:kCMMatchReasonError]) {
         result = MatchReasonError;
-    } else if ([reason isEqualToString:kGMMatchReasonTimeout]) {
+    } else if ([reason isEqualToString:kCMMatchReasonTimeout]) {
         result = MatchReasonTimeout;
-    } else if ([reason isEqualToString:kGMMatchReasonUncertain]) {
+    } else if ([reason isEqualToString:kCMMatchReasonUncertain]) {
         result = MatchReasonUncertain;
-    } else if ([reason isEqualToString:kGMMatchReasonInvalidRequest]) {
+    } else if ([reason isEqualToString:kCMMatchReasonInvalidRequest]) {
         result = MatchReasonInvalidRequest;
     }
     return result;
@@ -48,13 +48,13 @@
 +(DeliveryOutcome)getDeliveryOutcomeFromString:(NSString *)deliveryOutcome
 {
     DeliveryOutcome result = DeliveryOutcomeUnknown;
-    if ([deliveryOutcome isEqualToString:kGMDeliveryReasonNotDelivered]) {
+    if ([deliveryOutcome isEqualToString:kCMDeliveryReasonNotDelivered]) {
         result = DeliveryOutcomeNotDelivered;
-    } else if ([deliveryOutcome isEqualToString:kGMDeliveryReasonDelivered]) {
+    } else if ([deliveryOutcome isEqualToString:kCMDeliveryReasonDelivered]) {
         result = DeliveryOutcomeDelivered;
-    } else if ([deliveryOutcome isEqualToString:kGMDeliveryReasonNotPartOfAnyGroup]) {
+    } else if ([deliveryOutcome isEqualToString:kCMDeliveryReasonNotPartOfAnyGroup]) {
         result = DeliveryOutcomeNotPartOfAnyGroup;
-    } else if ([deliveryOutcome isEqualToString:kGMDeliveryReasonPartiallyDelivered]) {
+    } else if ([deliveryOutcome isEqualToString:kCMDeliveryReasonPartiallyDelivered]) {
         result = DeliveryOutcomePartiallyDelivered;
     }
     return result;
@@ -63,9 +63,9 @@
 +(LeaveGroupReason)getLeaveGroupReasonFromString:(NSString *)leaveGroupReason
 {
     LeaveGroupReason result = LeaveGroupReasonUnknown;
-    if ([leaveGroupReason isEqualToString:kGMLeaveGroupResponseNotPartOfAnyGroup]) {
+    if ([leaveGroupReason isEqualToString:kCMLeaveGroupResponseNotPartOfAnyGroup]) {
         result = LeaveGroupReasonNotPartOfAnyGroup;
-    } else if ([leaveGroupReason isEqualToString:kGMLeaveGroupResponseNotPartOfThisGroup]) {
+    } else if ([leaveGroupReason isEqualToString:kCMLeaveGroupResponseNotPartOfThisGroup]) {
         result = LeaveGroupReasonNotPartOfThisGroup;
     }
     return result;

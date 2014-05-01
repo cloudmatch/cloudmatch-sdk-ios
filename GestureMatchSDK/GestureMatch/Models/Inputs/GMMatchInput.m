@@ -68,9 +68,9 @@ static NSString* MATCH_INPUT_EQUALITYPARAM = @"equalityParam";
 {
     self = [super init];
     if (self) {
-        self.mCriteria = kGMCriteriaUndefined;
-        self.mAreaStart = kGMAreaInvalid;
-        self.mAreaEnd = kGMAreaInvalid;
+        self.mCriteria = kCMCriteriaUndefined;
+        self.mAreaStart = kCMAreaInvalid;
+        self.mAreaEnd = kCMAreaInvalid;
     }
     return self;
 }
@@ -78,7 +78,7 @@ static NSString* MATCH_INPUT_EQUALITYPARAM = @"equalityParam";
 - (NSDictionary *)dictionaryRepresentation
 {
     return @{
-             TYPE : kGMResponseTypeMatch,
+             TYPE : kCMResponseTypeMatch,
              MATCH_INPUT_CRITERIA: _mCriteria,
              MATCH_INPUT_LATITUDE : [NSNumber numberWithDouble:_mLatitude],
              MATCH_INPUT_LONGITUDE : [NSNumber numberWithDouble:_mLongitude],

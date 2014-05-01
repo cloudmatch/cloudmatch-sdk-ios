@@ -43,7 +43,7 @@
 #import "GMMatchResponse.h"
 
 //CHUNK SIZE
-NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
+NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
 @interface GMGestureMatchClient ()
 
@@ -203,7 +203,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
     
     NSString *deviceID = [GMUtilities getDeviceIdForAppId];
 
-    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@", kGMApiEndpoint, kGMApiParamDeviceId, deviceID];
+    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@", kCMApiEndpoint, kCMApiParamDeviceId, deviceID];
     
     NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:apiUrl]];
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
@@ -241,7 +241,7 @@ NSInteger const kGMMaxDeliveryChunkSize = 1024 * 10;
 - (void)deliverPayload:(NSString *)payload ToRecipients:(NSArray *)recipients inGroup:(NSString *)groupId
 {
     //Prepare the array of chunks
-    NSArray *chunks = [self splitEqually:payload chunkSize:kGMMaxDeliveryChunkSize];
+    NSArray *chunks = [self splitEqually:payload chunkSize:kCMMaxDeliveryChunkSize];
     NSString *deliveryId = [[GMUtilities generateDeliveryUUID] substringToIndex:3];
     
     //Iterate over the array and send each chunk

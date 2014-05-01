@@ -52,7 +52,7 @@
 
 - (NSDictionary*)dictionaryRepresentation
 {
-    return @{TYPE: kGMResponseTypeLeaveGroup,
+    return @{TYPE: kCMResponseTypeLeaveGroup,
              REASON : _mReason,
              GROUP_ID : _mGroupId
              };

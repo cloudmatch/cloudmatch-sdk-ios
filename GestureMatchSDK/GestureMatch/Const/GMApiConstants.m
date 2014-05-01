@@ -19,8 +19,8 @@
 @implementation GMApiConstants
 
 // TODO: insert here your web server url, eg: "ws://my-server.com:80/v1/open"
-NSString* const kGMApiEndpoint = @"DUMMY-API";
+NSString* const kCMApiEndpoint = @"DUMMY-API";
 
-NSString* const kGMApiParamDeviceId = @"deviceId";
+NSString* const kCMApiParamDeviceId = @"deviceId";
 
 @end

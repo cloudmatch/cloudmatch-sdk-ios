@@ -18,7 +18,7 @@
 
 @interface GMApiConstants : NSObject
 
-extern NSString* const kGMApiEndpoint;
-extern NSString* const kGMApiParamDeviceId;
+extern NSString* const kCMApiEndpoint;
+extern NSString* const kCMApiParamDeviceId;
 
 @end

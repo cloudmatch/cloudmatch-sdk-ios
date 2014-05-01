@@ -167,22 +167,22 @@
     NSString *area = @"";
     switch (viewArea) {
         case kViewAreaTop:
-            area = kGMAreaTop;
+            area = kCMAreaTop;
             break;
         case kViewAreaRight:
-            area = kGMAreaRight;
+            area = kCMAreaRight;
             break;
         case kViewAreaBottom:
-            area = kGMAreaBottom;
+            area = kCMAreaBottom;
             break;
         case kViewAreaLeft:
-            area = kGMAreaLeft;
+            area = kCMAreaLeft;
             break;
         case kViewAreaInner:
-            area = kGMAreaInner;
+            area = kCMAreaInner;
             break;
         case kViewAreaInvalid:
-            area = kGMAreaInvalid;
+            area = kCMAreaInvalid;
             break;
             
         default:

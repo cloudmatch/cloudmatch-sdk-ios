@@ -93,7 +93,7 @@
 - (NSDictionary*)dictionaryRepresentation
 {
     return @{
-             TYPE : kGMResponseTypeDelivery,
+             TYPE : kCMResponseTypeDelivery,
              INPUT_RECIPIENTS: _mRecipients,
              INPUT_DELIVERY_ID : _mDeliveryId,
              GROUP_ID : _mGroupId,

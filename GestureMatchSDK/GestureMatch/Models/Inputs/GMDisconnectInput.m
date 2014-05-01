@@ -51,7 +51,7 @@
 
 - (NSDictionary *)dictionaryRepresentation
 {
-    return @{TYPE: kGMResponseTypeDisconnect,
+    return @{TYPE: kCMResponseTypeDisconnect,
              REASON : _mReason
              };
 }

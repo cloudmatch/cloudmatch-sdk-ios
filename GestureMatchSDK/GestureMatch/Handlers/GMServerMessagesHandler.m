@@ -60,27 +60,27 @@
         }
         
         NSString* kind = [msgJson objectForKey:KIND];
-        if ([kind isEqualToString:kGMKindResponse]) {
+        if ([kind isEqualToString:kCMKindResponse]) {
             NSString* inputType = [msgJson objectForKey:TYPE];
-            if ([inputType isEqualToString:kGMResponseTypeMatch]){
+            if ([inputType isEqualToString:kCMResponseTypeMatch]){
                 GMMatchResponse *matchResponse = [GMMatchResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onMatchResponse:matchResponse];
             }
-            else if([inputType isEqualToString:kGMResponseTypeLeaveGroup]){
+            else if([inputType isEqualToString:kCMResponseTypeLeaveGroup]){
                 GMLeaveGroupResponse *leaveGroupResponse = [GMLeaveGroupResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onLeaveGroupResponse:leaveGroupResponse];
             }
-            else if ([inputType isEqualToString:kGMResponseTypeDisconnect]){
+            else if ([inputType isEqualToString:kCMResponseTypeDisconnect]){
                 GMDisconnectResponse *disconnectResponse = [GMDisconnectResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onDisconnectResponse:disconnectResponse];
             }
-            else if([inputType isEqualToString:kGMResponseTypeDelivery]){
+            else if([inputType isEqualToString:kCMResponseTypeDelivery]){
                 GMDeliveryResponse *deliveryResponse = [GMDeliveryResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onDeliveryResponse:deliveryResponse];
             }
-        } else if([kind isEqualToString:kGMKindMessage]){
+        } else if([kind isEqualToString:kCMKindMessage]){
             NSString* messageType = [msgJson objectForKey:TYPE];
-            if ([messageType isEqualToString:kGMInputTypeDelivery]) {
+            if ([messageType isEqualToString:kCMInputTypeDelivery]) {
                 GMMatcheeDeliveryMessage *deliveryMessage = [GMMatcheeDeliveryMessage modelObjectWithDictionary:msgJson];
                 if (deliveryMessage.mChunkNr == NSNotFound && deliveryMessage.mTotalChunks == NSNotFound) {
                     //this is not part of a chunked transfer
@@ -124,11 +124,11 @@
                         [_serverEventDelegate onMatcheeDeliveryProgress:progress forDeliveryId:deliveryId];
                     }
                 }
-            } else if ([messageType isEqualToString:kGMInputTypeMatcheeLeft]){
+            } else if ([messageType isEqualToString:kCMInputTypeMatcheeLeft]){
                 GMMatcheeLeftMessage *matcheeLeftMessage = [GMMatcheeLeftMessage modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onMatcheeLeftMessage:matcheeLeftMessage];
             }
-        } else if([kind isEqualToString:kGMKindError]){
+        } else if([kind isEqualToString:kCMKindError]){
             // TODO: manage the error
         } else {
             // TODO: We should not get here
