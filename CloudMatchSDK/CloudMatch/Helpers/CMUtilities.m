@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Fabio cloudmatch.io
+ * Copyright 2014 cloudmatch.io
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,12 +23,12 @@
 {
     // Get device UDID
     // getting the unique key (if present ) from keychain , assuming "your app identifier" as a key
-    NSString *deviceID = [SSKeychain passwordForService:@"com.gesturematch" account:@"deviceId"];
+    NSString *deviceID = [SSKeychain passwordForService:@"io.cloudmatch" account:@"deviceId"];
     if (deviceID == nil) {
         // if this is the first time app lunching , create key for device
         NSString *uuid  = [self createNewUUID];
         // save newly created key to Keychain
-        [SSKeychain setPassword:uuid forService:@"com.gesturematch" account:@"deviceId"];
+        [SSKeychain setPassword:uuid forService:@"io.cloudmatch" account:@"deviceId"];
         // this is the one time process
         deviceID = uuid;
     }
@@ -43,7 +43,7 @@
 #pragma mark - Private
 
 + (NSString *)createNewUUID {
-    
+
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
