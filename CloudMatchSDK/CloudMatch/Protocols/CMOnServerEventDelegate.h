@@ -29,7 +29,6 @@
 @protocol CMOnServerEventDelegate <NSObject>
 - (void)onMatchResponse:(CMMatchResponse*)response;
 - (void)onLeaveGroupResponse:(CMLeaveGroupResponse*)response;
-- (void)onDisconnectResponse:(CMDisconnectResponse*)response;
 - (void)onDeliveryResponse:(CMDeliveryResponse*)response;
 - (void)onMatcheeLeftMessage:(CMMatcheeLeftMessage*)message;
 - (void)onMatcheeDelivery:(CMMatcheeDelivery*)delivery;
