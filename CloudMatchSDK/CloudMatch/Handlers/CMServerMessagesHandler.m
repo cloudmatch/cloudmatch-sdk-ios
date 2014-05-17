@@ -24,7 +24,6 @@
 #import "CMDeliveryInput.h"
 #import "CMDeliveryResponse.h"
 #import "CMDisconnectInput.h"
-#import "CMDisconnectResponse.h"
 #import "CMLeaveGroupInput.h"
 #import "CMLeaveGroupResponse.h"
 #import "CMMatcheeDelivery.h"
@@ -74,10 +73,6 @@
             else if([inputType isEqualToString:kCMResponseTypeLeaveGroup]){
                 CMLeaveGroupResponse *leaveGroupResponse = [CMLeaveGroupResponse modelObjectWithDictionary:msgJson];
                 [_serverEventDelegate onLeaveGroupResponse:leaveGroupResponse];
-            }
-            else if ([inputType isEqualToString:kCMResponseTypeDisconnect]){
-                CMDisconnectResponse *disconnectResponse = [CMDisconnectResponse modelObjectWithDictionary:msgJson];
-                [_serverEventDelegate onDisconnectResponse:disconnectResponse];
             }
             else if([inputType isEqualToString:kCMResponseTypeDelivery]){
                 CMDeliveryResponse *deliveryResponse = [CMDeliveryResponse modelObjectWithDictionary:msgJson];

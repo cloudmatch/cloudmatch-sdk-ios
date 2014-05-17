@@ -85,8 +85,6 @@
 		AC7E931F18CF65BB00656C47 /* CMMatcheeLeftMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92E318CF65BB00656C47 /* CMMatcheeLeftMessage.m */; };
 		AC7E932018CF65BB00656C47 /* CMDeliveryResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E518CF65BB00656C47 /* CMDeliveryResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC7E932118CF65BB00656C47 /* CMDeliveryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92E618CF65BB00656C47 /* CMDeliveryResponse.m */; };
-		AC7E932218CF65BB00656C47 /* CMDisconnectResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E718CF65BB00656C47 /* CMDisconnectResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E932318CF65BB00656C47 /* CMDisconnectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92E818CF65BB00656C47 /* CMDisconnectResponse.m */; };
 		AC7E932418CF65BB00656C47 /* CMLeaveGroupResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E918CF65BB00656C47 /* CMLeaveGroupResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC7E932518CF65BB00656C47 /* CMLeaveGroupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92EA18CF65BB00656C47 /* CMLeaveGroupResponse.m */; };
 		AC7E932618CF65BB00656C47 /* CMMatchResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92EB18CF65BB00656C47 /* CMMatchResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -182,8 +180,6 @@
 		AC7E92E318CF65BB00656C47 /* CMMatcheeLeftMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMatcheeLeftMessage.m; sourceTree = "<group>"; };
 		AC7E92E518CF65BB00656C47 /* CMDeliveryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDeliveryResponse.h; sourceTree = "<group>"; };
 		AC7E92E618CF65BB00656C47 /* CMDeliveryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDeliveryResponse.m; sourceTree = "<group>"; };
-		AC7E92E718CF65BB00656C47 /* CMDisconnectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDisconnectResponse.h; sourceTree = "<group>"; };
-		AC7E92E818CF65BB00656C47 /* CMDisconnectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDisconnectResponse.m; sourceTree = "<group>"; };
 		AC7E92E918CF65BB00656C47 /* CMLeaveGroupResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLeaveGroupResponse.h; sourceTree = "<group>"; };
 		AC7E92EA18CF65BB00656C47 /* CMLeaveGroupResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLeaveGroupResponse.m; sourceTree = "<group>"; };
 		AC7E92EB18CF65BB00656C47 /* CMMatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMatchResponse.h; sourceTree = "<group>"; };
@@ -439,8 +435,6 @@
 			children = (
 				AC7E92E518CF65BB00656C47 /* CMDeliveryResponse.h */,
 				AC7E92E618CF65BB00656C47 /* CMDeliveryResponse.m */,
-				AC7E92E718CF65BB00656C47 /* CMDisconnectResponse.h */,
-				AC7E92E818CF65BB00656C47 /* CMDisconnectResponse.m */,
 				AC7E92E918CF65BB00656C47 /* CMLeaveGroupResponse.h */,
 				AC7E92EA18CF65BB00656C47 /* CMLeaveGroupResponse.m */,
 				AC7E92EB18CF65BB00656C47 /* CMMatchResponse.h */,
@@ -473,7 +467,6 @@
 				AC7E92F518CF65BB00656C47 /* CMJsonConstants.h in Headers */,
 				AC7E931A18CF65BB00656C47 /* CMMatcheeDelivery.h in Headers */,
 				AC7E931618CF65BB00656C47 /* CMLeaveGroupInput.h in Headers */,
-				AC7E932218CF65BB00656C47 /* CMDisconnectResponse.h in Headers */,
 				AC7E930818CF65BB00656C47 /* CMSwipeTranslationHelper.h in Headers */,
 				AC7E92FB18CF65BB00656C47 /* CMResponsesConstants.h in Headers */,
 				AC7E930418CF65BB00656C47 /* CMServerMessagesHandler.h in Headers */,
@@ -622,7 +615,6 @@
 				AC7E92FA18CF65BB00656C47 /* CMJsonInputLabels.m in Sources */,
 				AC7E92A618CF657400656C47 /* SRWebSocket.m in Sources */,
 				AC7E92A018CF657400656C47 /* base64.c in Sources */,
-				AC7E932318CF65BB00656C47 /* CMDisconnectResponse.m in Sources */,
 				AC7E92FF18CF65BB00656C47 /* CMCloudMatchClient.m in Sources */,
 				AC7E929118CF655600656C47 /* SBJson4StreamWriterState.m in Sources */,
 				AC7E931B18CF65BB00656C47 /* CMMatcheeDelivery.m in Sources */,
