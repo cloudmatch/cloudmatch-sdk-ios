@@ -17,7 +17,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol CMOnServerMessageDelegate <NSObject>
-
+@required
 - (void)onServerMessage:(NSString*)message;
-
 @end

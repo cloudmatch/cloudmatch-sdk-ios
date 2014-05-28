@@ -19,6 +19,8 @@
 
 @protocol CMOnMovementDelegate <NSObject>
 
+@required
+
 - (BOOL)isSwipeValid;
 - (NSString*)getEqualityParam;
 - (void)onMovementDetection:(Movement)movement swipeType:(SwipeType)swipeType pointStart:(CGPoint)pointStart pointEnd:(CGPoint)pointEnd;
