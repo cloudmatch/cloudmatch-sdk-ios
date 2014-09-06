@@ -101,12 +101,16 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)setServerEventDelegate:(id<CMOnServerEventDelegate>)serverEventDelegate apiKey:(NSString*)apiKey appId:(NSString*)appId
 {
+    // trim whitespaces and enter keys
+    NSString *apiKeyTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *appIdTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
     _serverMessagesHandler = [[CMServerMessagesHandler alloc] initWithServerEventDelegate:serverEventDelegate];
     self.onServerMessageDelegate = _serverMessagesHandler;
     self.onServerEventDelegate = serverEventDelegate;
     
-    _appId = appId;
-    _apiKey = apiKey;
+    _appId = appIdTrimmed;
+    _apiKey = apiKeyTrimmed;
     
     _matchHelper = [[CMMatchHelper alloc] init];
 }
@@ -209,9 +213,11 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
     NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kCMApiEndpoint, kCMApiParamApiKey, self.apiKey, kCMApiParamAppId, self.appId, kCMApiParamOS, @"ios", kCMApiParamDeviceId, deviceID];
-    
-    NSURLRequest *wsRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:apiUrl]];
-    _webSocket = [[SRWebSocket alloc] initWithURLRequest:wsRequest];
+    NSString* webStringURL = [apiUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url1 = [NSURL URLWithString:webStringURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url1];
+
+    _webSocket = [[SRWebSocket alloc] initWithURLRequest:urlRequest];
     _webSocket.delegate = self;
     
     [_webSocket open];
