@@ -9,24 +9,6 @@
 /* Begin PBXBuildFile section */
 		AC7E926518CF64DD00656C47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC7E926318CF64DD00656C47 /* InfoPlist.strings */; };
 		AC7E926918CF64DD00656C47 /* CloudMatchSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E926818CF64DD00656C47 /* CloudMatchSDK.m */; };
-		AC7E928518CF655600656C47 /* SBJson4.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927118CF655600656C47 /* SBJson4.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928618CF655600656C47 /* SBJson4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927218CF655600656C47 /* SBJson4Parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928718CF655600656C47 /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927318CF655600656C47 /* SBJson4Parser.m */; };
-		AC7E928818CF655600656C47 /* SBJson4StreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927418CF655600656C47 /* SBJson4StreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928918CF655600656C47 /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927518CF655600656C47 /* SBJson4StreamParser.m */; };
-		AC7E928A18CF655600656C47 /* SBJson4StreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927618CF655600656C47 /* SBJson4StreamParserState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928B18CF655600656C47 /* SBJson4StreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927718CF655600656C47 /* SBJson4StreamParserState.m */; };
-		AC7E928C18CF655600656C47 /* SBJson4StreamTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927818CF655600656C47 /* SBJson4StreamTokeniser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928D18CF655600656C47 /* SBJson4StreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927918CF655600656C47 /* SBJson4StreamTokeniser.m */; };
-		AC7E928E18CF655600656C47 /* SBJson4StreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927A18CF655600656C47 /* SBJson4StreamWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E928F18CF655600656C47 /* SBJson4StreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927B18CF655600656C47 /* SBJson4StreamWriter.m */; };
-		AC7E929018CF655600656C47 /* SBJson4StreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927C18CF655600656C47 /* SBJson4StreamWriterState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E929118CF655600656C47 /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927D18CF655600656C47 /* SBJson4StreamWriterState.m */; };
-		AC7E929218CF655600656C47 /* SBJson4Writer.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E927E18CF655600656C47 /* SBJson4Writer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7E929318CF655600656C47 /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E927F18CF655600656C47 /* SBJson4Writer.m */; };
-		AC7E929418CF655600656C47 /* AppledocSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC7E928118CF655600656C47 /* AppledocSettings.plist */; };
-		AC7E929518CF655600656C47 /* RegenerateApiDocumentation in Resources */ = {isa = PBXBuildFile; fileRef = AC7E928318CF655600656C47 /* RegenerateApiDocumentation */; };
-		AC7E929618CF655600656C47 /* RegenerateCredits in Resources */ = {isa = PBXBuildFile; fileRef = AC7E928418CF655600656C47 /* RegenerateCredits */; };
 		AC7E92A018CF657400656C47 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = AC7E929918CF657400656C47 /* base64.c */; };
 		AC7E92A118CF657400656C47 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929A18CF657400656C47 /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC7E92A218CF657400656C47 /* NSData+SRB64Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929B18CF657400656C47 /* NSData+SRB64Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,24 +86,6 @@
 		AC7E926618CF64DD00656C47 /* CloudMatchSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudMatchSDK-Prefix.pch"; sourceTree = "<group>"; };
 		AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudMatchSDK.h; sourceTree = "<group>"; };
 		AC7E926818CF64DD00656C47 /* CloudMatchSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudMatchSDK.m; sourceTree = "<group>"; };
-		AC7E927118CF655600656C47 /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
-		AC7E927218CF655600656C47 /* SBJson4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Parser.h; sourceTree = "<group>"; };
-		AC7E927318CF655600656C47 /* SBJson4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Parser.m; sourceTree = "<group>"; };
-		AC7E927418CF655600656C47 /* SBJson4StreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParser.h; sourceTree = "<group>"; };
-		AC7E927518CF655600656C47 /* SBJson4StreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParser.m; sourceTree = "<group>"; };
-		AC7E927618CF655600656C47 /* SBJson4StreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParserState.h; sourceTree = "<group>"; };
-		AC7E927718CF655600656C47 /* SBJson4StreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParserState.m; sourceTree = "<group>"; };
-		AC7E927818CF655600656C47 /* SBJson4StreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamTokeniser.h; sourceTree = "<group>"; };
-		AC7E927918CF655600656C47 /* SBJson4StreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamTokeniser.m; sourceTree = "<group>"; };
-		AC7E927A18CF655600656C47 /* SBJson4StreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriter.h; sourceTree = "<group>"; };
-		AC7E927B18CF655600656C47 /* SBJson4StreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriter.m; sourceTree = "<group>"; };
-		AC7E927C18CF655600656C47 /* SBJson4StreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriterState.h; sourceTree = "<group>"; };
-		AC7E927D18CF655600656C47 /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriterState.m; sourceTree = "<group>"; };
-		AC7E927E18CF655600656C47 /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
-		AC7E927F18CF655600656C47 /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
-		AC7E928118CF655600656C47 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
-		AC7E928318CF655600656C47 /* RegenerateApiDocumentation */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RegenerateApiDocumentation; sourceTree = "<group>"; };
-		AC7E928418CF655600656C47 /* RegenerateCredits */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RegenerateCredits; sourceTree = "<group>"; };
 		AC7E929918CF657400656C47 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
 		AC7E929A18CF657400656C47 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		AC7E929B18CF657400656C47 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
@@ -240,62 +204,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AC7E926F18CF655600656C47 /* SBJSON */ = {
-			isa = PBXGroup;
-			children = (
-				AC7E927018CF655600656C47 /* objc */,
-				AC7E928018CF655600656C47 /* resources */,
-				AC7E928218CF655600656C47 /* scripts */,
-			);
-			name = SBJSON;
-			path = "json-framework/src/main";
-			sourceTree = "<group>";
-		};
-		AC7E927018CF655600656C47 /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				AC7E927118CF655600656C47 /* SBJson4.h */,
-				AC7E927218CF655600656C47 /* SBJson4Parser.h */,
-				AC7E927318CF655600656C47 /* SBJson4Parser.m */,
-				AC7E927418CF655600656C47 /* SBJson4StreamParser.h */,
-				AC7E927518CF655600656C47 /* SBJson4StreamParser.m */,
-				AC7E927618CF655600656C47 /* SBJson4StreamParserState.h */,
-				AC7E927718CF655600656C47 /* SBJson4StreamParserState.m */,
-				AC7E927818CF655600656C47 /* SBJson4StreamTokeniser.h */,
-				AC7E927918CF655600656C47 /* SBJson4StreamTokeniser.m */,
-				AC7E927A18CF655600656C47 /* SBJson4StreamWriter.h */,
-				AC7E927B18CF655600656C47 /* SBJson4StreamWriter.m */,
-				AC7E927C18CF655600656C47 /* SBJson4StreamWriterState.h */,
-				AC7E927D18CF655600656C47 /* SBJson4StreamWriterState.m */,
-				AC7E927E18CF655600656C47 /* SBJson4Writer.h */,
-				AC7E927F18CF655600656C47 /* SBJson4Writer.m */,
-			);
-			path = objc;
-			sourceTree = "<group>";
-		};
-		AC7E928018CF655600656C47 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				AC7E928118CF655600656C47 /* AppledocSettings.plist */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
-		AC7E928218CF655600656C47 /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				AC7E928318CF655600656C47 /* RegenerateApiDocumentation */,
-				AC7E928418CF655600656C47 /* RegenerateCredits */,
-			);
-			path = scripts;
-			sourceTree = "<group>";
-		};
 		AC7E929718CF656100656C47 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				AC7E92AF18CF658400656C47 /* SSKeychain */,
 				AC7E929818CF657400656C47 /* SocketRocket */,
-				AC7E926F18CF655600656C47 /* SBJSON */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -491,19 +404,11 @@
 				AC7E930018CF65BB00656C47 /* CMInnerOuterChecker.h in Headers */,
 				AC7E931418CF65BB00656C47 /* CMDisconnectInput.h in Headers */,
 				AC7E92A418CF657400656C47 /* SocketRocket-Prefix.pch in Headers */,
-				AC7E928518CF655600656C47 /* SBJson4.h in Headers */,
-				AC7E928C18CF655600656C47 /* SBJson4StreamTokeniser.h in Headers */,
 				AC7E92A518CF657400656C47 /* SRWebSocket.h in Headers */,
 				AC7E92A118CF657400656C47 /* base64.h in Headers */,
 				AC7E932818CF65BB00656C47 /* NSData+Base64.h in Headers */,
-				AC7E928A18CF655600656C47 /* SBJson4StreamParserState.h in Headers */,
-				AC7E928618CF655600656C47 /* SBJson4Parser.h in Headers */,
 				AC7E92A218CF657400656C47 /* NSData+SRB64Additions.h in Headers */,
 				AC7E92AB18CF657F00656C47 /* SSKeychain.h in Headers */,
-				AC7E928818CF655600656C47 /* SBJson4StreamParser.h in Headers */,
-				AC7E929218CF655600656C47 /* SBJson4Writer.h in Headers */,
-				AC7E928E18CF655600656C47 /* SBJson4StreamWriter.h in Headers */,
-				AC7E929018CF655600656C47 /* SBJson4StreamWriterState.h in Headers */,
 				AC7E92AD18CF657F00656C47 /* SSKeychainQuery.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,10 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC7E929518CF655600656C47 /* RegenerateApiDocumentation in Resources */,
-				AC7E929618CF655600656C47 /* RegenerateCredits in Resources */,
 				AC7E926518CF64DD00656C47 /* InfoPlist.strings in Resources */,
-				AC7E929418CF655600656C47 /* AppledocSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,17 +497,13 @@
 				AC7E930918CF65BB00656C47 /* CMSwipeTranslationHelper.m in Sources */,
 				AC7E92AE18CF657F00656C47 /* SSKeychainQuery.m in Sources */,
 				AC7E92A318CF657400656C47 /* NSData+SRB64Additions.m in Sources */,
-				AC7E928718CF655600656C47 /* SBJson4Parser.m in Sources */,
-				AC7E928D18CF655600656C47 /* SBJson4StreamTokeniser.m in Sources */,
 				AC7E931D18CF65BB00656C47 /* CMMatcheeDeliveryMessage.m in Sources */,
 				AC7E932118CF65BB00656C47 /* CMDeliveryResponse.m in Sources */,
 				AC7E930318CF65BB00656C47 /* CMLocation.m in Sources */,
 				AC7E930518CF65BB00656C47 /* CMServerMessagesHandler.m in Sources */,
 				AC7E930118CF65BB00656C47 /* CMInnerOuterChecker.m in Sources */,
-				AC7E929318CF655600656C47 /* SBJson4Writer.m in Sources */,
 				AC7E930F18CF65BB00656C47 /* CMIntegerPoint.m in Sources */,
 				AC7E931718CF65BB00656C47 /* CMLeaveGroupInput.m in Sources */,
-				AC7E928F18CF655600656C47 /* SBJson4StreamWriter.m in Sources */,
 				AC7E931F18CF65BB00656C47 /* CMMatcheeLeftMessage.m in Sources */,
 				AC7E92AC18CF657F00656C47 /* SSKeychain.m in Sources */,
 				AC7E932518CF65BB00656C47 /* CMLeaveGroupResponse.m in Sources */,
@@ -616,13 +514,10 @@
 				AC7E92A618CF657400656C47 /* SRWebSocket.m in Sources */,
 				AC7E92A018CF657400656C47 /* base64.c in Sources */,
 				AC7E92FF18CF65BB00656C47 /* CMCloudMatchClient.m in Sources */,
-				AC7E929118CF655600656C47 /* SBJson4StreamWriterState.m in Sources */,
 				AC7E931B18CF65BB00656C47 /* CMMatcheeDelivery.m in Sources */,
 				AC7E931118CF65BB00656C47 /* CMPositionScheme.m in Sources */,
 				AC7E92F418CF65BB00656C47 /* CMApiConstants.m in Sources */,
 				AC7E926918CF64DD00656C47 /* CloudMatchSDK.m in Sources */,
-				AC7E928B18CF655600656C47 /* SBJson4StreamParserState.m in Sources */,
-				AC7E928918CF655600656C47 /* SBJson4StreamParser.m in Sources */,
 				AC7E931918CF65BB00656C47 /* CMMatchInput.m in Sources */,
 				AC7E92F618CF65BB00656C47 /* CMJsonConstants.m in Sources */,
 				AC7E931318CF65BB00656C47 /* CMDeliveryInput.m in Sources */,

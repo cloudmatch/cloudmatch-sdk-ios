@@ -22,7 +22,6 @@
 #import "NSData+Base64.h"
 #import "CMInnerOuterChecker.h"
 #import "CMUtilities.h"
-#import "SBJson4.h"
 
 //Constants
 #import "CMJsonConstants.h"
@@ -261,18 +260,18 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
         CMDeliveryInput *deliveryInput = [[CMDeliveryInput alloc] initWithRecipients:recipients deliveryId:deliveryId payload:[chunks objectAtIndex:idx] groupId:groupId totalChunks:[chunks count] chunkNr:idx];
 
         @try {
-            SBJson4Writer *writer = [[SBJson4Writer alloc] init];
-            NSString *dataToSend = [writer stringWithObject:[deliveryInput dictionaryRepresentation]];
+            NSError *jsonError;
+            NSData *data = [NSJSONSerialization dataWithJSONObject:[deliveryInput dictionaryRepresentation] options:0 error:&jsonError];
 
-            if (writer.error != nil) {
-                @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:writer.error userInfo:nil];
+            if (data == nil) {
+                @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:jsonError.localizedDescription userInfo:nil];
             }
+            
             if (_webSocket.readyState != SR_OPEN) {
-                [_sendQueue addObject:dataToSend];
+                [_sendQueue addObject:data];
                 [self connect];
-            }
-            else{
-                [_webSocket send:dataToSend];
+            } else{
+                [_webSocket send:data];
                 //TODO: check that progress update is sent
                 NSInteger progress = (NSInteger)(((idx+1) * 100)/[chunks count]);
                 [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];

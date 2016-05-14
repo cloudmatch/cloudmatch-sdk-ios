@@ -17,7 +17,6 @@
 #import "CMMatchHelper.h"
 #import "CMMatchInput.h"
 #import "CMLocation.h"
-#import "SBJson4Writer.h"
 #import "SRWebSocket.h"
 #import "CMCloudMatchClient.h"
 
@@ -35,10 +34,10 @@
     CMMatchInput *matchInput = [[CMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
     
     @try {
-        SBJson4Writer *writer = [[SBJson4Writer alloc] init];
-        NSString *dataToSend = [writer stringWithObject:[matchInput dictionaryRepresentation]];
-        if (writer.error != nil) {
-            @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:writer.error userInfo:nil];
+        NSError *jsonError;
+        NSData *dataToSend = [NSJSONSerialization dataWithJSONObject:[matchInput dictionaryRepresentation] options:0 error:&jsonError];
+        if (dataToSend == nil) {
+            @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:jsonError.localizedDescription userInfo:nil];
         }
         
         SRWebSocket* webSocket = [[CMCloudMatchClient sharedInstance] getWebSocket];
