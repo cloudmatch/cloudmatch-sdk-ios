@@ -28,6 +28,8 @@
 
 @implementation CMInnerOuterChecker
 
+@dynamic state;
+
 //The border around the screen (in points) to detect when the user tapped on a border
 NSInteger const kSIDE_AREA_WIDTH = 20;
 

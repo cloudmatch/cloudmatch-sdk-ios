@@ -29,10 +29,10 @@
 }
 
 //the state property is necessary for subclassing UIGestureRecognizer
-@property(nonatomic,readwrite) UIGestureRecognizerState state;
+@property (nonatomic,readwrite) UIGestureRecognizerState state;
 
 //@property(nonatomic, weak) id<GMInnerOuterCheckerDelegate> movementDelegate;
-@property(nonatomic, weak) id<CMOnMovementDelegate> movementDelegate;
+@property (nonatomic, weak) id<CMOnMovementDelegate> movementDelegate;
 
 @property (nonatomic, weak) UIView *attachedView;
 

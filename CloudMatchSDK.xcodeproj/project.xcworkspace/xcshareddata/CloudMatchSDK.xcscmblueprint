@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F047523FD3176B7BCFD8E2DC2A01F595E4344D4E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ABB939127996C66F7E852A780552ADEEF03C6B13" : 0,
+    "AA3724F8AD565DB2089C5757B6B76FDB09E52E51" : 0,
+    "C16576B571172538D95183F9515DC5DB064EAF7F" : 0,
+    "F047523FD3176B7BCFD8E2DC2A01F595E4344D4E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "990BECE5-CF1B-4806-8CB6-29CF1CCCBDC5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ABB939127996C66F7E852A780552ADEEF03C6B13" : "cloudmatch-sdk-ios\/SocketRocket\/",
+    "AA3724F8AD565DB2089C5757B6B76FDB09E52E51" : "cloudmatch-sdk-ios\/json-framework\/",
+    "C16576B571172538D95183F9515DC5DB064EAF7F" : "cloudmatch-sdk-ios\/sskeychain\/",
+    "F047523FD3176B7BCFD8E2DC2A01F595E4344D4E" : "cloudmatch-sdk-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CloudMatchSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CloudMatchSDK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stig\/json-framework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA3724F8AD565DB2089C5757B6B76FDB09E52E51"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/square\/SocketRocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABB939127996C66F7E852A780552ADEEF03C6B13"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soffes\/sskeychain.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C16576B571172538D95183F9515DC5DB064EAF7F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sgoodwin\/cloudmatch-sdk-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F047523FD3176B7BCFD8E2DC2A01F595E4344D4E"
+    }
+  ]
+}
