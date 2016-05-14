@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AC7E925D18CF64DD00656C47"
-               BuildableName = "CloudMatchSDK.framework"
-               BlueprintName = "CloudMatchSDK"
+               BlueprintIdentifier = "9B8E4E861CE7166900CF9E51"
+               BuildableName = "CouldmatchSDK.framework"
+               BlueprintName = "CouldmatchSDK"
                ReferencedContainer = "container:CloudMatchSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9B8E4E8F1CE7166A00CF9E51"
+               BuildableName = "CouldmatchSDKTests.xctest"
+               BlueprintName = "CouldmatchSDKTests"
+               ReferencedContainer = "container:CloudMatchSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9B8E4E861CE7166900CF9E51"
+            BuildableName = "CouldmatchSDK.framework"
+            BlueprintName = "CouldmatchSDK"
+            ReferencedContainer = "container:CloudMatchSDK.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AC7E925D18CF64DD00656C47"
-            BuildableName = "CloudMatchSDK.framework"
-            BlueprintName = "CloudMatchSDK"
+            BlueprintIdentifier = "9B8E4E861CE7166900CF9E51"
+            BuildableName = "CouldmatchSDK.framework"
+            BlueprintName = "CouldmatchSDK"
             ReferencedContainer = "container:CloudMatchSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AC7E925D18CF64DD00656C47"
-            BuildableName = "CloudMatchSDK.framework"
-            BlueprintName = "CloudMatchSDK"
+            BlueprintIdentifier = "9B8E4E861CE7166900CF9E51"
+            BuildableName = "CouldmatchSDK.framework"
+            BlueprintName = "CouldmatchSDK"
             ReferencedContainer = "container:CloudMatchSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -17,7 +17,6 @@
 #import <Foundation/Foundation.h>
 #import "SRWebSocket.h"
 #import "CMLocation.h"
-#import "NSData+Base64.h"
 #import "CMInnerOuterChecker.h"
 #import "CMUtilities.h"
 
