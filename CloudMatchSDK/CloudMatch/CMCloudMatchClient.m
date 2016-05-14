@@ -213,7 +213,7 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
     NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kCMApiEndpoint, kCMApiParamApiKey, self.apiKey, kCMApiParamAppId, self.appId, kCMApiParamOS, @"ios", kCMApiParamDeviceId, deviceID];
-    NSString* webStringURL = [apiUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString* webStringURL = [apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet letterCharacterSet]];
     NSURL *url1 = [NSURL URLWithString:webStringURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url1];
 

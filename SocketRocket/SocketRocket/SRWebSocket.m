@@ -88,7 +88,6 @@ typedef struct {
 static NSString *const SRWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 
 static inline int32_t validate_dispatch_data_partial_string(NSData *data);
-static inline dispatch_queue_t log_queue();
 static inline void SRFastLog(NSString *format, ...);
 
 @interface NSData (SRWebSocket)
@@ -124,7 +123,7 @@ static inline void SRFastLog(NSString *format, ...);
 static NSString *newSHA1String(const char *bytes, size_t length) {
     uint8_t md[CC_SHA1_DIGEST_LENGTH];
     
-    CC_SHA1(bytes, length, md);
+    CC_SHA1(bytes, (CC_LONG)length, md);
     
     size_t buffer_size = ((sizeof(md) * 3 + 2) / 2);
     
@@ -552,7 +551,7 @@ static __strong NSData *CRLFCRLF;
 
 - (void)_initializeStreams;
 {
-    NSInteger port = _url.port.integerValue;
+    UInt32 port = (UInt32)_url.port.integerValue;
     if (port == 0) {
         if (!_secure) {
             port = 80;
@@ -1460,7 +1459,7 @@ static const size_t SRFrameHeaderOverhead = 32;
                 uint8_t buffer[bufferSize];
                 
                 while (_inputStream.hasBytesAvailable) {
-                    int bytes_read = [_inputStream read:buffer maxLength:bufferSize];
+                    NSInteger bytes_read = [_inputStream read:buffer maxLength:bufferSize];
                     
                     if (bytes_read > 0) {
                         [_readBuffer appendBytes:buffer length:bytes_read];
@@ -1603,16 +1602,6 @@ static const size_t SRFrameHeaderOverhead = 32;
 
 @end
 
-static inline dispatch_queue_t log_queue() {
-    static dispatch_queue_t queue = 0;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("fast log queue", DISPATCH_QUEUE_SERIAL);
-    });
-    
-    return queue;
-}
-
 //#define SR_ENABLE_LOG
 
 static inline void SRFastLog(NSString *format, ...)  {
@@ -1670,7 +1659,7 @@ static inline int32_t validate_dispatch_data_partial_string(NSData *data) {
         size = -1;
     }
     
-    return size;
+    return (int32_t)size;
 }
 
 #else
