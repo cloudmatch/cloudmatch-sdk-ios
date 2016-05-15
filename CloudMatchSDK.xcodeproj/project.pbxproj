@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B77F1B81CE878420028689B /* CloudMatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */; };
+		9B77F1B81CE878420028689B /* CloudMatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F1B91CE87E300028689B /* CMCloudMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BD18CF65BB00656C47 /* CMCloudMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F1BA1CE87E320028689B /* CMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BF18CF65BB00656C47 /* CMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F1BB1CE87E350028689B /* CMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C118CF65BB00656C47 /* CMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4E8A1CE7166900CF9E51 /* CouldmatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8E4E891CE7166900CF9E51 /* CouldmatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4E9E1CE716C600CF9E51 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92A818CF657F00656C47 /* SSKeychain.m */; };
 		9B8E4E9F1CE716C900CF9E51 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92AA18CF657F00656C47 /* SSKeychainQuery.m */; };
@@ -359,6 +362,9 @@
 			files = (
 				9B8E4E8A1CE7166900CF9E51 /* CouldmatchSDK.h in Headers */,
 				9B77F1B81CE878420028689B /* CloudMatchSDK.h in Headers */,
+				9B77F1B91CE87E300028689B /* CMCloudMatchClient.h in Headers */,
+				9B77F1BA1CE87E320028689B /* CMInnerOuterChecker.h in Headers */,
+				9B77F1BB1CE87E350028689B /* CMLocation.h in Headers */,
 				9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
