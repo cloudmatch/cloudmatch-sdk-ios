@@ -18,7 +18,8 @@
 
 @implementation CMApiConstants
 
-NSString* const kCMApiEndpoint = @"wss://api.cloudmatch.io:443/v1/open";
+NSString* const kCMAPIScheme = @"wss";
+NSString* const kCMApiEndpoint = @"api.cloudmatch.io:443/v1/open";
 NSString* const kCMApiParamApiKey = @"apiKey";
 NSString* const kCMApiParamAppId = @"appId";
 NSString* const kCMApiParamOS = @"os";

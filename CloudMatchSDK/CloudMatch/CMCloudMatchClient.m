@@ -210,9 +210,17 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     [_webSocket close];
     
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
-    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kCMApiEndpoint, kCMApiParamApiKey, self.apiKey, kCMApiParamAppId, self.appId, kCMApiParamOS, @"ios", kCMApiParamDeviceId, deviceID];
-    NSString* webStringURL = [apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet letterCharacterSet]];
-    NSURL *url1 = [NSURL URLWithString:webStringURL];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] init];
+    components.scheme = kCMAPIScheme;
+    components.host = kCMApiEndpoint;
+    components.queryItems = @[
+                              [NSURLQueryItem queryItemWithName:kCMApiParamApiKey value:self.apiKey],
+                              [NSURLQueryItem queryItemWithName:kCMApiParamAppId value:self.appId],
+                              [NSURLQueryItem queryItemWithName:kCMApiParamOS value:@"ios"],
+                              [NSURLQueryItem queryItemWithName:kCMApiParamDeviceId value:deviceID]
+                              ];
+    NSURL *url1 = [components URL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url1];
 
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:urlRequest];

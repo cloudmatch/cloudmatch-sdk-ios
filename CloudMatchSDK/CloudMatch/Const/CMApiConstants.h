@@ -18,6 +18,7 @@
 
 @interface CMApiConstants : NSObject
 
+extern NSString* const kCMAPIScheme;
 extern NSString* const kCMApiEndpoint;
 extern NSString* const kCMApiParamApiKey;
 extern NSString* const kCMApiParamAppId;
