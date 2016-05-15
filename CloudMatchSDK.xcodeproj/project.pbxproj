@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B77F1B81CE878420028689B /* CloudMatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E926718CF64DD00656C47 /* CloudMatchSDK.h */; };
 		9B8E4E8A1CE7166900CF9E51 /* CouldmatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8E4E891CE7166900CF9E51 /* CouldmatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4E9E1CE716C600CF9E51 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92A818CF657F00656C47 /* SSKeychain.m */; };
 		9B8E4E9F1CE716C900CF9E51 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92AA18CF657F00656C47 /* SSKeychainQuery.m */; };
@@ -357,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8E4E8A1CE7166900CF9E51 /* CouldmatchSDK.h in Headers */,
+				9B77F1B81CE878420028689B /* CloudMatchSDK.h in Headers */,
 				9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +617,7 @@
 				9B8E4E991CE7166A00CF9E51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC7E925718CF64DD00656C47 /* Build configuration list for PBXProject "CloudMatchSDK" */ = {
 			isa = XCConfigurationList;
