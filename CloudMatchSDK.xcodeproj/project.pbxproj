@@ -11,10 +11,37 @@
 		9B77F1B91CE87E300028689B /* CMCloudMatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BD18CF65BB00656C47 /* CMCloudMatchClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F1BA1CE87E320028689B /* CMInnerOuterChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BF18CF65BB00656C47 /* CMInnerOuterChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F1BB1CE87E350028689B /* CMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C118CF65BB00656C47 /* CMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F1FD1CE87F770028689B /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929E18CF657400656C47 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2001CE87F980028689B /* CMJsonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B418CF65BB00656C47 /* CMJsonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2011CE87FAF0028689B /* CMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B218CF65BB00656C47 /* CMApiConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2021CE87FAF0028689B /* CMJsonGeneralLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B618CF65BB00656C47 /* CMJsonGeneralLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2031CE87FAF0028689B /* CMJsonInputLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B818CF65BB00656C47 /* CMJsonInputLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2041CE87FAF0028689B /* CMResponsesConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BA18CF65BB00656C47 /* CMResponsesConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2051CE87FAF0028689B /* CMSwipeConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BC18CF65BB00656C47 /* CMSwipeConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F20A1CE8800D0028689B /* CMOnMovementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92F018CF65BB00656C47 /* CMOnMovementDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2111CE8807C0028689B /* CMSwipeTranslationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C918CF65BB00656C47 /* CMSwipeTranslationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2141CE880B00028689B /* CMDeliveryInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92D518CF65BB00656C47 /* CMDeliveryInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2151CE880B00028689B /* CMDisconnectInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92D718CF65BB00656C47 /* CMDisconnectInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2161CE880B00028689B /* CMLeaveGroupInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92D918CF65BB00656C47 /* CMLeaveGroupInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2171CE880B00028689B /* CMMatchInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92DB18CF65BB00656C47 /* CMMatchInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2181CE880B00028689B /* CMMatcheeDelivery.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92DE18CF65BB00656C47 /* CMMatcheeDelivery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2191CE880B00028689B /* CMMatcheeDeliveryMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E018CF65BB00656C47 /* CMMatcheeDeliveryMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21A1CE880B00028689B /* CMMatcheeLeftMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E218CF65BB00656C47 /* CMMatcheeLeftMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21B1CE880B00028689B /* CMDeliveryResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E518CF65BB00656C47 /* CMDeliveryResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21C1CE880B00028689B /* CMLeaveGroupResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92E918CF65BB00656C47 /* CMLeaveGroupResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21D1CE880B00028689B /* CMMatchResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92EB18CF65BB00656C47 /* CMMatchResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21E1CE880B00028689B /* CMOnServerEventDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92F118CF65BB00656C47 /* CMOnServerEventDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F21F1CE880B00028689B /* CMOnServerMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92F218CF65BB00656C47 /* CMOnServerMessageDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2221CE880D30028689B /* CMMatchHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C718CF65BB00656C47 /* CMMatchHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2231CE880D30028689B /* CMUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92CB18CF65BB00656C47 /* CMUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2261CE880F40028689B /* CMDeviceInScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92CE18CF65BB00656C47 /* CMDeviceInScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2271CE880F40028689B /* CMIntegerPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92D018CF65BB00656C47 /* CMIntegerPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F2281CE880F40028689B /* CMPositionScheme.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92D218CF65BB00656C47 /* CMPositionScheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B77F22B1CE881110028689B /* CMServerMessagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C418CF65BB00656C47 /* CMServerMessagesHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4E8A1CE7166900CF9E51 /* CouldmatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8E4E891CE7166900CF9E51 /* CouldmatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4E9E1CE716C600CF9E51 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92A818CF657F00656C47 /* SSKeychain.m */; };
 		9B8E4E9F1CE716C900CF9E51 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92AA18CF657F00656C47 /* SSKeychainQuery.m */; };
-		9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929A18CF657400656C47 /* base64.h */; };
+		9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929A18CF657400656C47 /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4EA11CE716E000CF9E51 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E929C18CF657400656C47 /* NSData+SRB64Additions.m */; };
 		9B8E4EA21CE716E300CF9E51 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E929F18CF657400656C47 /* SRWebSocket.m */; };
 		9B8E4EA31CE716FD00CF9E51 /* CMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92B318CF65BB00656C47 /* CMApiConstants.m */; };
@@ -365,7 +392,34 @@
 				9B77F1B91CE87E300028689B /* CMCloudMatchClient.h in Headers */,
 				9B77F1BA1CE87E320028689B /* CMInnerOuterChecker.h in Headers */,
 				9B77F1BB1CE87E350028689B /* CMLocation.h in Headers */,
+				9B77F1FD1CE87F770028689B /* SRWebSocket.h in Headers */,
+				9B77F2021CE87FAF0028689B /* CMJsonGeneralLabels.h in Headers */,
+				9B77F2031CE87FAF0028689B /* CMJsonInputLabels.h in Headers */,
+				9B77F2041CE87FAF0028689B /* CMResponsesConstants.h in Headers */,
+				9B77F2111CE8807C0028689B /* CMSwipeTranslationHelper.h in Headers */,
+				9B77F2051CE87FAF0028689B /* CMSwipeConstants.h in Headers */,
+				9B77F2141CE880B00028689B /* CMDeliveryInput.h in Headers */,
+				9B77F2151CE880B00028689B /* CMDisconnectInput.h in Headers */,
+				9B77F2161CE880B00028689B /* CMLeaveGroupInput.h in Headers */,
+				9B77F2171CE880B00028689B /* CMMatchInput.h in Headers */,
+				9B77F2181CE880B00028689B /* CMMatcheeDelivery.h in Headers */,
+				9B77F2191CE880B00028689B /* CMMatcheeDeliveryMessage.h in Headers */,
+				9B77F21A1CE880B00028689B /* CMMatcheeLeftMessage.h in Headers */,
+				9B77F21B1CE880B00028689B /* CMDeliveryResponse.h in Headers */,
+				9B77F21C1CE880B00028689B /* CMLeaveGroupResponse.h in Headers */,
+				9B77F21D1CE880B00028689B /* CMMatchResponse.h in Headers */,
+				9B77F21E1CE880B00028689B /* CMOnServerEventDelegate.h in Headers */,
+				9B77F21F1CE880B00028689B /* CMOnServerMessageDelegate.h in Headers */,
+				9B77F2221CE880D30028689B /* CMMatchHelper.h in Headers */,
+				9B77F2231CE880D30028689B /* CMUtilities.h in Headers */,
+				9B77F20A1CE8800D0028689B /* CMOnMovementDelegate.h in Headers */,
+				9B77F2261CE880F40028689B /* CMDeviceInScheme.h in Headers */,
+				9B77F2271CE880F40028689B /* CMIntegerPoint.h in Headers */,
+				9B77F2281CE880F40028689B /* CMPositionScheme.h in Headers */,
+				9B77F2011CE87FAF0028689B /* CMApiConstants.h in Headers */,
 				9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */,
+				9B77F2001CE87F980028689B /* CMJsonConstants.h in Headers */,
+				9B77F22B1CE881110028689B /* CMServerMessagesHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

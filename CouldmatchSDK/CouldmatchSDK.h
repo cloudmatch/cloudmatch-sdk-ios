@@ -18,7 +18,10 @@ FOUNDATION_EXPORT const unsigned char CouldmatchSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <CouldmatchSDK/PublicHeader.h>
 
 #import <CouldmatchSDK/CloudMatchSDK.h>
-#import <CouldmatchSDK/CMCloudMatchClient>
-#import <CouldmatchSDK/CMInnerOuterChecker>
-#import <CouldmatchSDK/CMLocation>
-
+#import <CouldmatchSDK/CMCloudMatchClient.h>
+#import <CouldmatchSDK/CMInnerOuterChecker.h>
+#import <CouldmatchSDK/CMLocation.h>
+#import <CouldmatchSDK/base64.h>
+#import <CouldmatchSDK/CMJsonConstants.h>
+#import <CouldmatchSDK/CMAPIConstants.h>
+#import <CouldmatchSDK/CMJsonInputLabels.h>
