@@ -23,5 +23,4 @@ FOUNDATION_EXPORT const unsigned char CouldmatchSDKVersionString[];
 #import <CouldmatchSDK/CMLocation.h>
 #import <CouldmatchSDK/base64.h>
 #import <CouldmatchSDK/CMJsonConstants.h>
-#import <CouldmatchSDK/CMAPIConstants.h>
 #import <CouldmatchSDK/CMJsonInputLabels.h>

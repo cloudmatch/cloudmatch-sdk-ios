@@ -15,7 +15,6 @@
  */
 
 #import "CMCloudMatchClient.h"
-#import "CMApiConstants.h"
 #import "CMMatchHelper.h"
 
 #import "CMLocation.h"
@@ -209,11 +208,18 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket.delegate = nil;
     [_webSocket close];
     
+    NSString* const kCMApiParamApiKey = @"apiKey";
+    NSString* const kCMApiParamAppId = @"appId";
+    NSString* const kCMApiParamOS = @"os";
+    NSString* const kCMApiParamDeviceId = @"deviceId";
+    
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
     
     NSURLComponents *components = [[NSURLComponents alloc] init];
-    components.scheme = kCMAPIScheme;
-    components.host = kCMApiEndpoint;
+    components.scheme = @"wss";
+    components.host = @"api.cloudmatch.io";
+    components.port = @443;
+    components.path = @"/v1/open";
     components.queryItems = @[
                               [NSURLQueryItem queryItemWithName:kCMApiParamApiKey value:self.apiKey],
                               [NSURLQueryItem queryItemWithName:kCMApiParamAppId value:self.appId],

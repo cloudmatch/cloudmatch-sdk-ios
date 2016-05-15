@@ -13,7 +13,6 @@
 		9B77F1BB1CE87E350028689B /* CMLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92C118CF65BB00656C47 /* CMLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F1FD1CE87F770028689B /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929E18CF657400656C47 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F2001CE87F980028689B /* CMJsonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B418CF65BB00656C47 /* CMJsonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B77F2011CE87FAF0028689B /* CMApiConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B218CF65BB00656C47 /* CMApiConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F2021CE87FAF0028689B /* CMJsonGeneralLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B618CF65BB00656C47 /* CMJsonGeneralLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F2031CE87FAF0028689B /* CMJsonInputLabels.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92B818CF65BB00656C47 /* CMJsonInputLabels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77F2041CE87FAF0028689B /* CMResponsesConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E92BA18CF65BB00656C47 /* CMResponsesConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +43,6 @@
 		9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7E929A18CF657400656C47 /* base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B8E4EA11CE716E000CF9E51 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E929C18CF657400656C47 /* NSData+SRB64Additions.m */; };
 		9B8E4EA21CE716E300CF9E51 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E929F18CF657400656C47 /* SRWebSocket.m */; };
-		9B8E4EA31CE716FD00CF9E51 /* CMApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92B318CF65BB00656C47 /* CMApiConstants.m */; };
 		9B8E4EA41CE7170000CF9E51 /* CMJsonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92B518CF65BB00656C47 /* CMJsonConstants.m */; };
 		9B8E4EA51CE7170200CF9E51 /* CMJsonGeneralLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92B718CF65BB00656C47 /* CMJsonGeneralLabels.m */; };
 		9B8E4EA61CE7170400CF9E51 /* CMJsonInputLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E92B918CF65BB00656C47 /* CMJsonInputLabels.m */; };
@@ -99,8 +97,6 @@
 		AC7E92A818CF657F00656C47 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = sskeychain/SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
 		AC7E92A918CF657F00656C47 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = sskeychain/SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
 		AC7E92AA18CF657F00656C47 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = sskeychain/SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
-		AC7E92B218CF65BB00656C47 /* CMApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMApiConstants.h; sourceTree = "<group>"; };
-		AC7E92B318CF65BB00656C47 /* CMApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMApiConstants.m; sourceTree = "<group>"; };
 		AC7E92B418CF65BB00656C47 /* CMJsonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMJsonConstants.h; sourceTree = "<group>"; };
 		AC7E92B518CF65BB00656C47 /* CMJsonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMJsonConstants.m; sourceTree = "<group>"; };
 		AC7E92B618CF65BB00656C47 /* CMJsonGeneralLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMJsonGeneralLabels.h; sourceTree = "<group>"; };
@@ -276,8 +272,6 @@
 		AC7E92B118CF65BB00656C47 /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				AC7E92B218CF65BB00656C47 /* CMApiConstants.h */,
-				AC7E92B318CF65BB00656C47 /* CMApiConstants.m */,
 				AC7E92B418CF65BB00656C47 /* CMJsonConstants.h */,
 				AC7E92B518CF65BB00656C47 /* CMJsonConstants.m */,
 				AC7E92B618CF65BB00656C47 /* CMJsonGeneralLabels.h */,
@@ -416,7 +410,6 @@
 				9B77F2261CE880F40028689B /* CMDeviceInScheme.h in Headers */,
 				9B77F2271CE880F40028689B /* CMIntegerPoint.h in Headers */,
 				9B77F2281CE880F40028689B /* CMPositionScheme.h in Headers */,
-				9B77F2011CE87FAF0028689B /* CMApiConstants.h in Headers */,
 				9B8E4EA01CE716DE00CF9E51 /* base64.h in Headers */,
 				9B77F2001CE87F980028689B /* CMJsonConstants.h in Headers */,
 				9B77F22B1CE881110028689B /* CMServerMessagesHandler.h in Headers */,
@@ -518,7 +511,6 @@
 				9B8E4EB11CE7173200CF9E51 /* CMPositionScheme.m in Sources */,
 				9B8E4EB51CE7174200CF9E51 /* CMMatchInput.m in Sources */,
 				9B8E4EAC1CE7171800CF9E51 /* CMMatchHelper.m in Sources */,
-				9B8E4EA31CE716FD00CF9E51 /* CMApiConstants.m in Sources */,
 				9B8E4EA91CE7170C00CF9E51 /* CMInnerOuterChecker.m in Sources */,
 				9B8E4EA41CE7170000CF9E51 /* CMJsonConstants.m in Sources */,
 				9B8E4EA51CE7170200CF9E51 /* CMJsonGeneralLabels.m in Sources */,
