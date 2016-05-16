@@ -100,7 +100,7 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 {
     // trim whitespaces and enter keys
     NSString *apiKeyTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSString *appIdTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *appIdTrimmed = [appId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     _serverMessagesHandler = [[CMServerMessagesHandler alloc] initWithServerEventDelegate:serverEventDelegate];
     self.onServerMessageDelegate = _serverMessagesHandler;
@@ -208,11 +208,6 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSString* const kCMApiParamApiKey = @"apiKey";
-    NSString* const kCMApiParamAppId = @"appId";
-    NSString* const kCMApiParamOS = @"os";
-    NSString* const kCMApiParamDeviceId = @"deviceId";
-    
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
     
     NSURLComponents *components = [[NSURLComponents alloc] init];
@@ -221,10 +216,10 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     components.port = @443;
     components.path = @"/v1/open";
     components.queryItems = @[
-                              [NSURLQueryItem queryItemWithName:kCMApiParamApiKey value:self.apiKey],
-                              [NSURLQueryItem queryItemWithName:kCMApiParamAppId value:self.appId],
-                              [NSURLQueryItem queryItemWithName:kCMApiParamOS value:@"ios"],
-                              [NSURLQueryItem queryItemWithName:kCMApiParamDeviceId value:deviceID]
+                              [NSURLQueryItem queryItemWithName:@"apiKey" value:self.apiKey],
+                              [NSURLQueryItem queryItemWithName:@"appId" value:self.appId],
+                              [NSURLQueryItem queryItemWithName:@"os" value:@"iOS"],
+                              [NSURLQueryItem queryItemWithName:@"deviceId" value:[deviceID stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]]]
                               ];
     NSURL *url1 = [components URL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url1];
