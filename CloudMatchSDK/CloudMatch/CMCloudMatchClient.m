@@ -270,16 +270,17 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
         @try {
             NSError *jsonError;
             NSData *data = [NSJSONSerialization dataWithJSONObject:[deliveryInput dictionaryRepresentation] options:0 error:&jsonError];
+            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-            if (data == nil) {
+            if (string == nil) {
                 @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:jsonError.localizedDescription userInfo:nil];
             }
             
             if (_webSocket.readyState != SR_OPEN) {
-                [_sendQueue addObject:data];
+                [_sendQueue addObject:string];
                 [self connect];
             } else{
-                [_webSocket send:data];
+                [_webSocket send:string];
                 //TODO: check that progress update is sent
                 NSInteger progress = (NSInteger)(((idx+1) * 100)/[chunks count]);
                 [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];

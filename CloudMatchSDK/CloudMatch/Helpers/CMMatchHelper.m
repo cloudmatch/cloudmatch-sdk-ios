@@ -36,13 +36,19 @@
     @try {
         NSError *jsonError;
         NSData *dataToSend = [NSJSONSerialization dataWithJSONObject:[matchInput dictionaryRepresentation] options:0 error:&jsonError];
+        NSString *stringtoSend = [[NSString alloc] initWithData:dataToSend encoding:NSUTF8StringEncoding];
         if (dataToSend == nil) {
             @throw [NSException exceptionWithName:@"Error parsing matchInput" reason:jsonError.localizedDescription userInfo:nil];
         }
         
         SRWebSocket* webSocket = [[CMCloudMatchClient sharedInstance] getWebSocket];
+        
+#ifdef DEBUG
+        NSLog(@"Sending data: %@", [matchInput dictionaryRepresentation]);
+#endif
+        
         if (webSocket.readyState == SR_OPEN) {
-            [webSocket send:dataToSend];
+            [webSocket send:stringtoSend];
         } else {
             // TODO: deal with error states or add to sendQueue in CMCloudMatchClient
         }
