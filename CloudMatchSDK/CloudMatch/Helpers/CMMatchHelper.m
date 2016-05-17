@@ -34,6 +34,8 @@
     CMMatchInput *matchInput = [[CMMatchInput alloc] initWithCriteria:criteria latitude:latitude longitude:longitude equalityParam:equalityParam areaStart:areaStart areaEnd:areaEnd];
     
     @try {
+        NSLog(@"Sending match input: %@", [matchInput dictionaryRepresentation]);
+        
         NSError *jsonError;
         NSData *dataToSend = [NSJSONSerialization dataWithJSONObject:[matchInput dictionaryRepresentation] options:0 error:&jsonError];
         NSString *stringtoSend = [[NSString alloc] initWithData:dataToSend encoding:NSUTF8StringEncoding];
@@ -42,10 +44,6 @@
         }
         
         SRWebSocket* webSocket = [[CMCloudMatchClient sharedInstance] getWebSocket];
-        
-#ifdef DEBUG
-        NSLog(@"Sending data: %@", [matchInput dictionaryRepresentation]);
-#endif
         
         if (webSocket.readyState == SR_OPEN) {
             [webSocket send:stringtoSend];
