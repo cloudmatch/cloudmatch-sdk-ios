@@ -29,10 +29,12 @@
 @protocol CMOnServerEventDelegate <NSObject>
 @required
 - (void)onMatchResponse:(CMMatchResponse*)response;
-- (void)onLeaveGroupResponse:(CMLeaveGroupResponse*)response;
-- (void)onDeliveryResponse:(CMDeliveryResponse*)response;
-- (void)onMatcheeLeftMessage:(CMMatcheeLeftMessage*)message;
 - (void)onMatcheeDelivery:(CMMatcheeDelivery*)delivery;
+
+@optional
+- (void)onDeliveryResponse:(CMDeliveryResponse*)response;
+- (void)onLeaveGroupResponse:(CMLeaveGroupResponse*)response;
+- (void)onMatcheeLeftMessage:(CMMatcheeLeftMessage*)message;
 - (void)onMatcheeDeliveryProgress:(NSInteger)progress forDeliveryId:(NSString*)deliveryId;
 - (void)onConnectionOpen;
 - (void)onConnectionClosedWithWSReason:(NSString*)WSreason;

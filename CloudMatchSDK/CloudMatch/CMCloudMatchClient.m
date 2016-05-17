@@ -167,7 +167,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket;
 {
-    [self.onServerEventDelegate onConnectionOpen];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionOpen)]) {
+        [self.onServerEventDelegate onConnectionOpen];
+    }
     
     //If there's data to send, send it
     [_sendQueue enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -180,7 +182,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
 {
     _webSocket = nil;
-    [self.onServerEventDelegate onConnectionError:error];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionError:)]) {
+        [self.onServerEventDelegate onConnectionError:error];
+    }
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
@@ -198,7 +202,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 {
     _webSocket = nil;
-    [self.onServerEventDelegate onConnectionClosedWithWSReason:reason];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionClosedWithWSReason:)]) {
+        [self.onServerEventDelegate onConnectionClosedWithWSReason:reason];
+    }
 }
 
 #pragma mark - GestureMatchConnection public methods
@@ -283,7 +289,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
                 [_webSocket send:string];
                 //TODO: check that progress update is sent
                 NSInteger progress = (NSInteger)(((idx+1) * 100)/[chunks count]);
-                [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
+                if([self.onServerEventDelegate respondsToSelector:@selector(onMatcheeDeliveryProgress:forDeliveryId:)]) {
+                    [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
+                }
             }
 
         }
