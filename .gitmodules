@@ -1,9 +1,0 @@
-[submodule "sskeychain"]
-	path = sskeychain
-	url = https://github.com/soffes/sskeychain.git
-[submodule "SocketRocket"]
-	path = SocketRocket
-	url = https://github.com/square/SocketRocket.git
-[submodule "json-framework"]
-	path = json-framework
-	url = https://github.com/stig/json-framework.git

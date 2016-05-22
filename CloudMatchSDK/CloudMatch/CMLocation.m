@@ -115,7 +115,7 @@ NSString* const kLocationServicesGotBestAccuracyLocation = @"kLocationServicesGo
     CLLocation *currentLocation = [locations lastObject];
     NSDate* eventDate = currentLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0) {
+    if (fabs(howRecent) < 15.0) {
         _currentLocation = currentLocation;
         [[NSNotificationCenter defaultCenter] postNotificationName:kLocationServicesGotBestAccuracyLocation object:nil];
     }

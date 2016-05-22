@@ -15,14 +15,11 @@
  */
 
 #import "CMCloudMatchClient.h"
-#import "CMApiConstants.h"
 #import "CMMatchHelper.h"
 
 #import "CMLocation.h"
-#import "NSData+Base64.h"
 #import "CMInnerOuterChecker.h"
 #import "CMUtilities.h"
-#import "SBJson4.h"
 
 //Constants
 #import "CMJsonConstants.h"
@@ -103,7 +100,7 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 {
     // trim whitespaces and enter keys
     NSString *apiKeyTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSString *appIdTrimmed = [apiKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *appIdTrimmed = [appId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     _serverMessagesHandler = [[CMServerMessagesHandler alloc] initWithServerEventDelegate:serverEventDelegate];
     self.onServerMessageDelegate = _serverMessagesHandler;
@@ -170,7 +167,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket;
 {
-    [self.onServerEventDelegate onConnectionOpen];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionOpen)]) {
+        [self.onServerEventDelegate onConnectionOpen];
+    }
     
     //If there's data to send, send it
     [_sendQueue enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -183,7 +182,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
 {
     _webSocket = nil;
-    [self.onServerEventDelegate onConnectionError:error];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionError:)]) {
+        [self.onServerEventDelegate onConnectionError:error];
+    }
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
@@ -201,7 +202,9 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 {
     _webSocket = nil;
-    [self.onServerEventDelegate onConnectionClosedWithWSReason:reason];
+    if([self.onServerEventDelegate respondsToSelector:@selector(onConnectionClosedWithWSReason:)]) {
+        [self.onServerEventDelegate onConnectionClosedWithWSReason:reason];
+    }
 }
 
 #pragma mark - GestureMatchConnection public methods
@@ -212,9 +215,19 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
     [_webSocket close];
     
     NSString *deviceID = [CMUtilities getDeviceIdForAppId];
-    NSString* apiUrl = [NSString stringWithFormat:@"%@?%@=%@&%@=%@&%@=%@&%@=%@", kCMApiEndpoint, kCMApiParamApiKey, self.apiKey, kCMApiParamAppId, self.appId, kCMApiParamOS, @"ios", kCMApiParamDeviceId, deviceID];
-    NSString* webStringURL = [apiUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url1 = [NSURL URLWithString:webStringURL];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] init];
+    components.scheme = @"wss";
+    components.host = @"api.cloudmatch.io";
+    components.port = @443;
+    components.path = @"/v1/open";
+    components.queryItems = @[
+                              [NSURLQueryItem queryItemWithName:@"apiKey" value:self.apiKey],
+                              [NSURLQueryItem queryItemWithName:@"appId" value:self.appId],
+                              [NSURLQueryItem queryItemWithName:@"os" value:@"iOS"],
+                              [NSURLQueryItem queryItemWithName:@"deviceId" value:[deviceID stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]]]
+                              ];
+    NSURL *url1 = [components URL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url1];
 
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:urlRequest];
@@ -261,21 +274,24 @@ NSInteger const kCMMaxDeliveryChunkSize = 1024 * 10;
         CMDeliveryInput *deliveryInput = [[CMDeliveryInput alloc] initWithRecipients:recipients deliveryId:deliveryId payload:[chunks objectAtIndex:idx] groupId:groupId totalChunks:[chunks count] chunkNr:idx];
 
         @try {
-            SBJson4Writer *writer = [[SBJson4Writer alloc] init];
-            NSString *dataToSend = [writer stringWithObject:[deliveryInput dictionaryRepresentation]];
+            NSError *jsonError;
+            NSData *data = [NSJSONSerialization dataWithJSONObject:[deliveryInput dictionaryRepresentation] options:0 error:&jsonError];
+            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-            if (writer.error != nil) {
-                @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:writer.error userInfo:nil];
+            if (string == nil) {
+                @throw [NSException exceptionWithName:@"Error parsing deliverPayload" reason:jsonError.localizedDescription userInfo:nil];
             }
+            
             if (_webSocket.readyState != SR_OPEN) {
-                [_sendQueue addObject:dataToSend];
+                [_sendQueue addObject:string];
                 [self connect];
-            }
-            else{
-                [_webSocket send:dataToSend];
+            } else{
+                [_webSocket send:string];
                 //TODO: check that progress update is sent
                 NSInteger progress = (NSInteger)(((idx+1) * 100)/[chunks count]);
-                [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
+                if([self.onServerEventDelegate respondsToSelector:@selector(onMatcheeDeliveryProgress:forDeliveryId:)]) {
+                    [self.onServerEventDelegate onMatcheeDeliveryProgress: progress forDeliveryId:deliveryId];
+                }
             }
 
         }

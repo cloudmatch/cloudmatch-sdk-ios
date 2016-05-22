@@ -28,6 +28,8 @@
 
 @implementation CMInnerOuterChecker
 
+@dynamic state;
+
 //The border around the screen (in points) to detect when the user tapped on a border
 NSInteger const kSIDE_AREA_WIDTH = 20;
 
@@ -106,7 +108,7 @@ NSInteger const kSIDE_AREA_WIDTH = 20;
             [self.movementDelegate onMovementDetection:move swipeType:swipeType pointStart:startPoint pointEnd:np];
             
             NSString *eqParam = [self.movementDelegate getEqualityParam];
-            if (eqParam == (id)[NSNull null] || eqParam.length == 0) {
+            if ([eqParam isEqual:[NSNull null]] || eqParam.length == 0) {
                 eqParam = @"";
             }
             NSString *start = [CMSwipeTranslationHelper convertViewAreaToString:first];

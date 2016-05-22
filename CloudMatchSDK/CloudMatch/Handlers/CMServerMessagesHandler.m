@@ -68,11 +68,15 @@
             }
             else if([inputType isEqualToString:kCMResponseTypeLeaveGroup]){
                 CMLeaveGroupResponse *leaveGroupResponse = [CMLeaveGroupResponse modelObjectWithDictionary:msgJson];
-                [_serverEventDelegate onLeaveGroupResponse:leaveGroupResponse];
+                if([_serverEventDelegate respondsToSelector:@selector(onLeaveGroupResponse:)]) {
+                    [_serverEventDelegate onLeaveGroupResponse:leaveGroupResponse];
+                }
             }
             else if([inputType isEqualToString:kCMResponseTypeDelivery]){
                 CMDeliveryResponse *deliveryResponse = [CMDeliveryResponse modelObjectWithDictionary:msgJson];
-                [_serverEventDelegate onDeliveryResponse:deliveryResponse];
+                if([_serverEventDelegate respondsToSelector:@selector(onDeliveryResponse:)]) {
+                    [_serverEventDelegate onDeliveryResponse:deliveryResponse];
+                }
             }
         } else if([kind isEqualToString:kCMKindMessage]){
             NSString* messageType = [msgJson objectForKey:TYPE];
@@ -98,7 +102,9 @@
                     
                     [receivedChunks insertObject:deliveryMessage.mPayload atIndex:deliveryMessage.mChunkNr];
                     if ([receivedChunks count] == deliveryMessage.mTotalChunks) {
-                        [_serverEventDelegate onMatcheeDeliveryProgress:100 forDeliveryId:deliveryId];
+                        if([_serverEventDelegate respondsToSelector:@selector(onMatcheeDeliveryProgress:forDeliveryId:)]) {
+                            [_serverEventDelegate onMatcheeDeliveryProgress:100 forDeliveryId:deliveryId];
+                        }
                         
                         //1. remove object from dictionary
                         [_mPartialDeliveries removeObjectForKey:deliveryId];
@@ -117,12 +123,16 @@
                         
                         //2. deliver progress message to client
                         NSInteger progress = 100 * [receivedChunks count] / deliveryMessage.mTotalChunks;
-                        [_serverEventDelegate onMatcheeDeliveryProgress:progress forDeliveryId:deliveryId];
+                        if([_serverEventDelegate respondsToSelector:@selector(onMatcheeDeliveryProgress:forDeliveryId:)]) {
+                            [_serverEventDelegate onMatcheeDeliveryProgress:progress forDeliveryId:deliveryId];
+                        }
                     }
                 }
             } else if ([messageType isEqualToString:kCMInputTypeMatcheeLeft]){
                 CMMatcheeLeftMessage *matcheeLeftMessage = [CMMatcheeLeftMessage modelObjectWithDictionary:msgJson];
-                [_serverEventDelegate onMatcheeLeftMessage:matcheeLeftMessage];
+                if([_serverEventDelegate respondsToSelector:@selector(onMatcheeLeftMessage:)]) {
+                    [_serverEventDelegate onMatcheeLeftMessage:matcheeLeftMessage];
+                }
             }
         } else if([kind isEqualToString:kCMKindError]){
             // TODO: manage the error
